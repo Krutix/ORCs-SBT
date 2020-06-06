@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>563</width>
-    <height>248</height>
+    <width>655</width>
+    <height>363</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,44 +53,44 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_correntMatch">
+         <layout class="QHBoxLayout" name="horizontalLayout_Match">
           <property name="spacing">
            <number>5</number>
           </property>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_team1">
+           <layout class="QVBoxLayout" name="verticalLayout_t1">
             <property name="spacing">
              <number>2</number>
             </property>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_3">
+             <layout class="QVBoxLayout" name="verticalLayout_t1_name">
               <property name="spacing">
                <number>3</number>
               </property>
               <item>
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="label_t1_name">
                 <property name="text">
                  <string>Team 1</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit"/>
+               <widget class="QLineEdit" name="lineEdit_t1_name"/>
               </item>
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <layout class="QHBoxLayout" name="horizontalLayout_team1_sn">
               <property name="spacing">
                <number>6</number>
               </property>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_shortname">
+               <layout class="QVBoxLayout" name="verticalLayout_t1_sn">
                 <property name="spacing">
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_t1_shortname">
+                 <widget class="QLabel" name="label_t1_sn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -109,7 +109,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_shortname"/>
+                 <widget class="QLineEdit" name="lineEdit_t1_sn"/>
                 </item>
                </layout>
               </item>
@@ -233,7 +233,7 @@
              <number>3</number>
             </property>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_Button">
+             <layout class="QVBoxLayout" name="verticalLayout_button">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -266,14 +266,14 @@
                <number>3</number>
               </property>
               <item>
-               <widget class="QLabel" name="label_5">
+               <widget class="QLabel" name="label_map">
                 <property name="text">
                  <string>Map</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_2">
+               <widget class="QComboBox" name="comboBox_map">
                 <item>
                  <property name="text">
                   <string>None</string>
@@ -284,7 +284,7 @@
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_Score">
+             <layout class="QVBoxLayout" name="verticalLayout_score">
               <property name="spacing">
                <number>2</number>
               </property>
@@ -301,10 +301,10 @@
                  <number>3</number>
                 </property>
                 <item>
-                 <widget class="QSpinBox" name="spinBox_team1"/>
+                 <widget class="QSpinBox" name="spinBox_t1_score"/>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="spinBox_team2">
+                 <widget class="QSpinBox" name="spinBox_t2_score">
                   <property name="layoutDirection">
                    <enum>Qt::RightToLeft</enum>
                   </property>
@@ -330,24 +330,24 @@
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_team1_2">
+           <layout class="QVBoxLayout" name="verticalLayout_team2">
             <property name="spacing">
              <number>2</number>
             </property>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_5">
+             <layout class="QVBoxLayout" name="verticalLayout_team2_name">
               <property name="spacing">
                <number>3</number>
               </property>
               <item>
-               <widget class="QLabel" name="label_6">
+               <widget class="QLabel" name="label_t2_name">
                 <property name="text">
                  <string>Team 2</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_3"/>
+               <widget class="QLineEdit" name="lineEdit_t2_name"/>
               </item>
              </layout>
             </item>
@@ -357,7 +357,7 @@
                <number>6</number>
               </property>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_7">
+               <layout class="QVBoxLayout" name="verticalLayout_t2_2">
                 <property name="spacing">
                  <number>3</number>
                 </property>
@@ -415,12 +415,12 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_6">
+               <layout class="QVBoxLayout" name="verticalLayout_t2_shortName">
                 <property name="spacing">
                  <number>3</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_t2_shortName">
+                 <widget class="QLabel" name="label_t2_sn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -442,7 +442,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_4"/>
+                 <widget class="QLineEdit" name="lineEdit_t2_sn"/>
                 </item>
                </layout>
               </item>
@@ -484,7 +484,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>563</width>
+     <width>655</width>
      <height>20</height>
     </rect>
    </property>
