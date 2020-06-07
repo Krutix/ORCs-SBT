@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "idynamicdatamanager.h"
 #include <QMainWindow>
 #include <QDebug>
 
@@ -30,10 +29,14 @@ public:
     QString GetCurrentMap();
     void SetCurrentMap(const QString&);
 
-    QString GetCurrentScoreT1();
+    int GetCurrentScoreT1();
     void SetCurrentScoreT1(const int&);
-    QString GetCurrentScoreT2();
+    int GetCurrentScoreT2();
     void SetCurrentScoreT2(const int&);
+
+private slots:
+    void SwapTeams();
+    void ResetInput();
 
 private:
     Ui::MainWindow *ui;

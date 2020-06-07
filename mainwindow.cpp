@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->pushButton_swap, SIGNAL(clicked()), this, SLOT(SwapTeams()));
+    connect(ui->pushButton_reset, SIGNAL(clicked()), this, SLOT(ResetInput()));
 }
 
 MainWindow::~MainWindow()
@@ -15,71 +17,103 @@ MainWindow::~MainWindow()
 
 
 QString MainWindow::GetNameT1 (){
-    QString tbh = ui->lineEdit_t1_name->text();
-    qDebug() << "Getter team 1 full name <" + tbh + ">";
-    return tbh;
+    QString str = ui->lineEdit_t1_name->text();
+    qDebug() << "Get team 1 full name: " + str;
+    return str;
 }
 
-void MainWindow::SetNameT1 (const QString&){
-
+void MainWindow::SetNameT1 (const QString& str){
+    ui->lineEdit_t1_name->setText(str);
+    qDebug() << "Set team 1 full name: " + str;
 }
 
 QString MainWindow::GetNameT2 (){
     QString tbh = ui->lineEdit_t2_name->text();
-    qDebug() << "Getter team 2 full name <" + tbh + ">";
+    qDebug() << "Get team 2 full name: " + tbh;
     return tbh;
 }
 
-void MainWindow::SetNameT2 (const QString&){
-
+void MainWindow::SetNameT2 (const QString& str){
+    ui->lineEdit_t2_name->setText(str);
+    qDebug() << "Set team 2 full name: " + str;
 }
 
 QString MainWindow::GetShortNameT1(){
     QString tbh = ui->lineEdit_t1_sn->text();
-    qDebug() << "Getter team 1 short name <" + tbh + ">";
+    qDebug() << "Get team 1 short name: " + tbh;
     return tbh;
 }
 
-void MainWindow::SetShortNameT1(const QString&){
-
+void MainWindow::SetShortNameT1(const QString& str){
+    ui->lineEdit_t1_sn->setText(str);
+    qDebug() << "Set team 1 short name: " + str;
 }
 
 QString MainWindow::GetShortNameT2(){
     QString tbh = ui->lineEdit_t2_sn->text();
-    qDebug() << "Getter team 2 short name <" + tbh + ">";
+    qDebug() << "Get team 2 short name: " + tbh;
     return tbh;
 }
 
-void MainWindow::SetShortNameT2(const QString&){
-
+void MainWindow::SetShortNameT2(const QString& str){
+    ui->lineEdit_t2_sn->setText(str);
+    qDebug() << "Set team 2 short name: " + str;
 }
 
 QString MainWindow::GetCurrentMap(){
     QString tbh = ui->comboBox_map->currentText();
-    qDebug() << "Getter current map <" + tbh + ">";
+    qDebug() << "Get current map: " + tbh;
     return tbh;
 }
 
 void MainWindow::SetCurrentMap(const QString&){
-
+    //ui->comboBox_map->setEditText();
 }
 
-QString MainWindow::GetCurrentScoreT1(){
-    QString tbh = ui->spinBox_t1_score->text();
-    qDebug() << "Getter current score team 1 <" + tbh + ">";
+int MainWindow::GetCurrentScoreT1(){
+    int tbh = ui->spinBox_t1_score->value();
+    qDebug() << "Get current score team 1: " + QString::number(tbh);
     return tbh;
 }
 
-void MainWindow::SetCurrentScoreT1(const int&){
-
+void MainWindow::SetCurrentScoreT1(const int& score){
+    ui->spinBox_t1_score->setValue(score);
+    qDebug() << "Set score team 1: " + QString::number(score);
 }
 
-QString MainWindow::GetCurrentScoreT2(){
-    QString tbh = ui->spinBox_t1_score->text();
-    qDebug() << "Getter current score team 2 <" + tbh + ">";
+int MainWindow::GetCurrentScoreT2(){
+    int tbh = ui->spinBox_t2_score->value();
+    qDebug() << "Get current score team 2: " + QString::number(tbh);
     return tbh;
 }
 
-void MainWindow::SetCurrentScoreT2(const int&){
+void MainWindow::SetCurrentScoreT2(const int& score){
+    ui->spinBox_t2_score->setValue(score);
+    qDebug() << "Set score team 2: " + QString::number(score);
+}
 
+
+void MainWindow::SwapTeams(){
+    qDebug() << "-------Swap full name teams-------";
+    QString tbh = GetNameT1();
+    SetNameT1(GetNameT2());
+    SetNameT2(tbh);
+    qDebug() << "-------Swap short name teams------";
+    tbh = GetShortNameT1();
+    SetShortNameT1(GetShortNameT2());
+    SetShortNameT2(tbh);
+    qDebug() << "-------Swap score teams-----------";
+    int tbhscore = GetCurrentScoreT1();
+    SetCurrentScoreT1(GetCurrentScoreT2());
+    SetCurrentScoreT2(tbhscore);
+}
+
+void MainWindow::ResetInput(){
+    SetNameT1("");
+    SetNameT2("");
+    SetShortNameT1("");
+    SetShortNameT2("");
+    SetCurrentScoreT1(0);
+    SetCurrentScoreT2(0);
+    //SetCurrentMap("None");
 }
