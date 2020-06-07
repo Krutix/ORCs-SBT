@@ -3,16 +3,18 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow), upd(new UpdateExtData)
 {
     ui->setupUi(this);
     connect(ui->pushButton_swap, SIGNAL(clicked()), this, SLOT(SwapTeams()));
     connect(ui->pushButton_reset, SIGNAL(clicked()), this, SLOT(ResetInput()));
+    connect(ui->pushButton_update, SIGNAL(clicked()), this, SLOT(UpdateCM()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete upd;
 }
 
 
@@ -67,7 +69,7 @@ QString MainWindow::GetCurrentMap(){
 }
 
 void MainWindow::SetCurrentMap(const QString&){
-    //ui->comboBox_map->setEditText();
+    //ui->comboBox_map->;
 }
 
 int MainWindow::GetCurrentScoreT1(){
@@ -92,7 +94,6 @@ void MainWindow::SetCurrentScoreT2(const int& score){
     qDebug() << "Set score team 2: " + QString::number(score);
 }
 
-
 void MainWindow::SwapTeams(){
     qDebug() << "-------Swap full name teams-------";
     QString tbh = GetNameT1();
@@ -109,6 +110,7 @@ void MainWindow::SwapTeams(){
 }
 
 void MainWindow::ResetInput(){
+    qDebug() << "-------Reset Input----------------";
     SetNameT1("");
     SetNameT2("");
     SetShortNameT1("");
@@ -116,4 +118,13 @@ void MainWindow::ResetInput(){
     SetCurrentScoreT1(0);
     SetCurrentScoreT2(0);
     //SetCurrentMap("None");
+}
+
+void MainWindow::UpdateCM(){
+    upd->UpdateNameT1(GetNameT1());
+    upd->UpdateNameT2(GetNameT2());
+    upd->UpdateShortNameT1(GetShortNameT1());
+    upd->UpdateShortNameT2(GetShortNameT2());
+    upd->UpdateCurrentMap(GetCurrentMap());
+
 }

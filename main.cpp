@@ -1,14 +1,15 @@
 #include "mainwindow.h"
+#include "updateextdata.h"
 
 #include <QApplication>
+#include <QDir>
 #include <QDebug>
 #include <memory>
-#include <windows.h>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    std::shared_ptr<MainWindow> MWindow = std::make_shared<MainWindow> ();
+    MainWindow* MWindow = new MainWindow;
     MWindow->show();
     return a.exec();
 }

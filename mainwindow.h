@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "updateextdata.h"
 #include <QMainWindow>
 #include <QDebug>
 
@@ -16,6 +17,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    QString GetCurrentMap();
+    void SetCurrentMap(const QString&);
+
     QString GetNameT1 ();
     void SetNameT1 (const QString&);
     QString GetNameT2 ();
@@ -26,9 +30,6 @@ public:
     QString GetShortNameT2();
     void SetShortNameT2(const QString&);
 
-    QString GetCurrentMap();
-    void SetCurrentMap(const QString&);
-
     int GetCurrentScoreT1();
     void SetCurrentScoreT1(const int&);
     int GetCurrentScoreT2();
@@ -37,8 +38,10 @@ public:
 private slots:
     void SwapTeams();
     void ResetInput();
+    void UpdateCM();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui = nullptr;
+    UpdateExtData *upd = nullptr;
 };
 #endif // MAINWINDOW_H
