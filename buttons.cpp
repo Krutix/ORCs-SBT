@@ -1,46 +1,53 @@
-#include "buttoms.h"
+#include "buttons.h"
 
-Buttoms::Buttoms(){}
+Buttons::Buttons(){
 
-Buttoms::Buttoms(IUserInterface* ui){
+}
+
+Buttons::Buttons(IUserInterface* ui){
     this->ui = ui;
 }
 
-void Buttoms::SetUI(IUserInterface* ui){
+void Buttons::SetUI(IUserInterface* ui){
     this->ui = ui;
 }
 
-void Buttoms::Swap_CurrentTeams(){
-    qDebug() << "-------Swap full name teams";
-    QString tbh = ui->GetNameT1();
-    ui->SetNameT1(ui->GetNameT2());
-    ui->SetNameT2(tbh);
-    qDebug() << "-------Swap short name teams";
-    tbh = ui->GetShortNameT1();
-    ui->SetShortNameT1(ui->GetShortNameT2());
-    ui->SetShortNameT2(tbh);
-    qDebug() << "-------Swap score teams";
-    int tbhscore = ui->GetCurrentScoreT1();
-    ui->SetCurrentScoreT1(ui->GetCurrentScoreT2());
-    ui->SetCurrentScoreT2(tbhscore);
+Buttons::~Buttons(){
+    delete fwrite;
 }
 
-void Buttoms::ResetInput_CurrentMatch(){
-    qDebug() << "-------Reset Input";
-    ui->SetNameT1("");
-    ui->SetNameT2("");
-    ui->SetShortNameT1("");
-    ui->SetShortNameT2("");
-    ui->SetCurrentScoreT1(0);
-    ui->SetCurrentScoreT2(0);
+void Buttons::Swap_CurrentTeams(){
+    qDebug() << "Swap full name teams";
+    QString tbh = ui->GetT1_Name();
+    ui->SetT1_Name(ui->GetT2_Name());
+    ui->SetT2_Name(tbh);
+    qDebug() << "Swap short name teams";
+    tbh = ui->GetT1_ShortName();
+    ui->SetT1_ShortName(ui->GetT2_ShortName());
+    ui->SetT2_ShortName(tbh);
+    qDebug() << "Swap score teams";
+    int tbhscore = ui->GetCMap_ScoreT1();
+    ui->SetCMap_ScoreT1(ui->GetCMap_ScoreT2());
+    ui->SetCMap_ScoreT2(tbhscore);
+}
+
+void Buttons::ResetInput_CurrentMatch(){
+    qDebug() << "Reset Input";
+    ui->SetT1_Name("");
+    ui->SetT2_Name("");
+    ui->SetT1_ShortName("");
+    ui->SetT2_ShortName("");
+    ui->SetCMap_ScoreT1(0);
+    ui->SetCMap_ScoreT2(0);
     //SetCurrentMap("None");
 }
-/*
-void Buttoms::Update_CurrentMatch(){
-    upd->UpdateNameT1(GetNameT1());
-    upd->UpdateNameT2(GetNameT2());
-    upd->UpdateShortNameT1(GetShortNameT1());
-    upd->UpdateShortNameT2(GetShortNameT2());
-    upd->UpdateCurrentMap(GetCurrentMap());
+
+void Buttons::Update_CurrentMatch(){
+    fwrite->SaveData("/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
+    fwrite->SaveData("/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
+    fwrite->SaveData("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
+    fwrite->SaveData("/CurrentMap/Team2_ShortName.txt", ui->GetT2_ShortName());
+    fwrite->SaveData("/CurrentMap/Map.txt", ui->GetCMap_Map());
+    fwrite->SaveData("/CurrentMap/Score_Team1.txt", QString::number(ui->GetCMap_ScoreT1()));
+    fwrite->SaveData("/CurrentMap/Score_Team2.txt", QString::number(ui->GetCMap_ScoreT2()));
 }
-*/

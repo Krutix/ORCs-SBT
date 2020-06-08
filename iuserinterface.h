@@ -8,23 +8,23 @@ class IUserInterface
 public:
     IUserInterface() {};
 
-    virtual QString GetCurrentMap() = 0;
-    virtual void SetCurrentMap(const QString&) = 0;
+    virtual QString GetCMap_Map() = 0;
+    virtual void SetCMap_Map(const QString&) = 0;
 
-    virtual QString GetNameT1 () = 0;
-    virtual void SetNameT1 (const QString&) = 0;
-    virtual QString GetNameT2 () = 0;
-    virtual void SetNameT2 (const QString&) = 0;
+    virtual QString GetT1_Name () = 0;
+    virtual void SetT1_Name (const QString&) = 0;
+    virtual QString GetT2_Name () = 0;
+    virtual void SetT2_Name (const QString&) = 0;
 
-    virtual QString GetShortNameT1();
-    virtual void SetShortNameT1(const QString&) = 0;
-    virtual QString GetShortNameT2() = 0;
-    virtual void SetShortNameT2(const QString&) = 0;
+    virtual QString GetT1_ShortName();
+    virtual void SetT1_ShortName(const QString&) = 0;
+    virtual QString GetT2_ShortName() = 0;
+    virtual void SetT2_ShortName(const QString&) = 0;
 
-    virtual int GetCurrentScoreT1() = 0;
-    virtual void SetCurrentScoreT1(const int&) = 0;
-    virtual int GetCurrentScoreT2() = 0;
-    virtual void SetCurrentScoreT2(const int&) = 0;
+    virtual int GetCMap_ScoreT1() = 0;
+    virtual void SetCMap_ScoreT1(const int&) = 0;
+    virtual int GetCMap_ScoreT2() = 0;
+    virtual void SetCMap_ScoreT2(const int&) = 0;
 };
 
 #endif // IUSERINTERFACE_H

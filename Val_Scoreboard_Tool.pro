@@ -17,15 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     buttons.cpp \
+    filewrite.cpp \
     main.cpp \
-    mainwindow.cpp \
-    updateextdata.cpp
+    mainwindow.cpp
 
 HEADERS += \
     buttons.h \
+    filewrite.h \
     iuserinterface.h \
-    mainwindow.h \
-    updateextdata.h
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
@@ -37,3 +37,6 @@ TRANSLATIONS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resurce.qrc

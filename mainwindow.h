@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "buttoms.h"
+#include "buttons.h"
 #include "iuserinterface.h"
 #include <QMainWindow>
 #include <memory>
@@ -19,27 +19,27 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    QString GetCurrentMap();
-    void SetCurrentMap(const QString&);
+    QString GetCMap_Map();
+    void SetCMap_Map(const QString&);
 
-    QString GetNameT1 ();
-    void SetNameT1 (const QString&);
-    QString GetNameT2 ();
-    void SetNameT2 (const QString&);
+    QString GetT1_Name ();
+    void SetT1_Name (const QString&);
+    QString GetT2_Name ();
+    void SetT2_Name (const QString&);
 
-    QString GetShortNameT1();
-    void SetShortNameT1(const QString&);
-    QString GetShortNameT2();
-    void SetShortNameT2(const QString&);
+    QString GetT1_ShortName();
+    void SetT1_ShortName(const QString&);
+    QString GetT2_ShortName();
+    void SetT2_ShortName(const QString&);
 
-    int GetCurrentScoreT1();
-    void SetCurrentScoreT1(const int&);
-    int GetCurrentScoreT2();
-    void SetCurrentScoreT2(const int&);
+    int GetCMap_ScoreT1();
+    void SetCMap_ScoreT1(const int&);
+    int GetCMap_ScoreT2();
+    void SetCMap_ScoreT2(const int&);
 
-    QObject* GetButtonSwap_Current();
-    QObject* GetButtonUpdate_Current();
-    QObject* GetButtonReset_Current();
+    QObject* GetObjButtonCMatch_Swap();
+    QObject* GetButtonCMatch_Update();
+    QObject* GetButtonCMatch_Reset();
 
 private:
     Ui::MainWindow *ui = nullptr;

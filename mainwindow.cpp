@@ -3,87 +3,78 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow())
-{
+    , ui(new Ui::MainWindow()){
     ui->setupUi(this);
-    //connect(ui->pushButton_swap, SIGNAL(clicked()),
-    //        buttoms, SLOT(Swap_CurrentTeams()));
-    //connect(ui->pushButton_reset, SIGNAL(clicked()),
-    //        buttoms, SLOT(ResetInput_CurrentMatch()));
-    //connect(ui->pushButton_update, SIGNAL(clicked()),
-    //        this, SLOT(buttoms->Update_CurrentMatch()));
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
 }
 
-
-QString MainWindow::GetNameT1 (){
+QString MainWindow::GetT1_Name (){
     return ui->lineEdit_t1_name->text();
 }
 
-void MainWindow::SetNameT1 (const QString& str){
+void MainWindow::SetT1_Name (const QString& str){
     ui->lineEdit_t1_name->setText(str);
 }
 
-QString MainWindow::GetNameT2 (){
+QString MainWindow::GetT2_Name (){
     return ui->lineEdit_t2_name->text();
 }
 
-void MainWindow::SetNameT2 (const QString& str){
+void MainWindow::SetT2_Name (const QString& str){
     ui->lineEdit_t2_name->setText(str);
 }
 
-QString MainWindow::GetShortNameT1(){
+QString MainWindow::GetT1_ShortName(){
     return ui->lineEdit_t1_sn->text();
 }
 
-void MainWindow::SetShortNameT1(const QString& str){
+void MainWindow::SetT1_ShortName(const QString& str){
     ui->lineEdit_t1_sn->setText(str);
 }
 
-QString MainWindow::GetShortNameT2(){
+QString MainWindow::GetT2_ShortName(){
     return ui->lineEdit_t2_sn->text();
 }
 
-void MainWindow::SetShortNameT2(const QString& str){
+void MainWindow::SetT2_ShortName(const QString& str){
     ui->lineEdit_t2_sn->setText(str);
 }
 
-QString MainWindow::GetCurrentMap(){
+QString MainWindow::GetCMap_Map(){
     return ui->comboBox_map->currentText();
 }
 
-void MainWindow::SetCurrentMap(const QString&){
+void MainWindow::SetCMap_Map(const QString&){
     //ui->comboBox_map->;
 }
 
-int MainWindow::GetCurrentScoreT1(){
+int MainWindow::GetCMap_ScoreT1(){
     return ui->spinBox_t1_score->value();
 }
 
-void MainWindow::SetCurrentScoreT1(const int& score){
+void MainWindow::SetCMap_ScoreT1(const int& score){
     ui->spinBox_t1_score->setValue(score);
 }
 
-int MainWindow::GetCurrentScoreT2(){
+int MainWindow::GetCMap_ScoreT2(){
     return ui->spinBox_t2_score->value();
 }
 
-void MainWindow::SetCurrentScoreT2(const int& score){
+void MainWindow::SetCMap_ScoreT2(const int& score){
     ui->spinBox_t2_score->setValue(score);
 }
 
-QObject* MainWindow::GetButtonSwap_Current(){
+QObject* MainWindow::GetObjButtonCMatch_Swap(){
     return ui->pushButton_swap;
 }
 
-QObject* MainWindow::GetButtonUpdate_Current(){
+QObject* MainWindow::GetButtonCMatch_Update(){
     return ui->pushButton_update;
 }
 
-QObject* MainWindow::GetButtonReset_Current(){
+QObject* MainWindow::GetButtonCMatch_Reset(){
     return ui->pushButton_reset;
 }
