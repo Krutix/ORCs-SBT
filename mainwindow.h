@@ -1,15 +1,17 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "updateextdata.h"
+#include "buttoms.h"
+#include "iuserinterface.h"
 #include <QMainWindow>
+#include <memory>
 #include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, public IUserInterface
 {
     Q_OBJECT
 
@@ -35,13 +37,11 @@ public:
     int GetCurrentScoreT2();
     void SetCurrentScoreT2(const int&);
 
-private slots:
-    void SwapTeams();
-    void ResetInput();
-    void UpdateCM();
+    QObject* GetButtonSwap_Current();
+    QObject* GetButtonUpdate_Current();
+    QObject* GetButtonReset_Current();
 
 private:
     Ui::MainWindow *ui = nullptr;
-    UpdateExtData *upd = nullptr;
 };
 #endif // MAINWINDOW_H
