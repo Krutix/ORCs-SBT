@@ -279,6 +279,26 @@
                   <string>None</string>
                  </property>
                 </item>
+                <item>
+                 <property name="text">
+                  <string>Split</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bind</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Haven</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Ascent</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>

@@ -126,5 +126,4 @@ void MainWindow::UpdateCM(){
     upd->UpdateShortNameT1(GetShortNameT1());
     upd->UpdateShortNameT2(GetShortNameT2());
     upd->UpdateCurrentMap(GetCurrentMap());
-
 }
