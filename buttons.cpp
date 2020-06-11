@@ -43,6 +43,8 @@ void Buttons::ResetInput_CurrentMatch(){
 }
 
 void Buttons::Update_CurrentMatch(){
+    if (!QDir(QApplication::applicationDirPath() + "/CurrentMap").exists())
+        QDir().mkdir(QApplication::applicationDirPath() + "/CurrentMap");
     fwrite->SaveData("/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
     fwrite->SaveData("/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
     fwrite->SaveData("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
