@@ -32,6 +32,8 @@ void Buttons::Swap_CurrentTeams(){
 }
 
 void Buttons::ResetInput_CurrentMatch(){
+    if (!ui->ActConfirmation("FUCK"))
+        return;
     qDebug() << "Reset Input";
     ui->SetT1_Name("");
     ui->SetT2_Name("");

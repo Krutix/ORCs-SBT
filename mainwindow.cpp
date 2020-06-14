@@ -67,6 +67,15 @@ void MainWindow::SetCMap_ScoreT2(const int& score){
     ui->spinBox_t2_score->setValue(score);
 }
 
+bool MainWindow::ActConfirmation(const QString& message){
+    int conf = QMessageBox::question(this, "Confirm action", message,
+                                     QMessageBox::Yes|QMessageBox::Cancel);
+    if (conf == QMessageBox::Yes) {
+       return true;
+    }
+    return false;
+}
+
 QObject* MainWindow::GetObjButtonCMatch_Swap(){
     return ui->pushButton_swap;
 }
