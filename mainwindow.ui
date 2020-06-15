@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
-    <height>498</height>
+    <width>914</width>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,2395 +57,3301 @@
        <attribute name="title">
         <string>Match</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_80">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_23">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_10">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_9">
-              <property name="spacing">
-               <number>6</number>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_name">
+              <property name="text">
+               <string>Team 1</string>
               </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name">
-                  <property name="text">
-                   <string>Team 1</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_name"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_sn">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_sn">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>120</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Short name</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_sn">
-                  <property name="maximumSize">
-                   <size>
-                    <width>120</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+             </widget>
             </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="label_t1_name_2">
-                <property name="text">
-                 <string>Team 1 Logo</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="lineEdit_t1_name_2">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QToolButton" name="toolButton">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="text">
-                 <string>...</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_side">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_side">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="baseSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Side</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_side_attack">
-                  <property name="baseSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>A</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_side_defence">
-                  <property name="baseSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>D</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_side_defence_2">
-                  <property name="baseSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>N</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_name"/>
             </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_2">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_4">
-                  <property name="text">
-                   <string>Player 1</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_2">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_2">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_3">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_2">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_44">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_15">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_21">
-                  <property name="text">
-                   <string>Player 2</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_35"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_13">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_13">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_13">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_24">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_19">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_45">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_23">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_36">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_46">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_16">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_22">
-                  <property name="text">
-                   <string>Player 3</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_37"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_34">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_14">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_14">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_35">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_20">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_47">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_24">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_38">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_48">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_17">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_23">
-                  <property name="text">
-                   <string>Player 4</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_39"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_36">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_15">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_15">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_37">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_21">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_49">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_25">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_40">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_50">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_18">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_24">
-                  <property name="text">
-                   <string>Player 5</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_41"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_38">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_16">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_16">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_39">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_22">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_51">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_26">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_42">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_t1_sn">
+              <property name="maximumSize">
                <size>
-                <width>20</width>
-                <height>40</height>
+                <width>16777215</width>
+                <height>16777215</height>
                </size>
               </property>
-             </spacer>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_t1_sn">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Short name</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_general">
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_name_2">
+              <property name="text">
+               <string>Team 1 Logo</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_t1_name_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QToolButton" name="toolButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="label_side">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Side</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QRadioButton" name="radioButton_side_attack">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>A</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_side_defence">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>D</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_side_defence_2">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>N</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_35">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_t1_name_39">
+              <property name="text">
+               <string>Player 2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_71">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_23">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_72">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_73">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_t1_hero_p1_13">
+              <property name="text">
+               <string>Hero</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_13">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_31">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_32">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_t1_name_40">
+              <property name="text">
+               <string>Player 3</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_41">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_t1_social_p1_19">
+              <property name="text">
+               <string>Socials</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_74">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_33">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_34">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_42">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_t1_name_41">
+              <property name="text">
+               <string>Player 5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_43">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_t1_name_42">
+              <property name="text">
+               <string>Player 4</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_44">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_name_21">
+              <property name="text">
+               <string>Player 1</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_36">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_75">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_76">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_77">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_78">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_general">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_button">
             <property name="spacing">
              <number>6</number>
             </property>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_button">
-              <property name="spacing">
-               <number>6</number>
+             <widget class="QPushButton" name="pushButton_swap">
+              <property name="text">
+               <string>Swap</string>
               </property>
-              <item>
-               <widget class="QPushButton" name="pushButton_swap">
-                <property name="text">
-                 <string>Swap</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_update">
-                <property name="text">
-                 <string>Update</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_reset">
-                <property name="text">
-                 <string>Reset</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_map">
-              <property name="spacing">
-               <number>6</number>
+             <widget class="QPushButton" name="pushButton_update">
+              <property name="text">
+               <string>Update</string>
               </property>
-              <item>
-               <widget class="QLabel" name="label_map">
-                <property name="text">
-                 <string>Map</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox_map">
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Split</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Bind</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Haven</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Ascent</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
+             </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_score">
-              <property name="spacing">
-               <number>6</number>
+             <widget class="QPushButton" name="pushButton_reset">
+              <property name="text">
+               <string>Reset</string>
               </property>
-              <item>
-               <widget class="QLabel" name="label_score">
-                <property name="text">
-                 <string>Score</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_score">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QSpinBox" name="spinBox_t1_score"/>
-                </item>
-                <item>
-                 <widget class="QSpinBox" name="spinBox_t2_score">
-                  <property name="layoutDirection">
-                   <enum>Qt::RightToLeft</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_81">
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>Bo</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="spinBox">
-                <property name="layoutDirection">
-                 <enum>Qt::LeftToRight</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_7">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
+             </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_9">
+           <layout class="QVBoxLayout" name="verticalLayout_map">
+            <property name="spacing">
+             <number>6</number>
+            </property>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_10">
-              <property name="spacing">
-               <number>6</number>
+             <widget class="QLabel" name="label_map">
+              <property name="text">
+               <string>Map</string>
               </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_team2_name">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t2_name">
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>Team 2</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t2_name"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t2_shortName">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t2_sn">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>120</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>Short name</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t2_sn">
-                  <property name="maximumSize">
-                   <size>
-                    <width>120</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+             </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_11">
-              <property name="spacing">
-               <number>6</number>
-              </property>
+             <widget class="QComboBox" name="comboBox_map">
               <item>
-               <widget class="QLabel" name="label_t1_name_8">
-                <property name="text">
-                 <string>Team 2 Logo</string>
-                </property>
-               </widget>
+               <property name="text">
+                <string>None</string>
+               </property>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_t1_name_6">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-               </widget>
+               <property name="text">
+                <string>Split</string>
+               </property>
               </item>
               <item>
-               <widget class="QToolButton" name="toolButton_4">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="text">
-                 <string>...</string>
-                </property>
-               </widget>
+               <property name="text">
+                <string>Bind</string>
+               </property>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_8">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label">
-                  <property name="text">
-                   <string>Murual info</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit"/>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_42">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_14">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_20">
-                  <property name="text">
-                   <string>Player 1</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_33"/>
-                </item>
-               </layout>
+               <property name="text">
+                <string>Haven</string>
+               </property>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_11">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_12">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_12">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
+               <property name="text">
+                <string>Ascent</string>
+               </property>
               </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_12">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_18">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_43">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_22">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_34">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_72">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_29">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_35">
-                  <property name="text">
-                   <string>Player 2</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_63"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_60">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_27">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_27">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_61">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_33">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_73">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_37">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_64">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_74">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_30">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_36">
-                  <property name="text">
-                   <string>Player 3</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_65"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_62">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_28">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_28">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_63">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_34">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_75">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_38">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_66">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_76">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_31">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_37">
-                  <property name="text">
-                   <string>Player 4</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_67"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_64">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_29">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_29">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_65">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_35">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_77">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_39">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_68">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_78">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_t1_name_32">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_name_38">
-                  <property name="text">
-                   <string>Player 5</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_t1_player1_69"/>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_66">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_hero_p1_30">
-                  <property name="text">
-                   <string>Hero</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_hero_p1_30">
-                  <item>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Brimstone</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_67">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_t1_social_p1_36">
-                  <property name="text">
-                   <string>Socials</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_79">
-                  <property name="spacing">
-                   <number>6</number>
-                  </property>
-                  <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
-                  </property>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_socials_p1_40">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::RightToLeft</enum>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>VK</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Twitter</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_t1_player1_70">
-                    <property name="text">
-                     <string>/</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_5">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
+             </widget>
             </item>
            </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_score">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_score">
+              <property name="text">
+               <string>Score</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_score">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QSpinBox" name="spinBox_t1_score"/>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBox_t2_score">
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_81">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Best of</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_name"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_t2_sn">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Short name</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t2_name">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Team 2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_t2_sn">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_name_8">
+              <property name="text">
+               <string>Team 2 Logo</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_t1_name_6">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QToolButton" name="toolButton_4">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Murual info</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_33">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_t1_name_35">
+              <property name="text">
+               <string>Player 2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_63">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_22">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_65">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_67">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_t1_hero_p1_12">
+              <property name="text">
+               <string>Hero</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_12">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_29">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_28">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_t1_name_36">
+              <property name="text">
+               <string>Player 3</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_39">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_t1_social_p1_18">
+              <property name="text">
+               <string>Socials</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_69">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_27">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QComboBox" name="comboBox_hero_p1_30">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brimstone</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_38">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_t1_name_38">
+              <property name="text">
+               <string>Player 5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_40">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_t1_name_37">
+              <property name="text">
+               <string>Player 4</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QComboBox" name="comboBox_socials_p1_37">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>None</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Twitter</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_name_20">
+              <property name="text">
+               <string>Player 1</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_34">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_64">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_66">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_68">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="3">
+             <widget class="QLineEdit" name="lineEdit_t1_player1_70">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_PickBan">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="mouseTracking">
         <bool>false</bool>
        </property>
        <attribute name="title">
         <string>Pick/Ban</string>
        </attribute>
-       <widget class="QWidget" name="layoutWidget_2">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>20</y>
-          <width>84</width>
-          <height>221</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <property name="spacing">
-          <number>6</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_map_1">
-           <property name="text">
-            <string>Map_1</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_map_1">
-           <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_map_1">
             <property name="text">
-             <string>None</string>
+             <string>Map_1</string>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Split</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Bind</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Haven</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Ascent</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <property name="spacing">
-            <number>6</number>
-           </property>
-           <item>
-            <widget class="QLabel" name="label_mapPick_1">
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_1">
+            <item>
              <property name="text">
-              <string>Pick/Ban by</string>
+              <string>None</string>
              </property>
-            </widget>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
-             <property name="spacing">
-              <number>6</number>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
              </property>
-             <item>
-              <widget class="QRadioButton" name="radioButton">
-               <property name="text">
-                <string>P</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QRadioButton" name="radioButton_2">
-               <property name="text">
-                <string>B</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBox_mapPick_1">
-             <item>
-              <property name="text">
-               <string>None</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Team1</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Team2</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Desider</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="checkBox">
-           <property name="text">
-            <string>Complated?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_mapWinner_1">
-           <property name="text">
-            <string>Winner</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_mapWinner_1">
-           <item>
-            <property name="text">
-             <string>None</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Team1</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Team2</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_6">
-           <property name="spacing">
-            <number>6</number>
-           </property>
-           <item>
-            <widget class="QSpinBox" name="spinBox_mapScoreT1_1"/>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="spinBox_mapScoreT2_1">
-             <property name="layoutDirection">
-              <enum>Qt::RightToLeft</enum>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
              </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>150</y>
-          <width>80</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Plus map</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_update_3">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>81</y>
-          <width>80</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Update</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_swap_3">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>60</y>
-          <width>80</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Swap</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_delete_map">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>170</y>
-          <width>82</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Delete map</string>
-        </property>
-       </widget>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_1">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_2">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_1">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_1">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_1">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_1"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_1">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_map_2">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_2">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_2">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_3">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_4">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_2">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_2">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_2">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_2"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_2">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_map_3">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_3">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_3">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_5">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_6">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_3">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_3">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_3">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_3"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_3">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_map_4">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_4">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_4">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_7">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_8">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_4">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_4">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_4">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_4"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_4">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_map_5">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_5">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_5">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_5">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_9">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_10">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_5">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_5">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_5">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_5"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_5">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_map_6">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_6">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_6">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_11">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_12">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_6">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_6">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_6">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_6"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_6">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_map_7">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_7">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_7">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_7">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_13">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_14">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_7">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_7">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_7">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_7"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_7">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_map_8">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_8">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_8">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_8">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_15">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_16">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_8">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_8">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_8">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_8"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_8">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_map_9">
+            <property name="text">
+             <string>Map_1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_map_9">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Split</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bind</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ascent</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapPick_9">
+            <property name="text">
+             <string>Pick/Ban by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_9">
+            <property name="text">
+             <string>Complated?</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioButton_17">
+              <property name="text">
+               <string>P</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_18">
+              <property name="text">
+               <string>B</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapPick_9">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desider</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_mapWinner_9">
+            <property name="text">
+             <string>Winner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_mapWinner_9">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Team2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT1_9"/>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_mapScoreT2_9">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QPushButton" name="pushButton_update_3">
+            <property name="text">
+             <string>Update</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_reset_2">
+            <property name="text">
+             <string>Reset</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_Cast">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>Cast</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_update_4">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>10</y>
-          <width>80</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Update</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_swap_4">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>9</y>
-          <width>80</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Swap</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_5">
-        <property name="geometry">
-         <rect>
-          <x>307</x>
-          <y>170</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_3">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>238</x>
-          <y>170</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_24">
         <item>
-         <property name="text">
-          <string>None</string>
-         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="9" column="4">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Utility 3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_16">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Caster 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_5"/>
+          </item>
+          <item row="0" column="5">
+           <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <item>
+             <widget class="QPushButton" name="pushButton_update_4">
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_reset_3">
+              <property name="text">
+               <string>Reset</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_12">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="2">
+           <spacer name="verticalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="5" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_9">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_20">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="5">
+           <widget class="QLineEdit" name="lineEdit_15"/>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="lineEdit_11"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_13">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_t1_social_p1_5">
+            <property name="text">
+             <string>Socials</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Utility 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_14">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>Utility 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_7">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_9">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="7" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_16">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lineEdit_10"/>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_17">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_8">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEdit_6"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_5">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="9" column="3">
+           <widget class="QLineEdit" name="lineEdit_14"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Caster 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Utility 4</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_14">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Observer 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="5">
+           <widget class="QLineEdit" name="lineEdit_18"/>
+          </item>
+          <item row="2" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_11">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_19">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="8" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_18">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Analist 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Producer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Host</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_17">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>Analist 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_10">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_8">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_6">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_6">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_15">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_13">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="6" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_18">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QLineEdit" name="lineEdit_16"/>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="lineEdit_12"/>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEdit_7"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_15">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QLineEdit" name="lineEdit_13"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Observer 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="3">
+           <widget class="QLineEdit" name="lineEdit_17"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_5">
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QLineEdit" name="lineEdit_19"/>
+          </item>
+          <item row="11" column="3">
+           <widget class="QLineEdit" name="lineEdit_20"/>
+          </item>
+          <item row="11" column="5">
+           <widget class="QLineEdit" name="lineEdit_21"/>
+          </item>
+          <item row="10" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Utility 5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="4">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Utility 6</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="4">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Utility 9</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>Utility 8</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>Utility 7</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_t1_social_p1_4">
-        <property name="geometry">
-         <rect>
-          <x>187</x>
-          <y>170</y>
-          <width>41</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Socials</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_4">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>418</x>
-          <y>170</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_6">
-        <property name="geometry">
-         <rect>
-          <x>487</x>
-          <y>170</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_7">
-        <property name="geometry">
-         <rect>
-          <x>499</x>
-          <y>80</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_5">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>80</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_t1_social_p1_5">
-        <property name="geometry">
-         <rect>
-          <x>199</x>
-          <y>80</y>
-          <width>41</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Socials</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_8">
-        <property name="geometry">
-         <rect>
-          <x>319</x>
-          <y>80</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_6">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>80</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_t1_social_p1_6">
-        <property name="geometry">
-         <rect>
-          <x>197</x>
-          <y>199</y>
-          <width>41</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Socials</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_9">
-        <property name="geometry">
-         <rect>
-          <x>497</x>
-          <y>199</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_7">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>428</x>
-          <y>199</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>51</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Caster 2</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_8">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>248</x>
-          <y>199</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_10">
-        <property name="geometry">
-         <rect>
-          <x>317</x>
-          <y>199</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
-        <property name="geometry">
-         <rect>
-          <x>67</x>
-          <y>200</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_t1_social_p1_7">
-        <property name="geometry">
-         <rect>
-          <x>199</x>
-          <y>110</y>
-          <width>41</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Socials</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_11">
-        <property name="geometry">
-         <rect>
-          <x>499</x>
-          <y>110</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_9">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>110</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>12</x>
-          <y>111</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Observer 1</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_10">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>110</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_12">
-        <property name="geometry">
-         <rect>
-          <x>319</x>
-          <y>110</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
-        <property name="geometry">
-         <rect>
-          <x>69</x>
-          <y>111</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>13</x>
-          <y>131</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Observer 2</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>131</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_13">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>130</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_11">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>251</x>
-          <y>130</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_t1_social_p1_8">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>130</y>
-          <width>41</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Socials</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_socials_p1_12">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>431</x>
-          <y>130</y>
-          <width>63</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>VK</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Twitter</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_t1_player1_14">
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>130</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>170</y>
-          <width>51</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Caster 1</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_6">
-        <property name="geometry">
-         <rect>
-          <x>67</x>
-          <y>170</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>41</x>
-          <y>81</y>
-          <width>22</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Host</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_5">
-        <property name="geometry">
-         <rect>
-          <x>69</x>
-          <y>81</y>
-          <width>108</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -2456,7 +3362,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>774</width>
+     <width>914</width>
      <height>20</height>
     </rect>
    </property>
