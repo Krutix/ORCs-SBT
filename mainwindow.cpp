@@ -76,6 +76,10 @@ bool MainWindow::ActConfirmation(const QString& message){
     return false;
 }
 
+void MainWindow::SetStatus(const QString& status){
+    ui->statusbar->showMessage(status);
+}
+
 QObject* MainWindow::GetObjButtonCMatch_Swap(){
     return ui->pushButton_swap;
 }

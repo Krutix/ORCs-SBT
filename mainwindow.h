@@ -40,6 +40,8 @@ public:
 
     bool ActConfirmation(const QString&) override;
 
+    void SetStatus(const QString &) override;
+
     QObject* GetObjButtonCMatch_Swap();
     QObject* GetButtonCMatch_Update();
     QObject* GetButtonCMatch_Reset();

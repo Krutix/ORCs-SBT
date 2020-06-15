@@ -29,6 +29,7 @@ void Buttons::Swap_CurrentTeams(){
     int tbhscore = ui->GetCMap_ScoreT1();
     ui->SetCMap_ScoreT1(ui->GetCMap_ScoreT2());
     ui->SetCMap_ScoreT2(tbhscore);
+    ui->SetStatus("Team swaped");
 }
 
 void Buttons::ResetInput_CurrentMatch(){
@@ -42,6 +43,7 @@ void Buttons::ResetInput_CurrentMatch(){
     ui->SetCMap_ScoreT1(0);
     ui->SetCMap_ScoreT2(0);
     //SetCurrentMap("None");
+    ui->SetStatus("Match fields reset");
 }
 
 void Buttons::Update_CurrentMatch(){
@@ -54,4 +56,5 @@ void Buttons::Update_CurrentMatch(){
     fwrite->SaveData("/CurrentMap/Map.txt", ui->GetCMap_Map());
     fwrite->SaveData("/CurrentMap/Score_Team1.txt", QString::number(ui->GetCMap_ScoreT1()));
     fwrite->SaveData("/CurrentMap/Score_Team2.txt", QString::number(ui->GetCMap_ScoreT2()));
+    ui->SetStatus("Match data update");
 }

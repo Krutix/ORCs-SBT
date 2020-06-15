@@ -27,6 +27,8 @@ public:
     virtual void SetCMap_ScoreT2(const int&) = 0;
 
     virtual bool ActConfirmation(const QString&) = 0;
+
+    virtual void SetStatus(const QString&) = 0;
 };
 
 #endif // IUSERINTERFACE_H
