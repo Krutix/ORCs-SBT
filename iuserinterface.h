@@ -2,6 +2,7 @@
 #define IUSERINTERFACE_H
 
 #include <QString>
+#include <QVector>
 
 class IUserInterface
 {
@@ -25,6 +26,9 @@ public:
     virtual void SetCMap_ScoreT1(const int&) = 0;
     virtual int GetCMap_ScoreT2() = 0;
     virtual void SetCMap_ScoreT2(const int&) = 0;
+
+    virtual QVector<QString> GetUtilityList() = 0;
+    virtual void SetUtilityList(const QVector<QString>&) = 0;
 
     virtual bool ActConfirmation(const QString& name, const QString& message) = 0;
 

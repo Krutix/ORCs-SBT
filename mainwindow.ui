@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>914</width>
-    <height>530</height>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <property name="usesScrollButtons">
        <bool>true</bool>
@@ -79,7 +79,7 @@
              <widget class="QLineEdit" name="lineEdit_t1_sn">
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
+                <width>150</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -585,21 +585,21 @@
              <number>6</number>
             </property>
             <item>
-             <widget class="QPushButton" name="pushButton_swap">
+             <widget class="QPushButton" name="pushButton_swap_match">
               <property name="text">
                <string>Swap</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_update">
+             <widget class="QPushButton" name="pushButton_update_match">
               <property name="text">
                <string>Update</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_reset">
+             <widget class="QPushButton" name="pushButton_reset_match">
               <property name="text">
                <string>Reset</string>
               </property>
@@ -760,7 +760,7 @@
              <widget class="QLineEdit" name="lineEdit_t2_sn">
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
+                <width>150</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2616,7 +2616,7 @@
       </widget>
       <widget class="QWidget" name="tab_Cast">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <attribute name="title">
         <string>Cast</string>
@@ -2625,7 +2625,7 @@
         <item>
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="9" column="4">
-           <widget class="QLabel" name="label_15">
+           <widget class="QLabel" name="label_utility3">
             <property name="text">
              <string>Utility 3</string>
             </property>
@@ -2657,26 +2657,30 @@
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="label_6">
+           <widget class="QLabel" name="label_caster1">
             <property name="text">
              <string>Caster 1</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_5"/>
+           <widget class="QLineEdit" name="lineEdit_producer_nick">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="0" column="5">
            <layout class="QHBoxLayout" name="horizontalLayout_23">
             <item>
-             <widget class="QPushButton" name="pushButton_update_4">
+             <widget class="QPushButton" name="pushButton_update_cast">
               <property name="text">
                <string>Update</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_reset_3">
+             <widget class="QPushButton" name="pushButton_reset_cast">
               <property name="text">
                <string>Reset</string>
               </property>
@@ -2686,6 +2690,9 @@
           </item>
           <item row="2" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2706,6 +2713,9 @@
           </item>
           <item row="5" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2713,19 +2723,29 @@
           </item>
           <item row="8" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_20">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
            </widget>
           </item>
           <item row="9" column="5">
-           <widget class="QLineEdit" name="lineEdit_15"/>
+           <widget class="QLineEdit" name="lineEdit_utility3"/>
           </item>
           <item row="6" column="1">
-           <widget class="QLineEdit" name="lineEdit_11"/>
+           <widget class="QLineEdit" name="lineEdit_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="3" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_13">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2739,7 +2759,7 @@
            </widget>
           </item>
           <item row="9" column="2">
-           <widget class="QLabel" name="label_14">
+           <widget class="QLabel" name="label_utility2">
             <property name="text">
              <string>Utility 2</string>
             </property>
@@ -2771,7 +2791,7 @@
            </widget>
           </item>
           <item row="9" column="0">
-           <widget class="QLabel" name="label_13">
+           <widget class="QLabel" name="label_utility1">
             <property name="text">
              <string>Utility 1</string>
             </property>
@@ -2779,6 +2799,9 @@
           </item>
           <item row="1" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2786,6 +2809,9 @@
           </item>
           <item row="3" column="1">
            <widget class="QLineEdit" name="lineEdit_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -2818,16 +2844,26 @@
           </item>
           <item row="7" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_16">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
            </widget>
           </item>
           <item row="7" column="1">
-           <widget class="QLineEdit" name="lineEdit_10"/>
+           <widget class="QLineEdit" name="lineEdit_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="6" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_17">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2860,13 +2896,20 @@
           </item>
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineEdit_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="lineEdit_6"/>
+           <widget class="QLineEdit" name="lineEdit_6">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="1" column="2">
            <widget class="QComboBox" name="comboBox_socials_p1_5">
@@ -2919,17 +2962,17 @@
            </widget>
           </item>
           <item row="9" column="3">
-           <widget class="QLineEdit" name="lineEdit_14"/>
+           <widget class="QLineEdit" name="lineEdit_utility2"/>
           </item>
           <item row="5" column="0">
-           <widget class="QLabel" name="label_7">
+           <widget class="QLabel" name="label_caster2">
             <property name="text">
              <string>Caster 2</string>
             </property>
            </widget>
           </item>
           <item row="10" column="0">
-           <widget class="QLabel" name="label_16">
+           <widget class="QLabel" name="label_utility4">
             <property name="text">
              <string>Utility 4</string>
             </property>
@@ -2962,23 +3005,29 @@
           </item>
           <item row="3" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_14">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_8">
+           <widget class="QLabel" name="label_observer1">
             <property name="text">
              <string>Observer 1</string>
             </property>
            </widget>
           </item>
           <item row="10" column="5">
-           <widget class="QLineEdit" name="lineEdit_18"/>
+           <widget class="QLineEdit" name="lineEdit_utility6"/>
           </item>
           <item row="2" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -2986,6 +3035,9 @@
           </item>
           <item row="8" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_19">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -3042,21 +3094,21 @@
            </widget>
           </item>
           <item row="7" column="0">
-           <widget class="QLabel" name="label_10">
+           <widget class="QLabel" name="label_analist1">
             <property name="text">
              <string>Analist 1</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_5">
+           <widget class="QLabel" name="label_producer">
             <property name="text">
              <string>Producer</string>
             </property>
            </widget>
           </item>
           <item row="6" column="0">
-           <widget class="QLabel" name="label_11">
+           <widget class="QLabel" name="label_host">
             <property name="text">
              <string>Host</string>
             </property>
@@ -3113,7 +3165,7 @@
            </widget>
           </item>
           <item row="8" column="0">
-           <widget class="QLabel" name="label_12">
+           <widget class="QLabel" name="label_analist2">
             <property name="text">
              <string>Analist 2</string>
             </property>
@@ -3121,6 +3173,9 @@
           </item>
           <item row="5" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -3153,6 +3208,9 @@
           </item>
           <item row="1" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -3185,6 +3243,9 @@
           </item>
           <item row="4" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_6">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -3192,6 +3253,9 @@
           </item>
           <item row="7" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_15">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
@@ -3224,19 +3288,30 @@
           </item>
           <item row="6" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_18">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
            </widget>
           </item>
           <item row="10" column="1">
-           <widget class="QLineEdit" name="lineEdit_16"/>
+           <widget class="QLineEdit" name="lineEdit_utility4"/>
           </item>
           <item row="8" column="1">
-           <widget class="QLineEdit" name="lineEdit_12"/>
+           <widget class="QLineEdit" name="lineEdit_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="lineEdit_7"/>
+           <widget class="QLineEdit" name="lineEdit_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="5" column="2">
            <widget class="QComboBox" name="comboBox_socials_p1_8">
@@ -3289,64 +3364,67 @@
            </widget>
           </item>
           <item row="9" column="1">
-           <widget class="QLineEdit" name="lineEdit_13"/>
+           <widget class="QLineEdit" name="lineEdit_utility1"/>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_9">
+           <widget class="QLabel" name="label_observer2">
             <property name="text">
              <string>Observer 2</string>
             </property>
            </widget>
           </item>
           <item row="10" column="3">
-           <widget class="QLineEdit" name="lineEdit_17"/>
+           <widget class="QLineEdit" name="lineEdit_utility5"/>
           </item>
           <item row="4" column="3">
            <widget class="QLineEdit" name="lineEdit_t1_player1_5">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>/</string>
             </property>
            </widget>
           </item>
           <item row="11" column="1">
-           <widget class="QLineEdit" name="lineEdit_19"/>
+           <widget class="QLineEdit" name="lineEdit_utility7"/>
           </item>
           <item row="11" column="3">
-           <widget class="QLineEdit" name="lineEdit_20"/>
+           <widget class="QLineEdit" name="lineEdit_utility8"/>
           </item>
           <item row="11" column="5">
-           <widget class="QLineEdit" name="lineEdit_21"/>
+           <widget class="QLineEdit" name="lineEdit_utility9"/>
           </item>
           <item row="10" column="2">
-           <widget class="QLabel" name="label_17">
+           <widget class="QLabel" name="label_utility5">
             <property name="text">
              <string>Utility 5</string>
             </property>
            </widget>
           </item>
           <item row="10" column="4">
-           <widget class="QLabel" name="label_18">
+           <widget class="QLabel" name="label_utility6">
             <property name="text">
              <string>Utility 6</string>
             </property>
            </widget>
           </item>
           <item row="11" column="4">
-           <widget class="QLabel" name="label_19">
+           <widget class="QLabel" name="label_utility9">
             <property name="text">
              <string>Utility 9</string>
             </property>
            </widget>
           </item>
           <item row="11" column="2">
-           <widget class="QLabel" name="label_20">
+           <widget class="QLabel" name="label_utility8">
             <property name="text">
              <string>Utility 8</string>
             </property>
            </widget>
           </item>
           <item row="11" column="0">
-           <widget class="QLabel" name="label_21">
+           <widget class="QLabel" name="label_utility7">
             <property name="text">
              <string>Utility 7</string>
             </property>

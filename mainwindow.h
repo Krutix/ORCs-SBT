@@ -5,8 +5,8 @@
 #include "iuserinterface.h"
 #include <QMainWindow>
 #include <QMessageBox>
-#include <memory>
 #include <QDebug>
+#include <memory>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,9 +40,14 @@ public:
 
     bool ActConfirmation(const QString& name, const QString& message) override;
 
+    QVector<QString> GetUtilityList() override;
+    void SetUtilityList(const QVector<QString>&) override;
+
     void SetStatus(const QString&) override;
 
-    QObject* GetObjButtonCMatch_Swap();
+    QObject* GetButtonCast_Update();
+    QObject* GetButtonCast_Reset();
+    QObject* GetButtonCMatch_Swap();
     QObject* GetButtonCMatch_Update();
     QObject* GetButtonCMatch_Reset();
 
