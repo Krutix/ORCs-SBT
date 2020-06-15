@@ -67,8 +67,8 @@ void MainWindow::SetCMap_ScoreT2(const int& score){
     ui->spinBox_t2_score->setValue(score);
 }
 
-bool MainWindow::ActConfirmation(const QString& message){
-    int conf = QMessageBox::question(this, "Confirm action", message,
+bool MainWindow::ActConfirmation(const QString& name, const QString& message){
+    int conf = QMessageBox::question(this, name, message,
                                      QMessageBox::Yes|QMessageBox::Cancel);
     if (conf == QMessageBox::Yes) {
        return true;

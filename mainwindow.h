@@ -38,9 +38,9 @@ public:
     int GetCMap_ScoreT2() override;
     void SetCMap_ScoreT2(const int&) override;
 
-    bool ActConfirmation(const QString&) override;
+    bool ActConfirmation(const QString& name, const QString& message) override;
 
-    void SetStatus(const QString &) override;
+    void SetStatus(const QString&) override;
 
     QObject* GetObjButtonCMatch_Swap();
     QObject* GetButtonCMatch_Update();
