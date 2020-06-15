@@ -3,6 +3,7 @@
 #include "buttons.h"
 
 #include <QObject>
+#include <memory>
 #include <QDebug>
 
 int main(int argc, char *argv[])
@@ -10,6 +11,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     MainWindow* MWindow = new MainWindow();
+
     Buttons *buttons = new Buttons(MWindow);
     QObject::connect(MWindow->GetObjButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));

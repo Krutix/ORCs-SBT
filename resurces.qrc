@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>SMOrc_icon.ico</file>
+    </qresource>
+</RCC>
