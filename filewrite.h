@@ -13,7 +13,7 @@ public:
     FileWrite(const QString&);
 
     bool SaveData(const QString&, const QString&);
-
+    bool ReplaceFile(const QString& dir, const QString& str);
 private:
     QString dir = "";
 };

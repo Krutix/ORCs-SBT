@@ -48,6 +48,7 @@ void Buttons::Reset_CurrentMatch(){
 }
 
 void Buttons::Update_CurrentMatch(){
+
     fwrite->SaveData("/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
     fwrite->SaveData("/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
     fwrite->SaveData("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
@@ -56,6 +57,17 @@ void Buttons::Update_CurrentMatch(){
     fwrite->SaveData("/CurrentMap/Score_Team1.txt", QString::number(ui->GetCMap_ScoreT1()));
     fwrite->SaveData("/CurrentMap/Score_Team2.txt", QString::number(ui->GetCMap_ScoreT2()));
     fwrite->SaveData("/CurrentMap/MutualInfo.txt", ui->GetMutualInfo());
+    QString side = ui->GetSideT1();
+    if (side[0] == "A"){
+        fwrite->ReplaceFile(":/side_img/attack_red.png", "/CurrentMap/sideT1.png");
+        fwrite->ReplaceFile(":/side_img/defend_white.png", "/CurrentMap/sideT2.png");
+    } else if (side[0] == "D"){
+        fwrite->ReplaceFile(":/side_img/defend_red.png", "/CurrentMap/sideT1.png");
+        fwrite->ReplaceFile(":/side_img/attack_white.png", "/CurrentMap/sideT2.png");
+    } else if (side[0] == "N"){
+        fwrite->ReplaceFile(":/side_img/attack_red.png", "/CurrentMap/sideT1.png");
+        fwrite->ReplaceFile(":/side_img/attack_white.png", "/CurrentMap/sideT2.png");
+    }
     ui->SetStatus("Match data update");
 }
 

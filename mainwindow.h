@@ -46,6 +46,9 @@ public:
     QString GetMutualInfo() override;
     void SetMutualInfo(const QString&) override;
 
+    QString GetSideT1() override; //A - attack | D - defence | N - none
+    //void SetSideT1() override;
+
     void SetStatus(const QString&) override;
 
     QObject* GetButtonCast_Update();

@@ -14,7 +14,6 @@ QMAKE_TARGET_PRODUCT = ORCs Scoreboard Tool
 QMAKE_TARGET_COPYRIGHT = Andrey Krutikhin
 QMAKE_TARGET_DESCRIPTION = Scoreboard tool for valorant
 RC_ICONS = SMOrc_icon.ico
-#RC_ICON = :/icon/SMOrc_icon.ico
 
 SOURCES += \
     buttons.cpp \

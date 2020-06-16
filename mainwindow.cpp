@@ -99,7 +99,20 @@ QVector<QString> MainWindow::GetUtilityList(){
     return utilitys;
 }
 
-void MainWindow::SetUtilityList(const QVector<QString>& utilitys){
+
+QString MainWindow::GetSideT1(){ // TODO Groupe radio buttons
+    if (ui->radioButton_side_attack->isChecked())
+        return "Attack";
+    if (ui->radioButton_side_defence->isChecked())
+        return "Defence";
+    if (ui->radioButton_side_none->isChecked())
+        return "None";
+    return "";
+}
+
+//void MainWindow::SetSideT1(){}
+
+void MainWindow::SetUtilityList(const QVector<QString>& utilitys){ // TODO fuck 'if'
     if (utilitys.size() >= 1)
         ui->lineEdit_utility1->setText(utilitys[0]);
     if (utilitys.size() >= 2)

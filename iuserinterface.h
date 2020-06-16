@@ -30,6 +30,9 @@ public:
     virtual QString GetMutualInfo() = 0;
     virtual void SetMutualInfo(const QString&) = 0;
 
+    virtual QString GetSideT1() = 0; //A - attack | D - defence | N - none
+    //virtual void SetSideT1() = 0;
+
     virtual QVector<QString> GetUtilityList() = 0;
     virtual void SetUtilityList(const QVector<QString>&) = 0;
 

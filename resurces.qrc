@@ -2,4 +2,10 @@
     <qresource prefix="/icon">
         <file>SMOrc_icon.ico</file>
     </qresource>
+    <qresource prefix="/side_img">
+        <file>attack_red.png</file>
+        <file>attack_white.png</file>
+        <file>defend_red.png</file>
+        <file>defend_white.png</file>
+    </qresource>
 </RCC>
