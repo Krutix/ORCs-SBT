@@ -7,12 +7,15 @@
 #include <windows.h>
 
 void StartFoldersCheck();
+void ResurcesDefault();
 void showInGraphicalShell(QWidget *parent, const QString &pathIn);
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     StartFoldersCheck();
+    ResurcesDefault();
 
     MainWindow* MWindow = new MainWindow();
     Buttons *buttons = new Buttons(MWindow);
@@ -36,5 +39,22 @@ void StartFoldersCheck(){
         QDir().mkdir(QApplication::applicationDirPath() + "/CurrentMap");
     if (!QDir(QApplication::applicationDirPath() + "/Info").exists())
         QDir().mkdir(QApplication::applicationDirPath() + "/Info");
+    if (!QDir(QApplication::applicationDirPath() + "/Resurces").exists())
+        QDir().mkdir(QApplication::applicationDirPath() + "/Resurces");
+}
+
+void ResurcesDefault(){
+    QFile::copy(":/side_img/attack_red.png",
+                QApplication::applicationDirPath() + "/Resurces/side_attack_t1.png");
+    QFile::copy(":/side_img/attack_white.png",
+                QApplication::applicationDirPath() + "/Resurces/side_attack_t2.png");
+    QFile::copy(":/side_img/defend_red.png",
+                QApplication::applicationDirPath() + "/Resurces/side_defense_t1.png");
+    QFile::copy(":/side_img/defend_white.png",
+                QApplication::applicationDirPath() + "/Resurces/side_defense_t2.png");
+    QFile::copy(":/side_img/attack_red.png",
+                QApplication::applicationDirPath() + "/Resurces/side_none_t1.png");
+    QFile::copy(":/side_img/attack_white.png",
+                QApplication::applicationDirPath() + "/Resurces/side_none_t2.png");
 }
 

@@ -67,6 +67,8 @@ public:
 private slots:
     void on_toolButton_t1_logo_clicked();
 
+    void on_toolButton_4_clicked();
+
 private:
     Ui::MainWindow *ui = nullptr;
 };

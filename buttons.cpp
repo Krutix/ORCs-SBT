@@ -54,19 +54,51 @@ void Buttons::Update_CurrentMatch(){
     fwrite->SaveData("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
     fwrite->SaveData("/CurrentMap/Team2_ShortName.txt", ui->GetT2_ShortName());
     fwrite->SaveData("/CurrentMap/Map.txt", ui->GetCMap_Map());
-    fwrite->SaveData("/CurrentMap/Score_Team1.txt", QString::number(ui->GetCMap_ScoreT1()));
-    fwrite->SaveData("/CurrentMap/Score_Team2.txt", QString::number(ui->GetCMap_ScoreT2()));
+    fwrite->SaveData("/CurrentMap/Score_Team1.txt",
+                     QString::number(ui->GetCMap_ScoreT1()));
+    fwrite->SaveData("/CurrentMap/Score_Team2.txt",
+                     QString::number(ui->GetCMap_ScoreT2()));
     fwrite->SaveData("/CurrentMap/MutualInfo.txt", ui->GetMutualInfo());
     QString side = ui->GetSideT1();
     if (side[0] == "A"){
-        fwrite->ReplaceFile(":/side_img/attack_red.png", "/CurrentMap/sideT1.png");
-        fwrite->ReplaceFile(":/side_img/defend_white.png", "/CurrentMap/sideT2.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_attack_T1.png",
+                            "/CurrentMap/sideT1.png");
+        fwrite->SaveData("/CurrentMap/sideT1.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_attack_T1.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_defense_T2.png",
+                            "/CurrentMap/sideT2.png");
+        fwrite->SaveData("/CurrentMap/sideT2.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_defense_T2.png");
     } else if (side[0] == "D"){
-        fwrite->ReplaceFile(":/side_img/defend_red.png", "/CurrentMap/sideT1.png");
-        fwrite->ReplaceFile(":/side_img/attack_white.png", "/CurrentMap/sideT2.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_defense_T1.png",
+                            "/CurrentMap/sideT1.png");
+        fwrite->SaveData("/CurrentMap/sideT1.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_defense_T1.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_attack_T2.png",
+                            "/CurrentMap/sideT2.png");
+        fwrite->SaveData("/CurrentMap/sideT2.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_attack_T2.png");
     } else if (side[0] == "N"){
-        fwrite->ReplaceFile(":/side_img/attack_red.png", "/CurrentMap/sideT1.png");
-        fwrite->ReplaceFile(":/side_img/attack_white.png", "/CurrentMap/sideT2.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_none_T1.png",
+                            "/CurrentMap/sideT1.png");
+        fwrite->SaveData("/CurrentMap/sideT1.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_none_T1.png");
+        fwrite->ReplaceFile(QApplication::applicationDirPath()
+                            + "/Resurces/side_none_T2.png",
+                            "/CurrentMap/sideT2.png");
+        fwrite->SaveData("/CurrentMap/sideT2.txt",
+                         QApplication::applicationDirPath()
+                         + "/Resurces/side_none_T2.png");
     }
     ui->SetStatus("Match data update");
 }
