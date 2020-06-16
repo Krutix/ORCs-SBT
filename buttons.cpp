@@ -74,7 +74,7 @@ void Buttons::Update_CurrentMatch(){
 void Buttons::Update_CastInfo(){
     int i = 1;
     for (auto saveData : ui->GetUtilityList()){
-        fwrite->SaveData("/CastInfo/Utility" + QString::number(i++) + ".txt", saveData);
+        fwrite->SaveData("/Info/Utility" + QString::number(i++) + ".txt", saveData);
     }
     ui->SetStatus("Cast info updated");
 }

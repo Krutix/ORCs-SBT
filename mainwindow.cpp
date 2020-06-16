@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -66,6 +67,22 @@ int MainWindow::GetCMap_ScoreT2(){
 
 void MainWindow::SetCMap_ScoreT2(const int& score){
     ui->spinBox_t2_score->setValue(score);
+}
+
+QString MainWindow::GetT1_Logo(){
+    return ui->lineEdit_t1_logo->text();
+}
+
+void MainWindow::SetT1_Logo(const QString& dir){
+     ui->lineEdit_t1_logo->setText(dir);
+}
+
+QString MainWindow::GetT2_Logo(){
+    return ui->lineEdit_t2_logo->text();
+}
+
+void MainWindow::SetT2_Logo(const QString& dir){
+     ui->lineEdit_t2_logo->setText(dir);
 }
 
 bool MainWindow::ActConfirmation(const QString& name, const QString& message){
@@ -155,4 +172,22 @@ QObject* MainWindow::GetButtonCast_Update(){
 
 QObject* MainWindow::GetButtonCast_Reset(){
     return ui->pushButton_reset_cast;
+}
+
+QString MainWindow::GetPath(const QString& name, const QString& str){
+    return QFileDialog::getOpenFileName(
+                        this,
+                        name,
+                        QApplication::applicationDirPath(),
+                        str);
+}
+
+void MainWindow::on_toolButton_t1_logo_clicked()
+{
+    SetT1_Logo(GetPath("Get team 1 logo", "(*.png)"));
+}
+
+void MainWindow::on_toolButton_4_clicked()
+{
+    SetT2_Logo(GetPath("Get team 2 logo", "(*.png)"));
 }

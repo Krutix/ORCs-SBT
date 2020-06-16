@@ -94,23 +94,23 @@
           <item>
            <layout class="QGridLayout" name="gridLayout_5">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_t1_name_2">
+             <widget class="QLabel" name="label_t1_logo">
               <property name="text">
                <string>Team 1 Logo</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEdit_t1_name_2">
+             <widget class="QLineEdit" name="lineEdit_t1_logo">
               <property name="enabled">
                <bool>false</bool>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QToolButton" name="toolButton">
+             <widget class="QToolButton" name="toolButton_t1_logo">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="text">
                <string>...</string>
@@ -756,14 +756,14 @@
           <item>
            <layout class="QGridLayout" name="gridLayout_6">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_t1_name_8">
+             <widget class="QLabel" name="label_t2_logo">
               <property name="text">
                <string>Team 2 Logo</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEdit_t1_name_6">
+             <widget class="QLineEdit" name="lineEdit_t2_logo">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -772,7 +772,7 @@
             <item row="0" column="2">
              <widget class="QToolButton" name="toolButton_4">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="text">
                <string>...</string>
@@ -1331,7 +1331,7 @@
           <item>
            <widget class="QLabel" name="label_map_2">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_2</string>
             </property>
            </widget>
           </item>
@@ -1486,7 +1486,7 @@
           <item>
            <widget class="QLabel" name="label_map_3">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_3</string>
             </property>
            </widget>
           </item>
@@ -1641,7 +1641,7 @@
           <item>
            <widget class="QLabel" name="label_map_4">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_4</string>
             </property>
            </widget>
           </item>
@@ -1796,7 +1796,7 @@
           <item>
            <widget class="QLabel" name="label_map_5">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_5</string>
             </property>
            </widget>
           </item>
@@ -1951,7 +1951,7 @@
           <item>
            <widget class="QLabel" name="label_map_6">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_6</string>
             </property>
            </widget>
           </item>
@@ -2106,7 +2106,7 @@
           <item>
            <widget class="QLabel" name="label_map_7">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_7</string>
             </property>
            </widget>
           </item>
@@ -2261,7 +2261,7 @@
           <item>
            <widget class="QLabel" name="label_map_8">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_8</string>
             </property>
            </widget>
           </item>
@@ -2416,7 +2416,7 @@
           <item>
            <widget class="QLabel" name="label_map_9">
             <property name="text">
-             <string>Map_1</string>
+             <string>Map_9</string>
             </property>
            </widget>
           </item>
@@ -2599,12 +2599,12 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_Cast">
+      <widget class="QWidget" name="tab_Info">
        <property name="enabled">
         <bool>true</bool>
        </property>
        <attribute name="title">
-        <string>Cast</string>
+        <string>Info</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_24">
         <item>

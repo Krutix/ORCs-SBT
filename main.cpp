@@ -4,8 +4,10 @@
 #include <QObject>
 #include <memory>
 #include <QDebug>
+#include <windows.h>
 
 void StartFoldersCheck();
+void showInGraphicalShell(QWidget *parent, const QString &pathIn);
 
 int main(int argc, char *argv[])
 {
@@ -13,8 +15,8 @@ int main(int argc, char *argv[])
     StartFoldersCheck();
 
     MainWindow* MWindow = new MainWindow();
-
     Buttons *buttons = new Buttons(MWindow);
+
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
     QObject::connect(MWindow->GetButtonCMatch_Reset(), SIGNAL(clicked()),
@@ -32,6 +34,7 @@ int main(int argc, char *argv[])
 void StartFoldersCheck(){
     if (!QDir(QApplication::applicationDirPath() + "/CurrentMap").exists())
         QDir().mkdir(QApplication::applicationDirPath() + "/CurrentMap");
-    if (!QDir(QApplication::applicationDirPath() + "/CastInfo").exists())
-        QDir().mkdir(QApplication::applicationDirPath() + "/CastInfo");
+    if (!QDir(QApplication::applicationDirPath() + "/Info").exists())
+        QDir().mkdir(QApplication::applicationDirPath() + "/Info");
 }
+
