@@ -27,6 +27,9 @@ public:
     virtual int GetCMap_ScoreT2() = 0;
     virtual void SetCMap_ScoreT2(const int&) = 0;
 
+    virtual QString GetMutualInfo() = 0;
+    virtual void SetMutualInfo(const QString&) = 0;
+
     virtual QVector<QString> GetUtilityList() = 0;
     virtual void SetUtilityList(const QVector<QString>&) = 0;
 

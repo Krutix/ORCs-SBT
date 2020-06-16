@@ -43,6 +43,9 @@ public:
     QVector<QString> GetUtilityList() override;
     void SetUtilityList(const QVector<QString>&) override;
 
+    QString GetMutualInfo() override;
+    void SetMutualInfo(const QString&) override;
+
     void SetStatus(const QString&) override;
 
     QObject* GetButtonCast_Update();

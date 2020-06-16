@@ -77,6 +77,14 @@ bool MainWindow::ActConfirmation(const QString& name, const QString& message){
     return false;
 }
 
+QString MainWindow::GetMutualInfo(){
+    return ui->lineEdit_mutualinfo->text();
+}
+
+void MainWindow::SetMutualInfo(const QString& str){
+    ui->lineEdit_mutualinfo->setText(str);
+}
+
 QVector<QString> MainWindow::GetUtilityList(){
     QVector<QString> utilitys;
     utilitys.push_back(ui->lineEdit_utility1->text());
