@@ -32,8 +32,8 @@ void Buttons::Swap_CurrentTeams(){
     ui->SetStatus("Team swaped");
 }
 
-void Buttons::ResetInput_CurrentMatch(){
-    if (!ui->ActConfirmation("FUCK", "FUCK"))
+void Buttons::Reset_CurrentMatch(){
+    if (!ui->ActConfirmation("Reset match info?", "Reset match info?"))
         return;
     qDebug() << "Reset Input";
     ui->SetT1_Name("");
@@ -42,13 +42,11 @@ void Buttons::ResetInput_CurrentMatch(){
     ui->SetT2_ShortName("");
     ui->SetCMap_ScoreT1(0);
     ui->SetCMap_ScoreT2(0);
-    //SetCurrentMap("None");
+    //ui->SetCMap("None");
     ui->SetStatus("Match fields reset");
 }
 
 void Buttons::Update_CurrentMatch(){
-    if (!QDir(QApplication::applicationDirPath() + "/CurrentMap").exists())
-        QDir().mkdir(QApplication::applicationDirPath() + "/CurrentMap");
     fwrite->SaveData("/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
     fwrite->SaveData("/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
     fwrite->SaveData("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
@@ -57,4 +55,20 @@ void Buttons::Update_CurrentMatch(){
     fwrite->SaveData("/CurrentMap/Score_Team1.txt", QString::number(ui->GetCMap_ScoreT1()));
     fwrite->SaveData("/CurrentMap/Score_Team2.txt", QString::number(ui->GetCMap_ScoreT2()));
     ui->SetStatus("Match data update");
+}
+
+void Buttons::Update_CastInfo(){
+    int i = 1;
+    for (auto saveData : ui->GetUtilityList()){
+        fwrite->SaveData("/CastInfo/Utility" + QString::number(i++) + ".txt", saveData);
+    }
+    ui->SetStatus("Cast info updated");
+}
+
+void Buttons::Reset_CastInfo(){
+    if (!ui->ActConfirmation("Reset cast info?", "Reset cast info?"))
+        return;
+    QVector<QString> res (9, "");
+    ui->SetUtilityList(res);
+    ui->SetStatus("Cast info reseted");
 }

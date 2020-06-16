@@ -48,8 +48,8 @@ QString MainWindow::GetCMap_Map(){
     return ui->comboBox_map->currentText();
 }
 
-void MainWindow::SetCMap_Map(const QString&){
-    //ui->comboBox_map->;
+void MainWindow::SetCMap_Map(const QString& str){
+    ui->comboBox_map->setCurrentText(str);
 }
 
 int MainWindow::GetCMap_ScoreT1(){

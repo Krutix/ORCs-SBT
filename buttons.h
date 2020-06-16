@@ -20,8 +20,11 @@ public:
 
 public slots:
     void Swap_CurrentTeams();
-    void ResetInput_CurrentMatch();
+    void Reset_CurrentMatch();
     void Update_CurrentMatch();
+
+    void Update_CastInfo();
+    void Reset_CastInfo();
 protected:
     IUserInterface* ui = nullptr;
     FileWrite* fwrite = new FileWrite(QApplication::applicationDirPath());
