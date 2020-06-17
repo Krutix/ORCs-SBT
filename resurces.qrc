@@ -8,4 +8,8 @@
         <file>defend_red.png</file>
         <file>defend_white.png</file>
     </qresource>
+    <qresource prefix="/default_logo">
+        <file>logo_default_t2.png</file>
+        <file>logo_default_t1.png</file>
+    </qresource>
 </RCC>

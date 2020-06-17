@@ -184,10 +184,10 @@ QString MainWindow::GetPath(const QString& name, const QString& str){
 
 void MainWindow::on_toolButton_t1_logo_clicked()
 {
-    SetT1_Logo(GetPath("Get team 1 logo", "(*.png)"));
+    SetT1_Logo(GetPath("Select team 1 logo", "(*.png)"));
 }
 
 void MainWindow::on_toolButton_4_clicked()
 {
-    SetT2_Logo(GetPath("Get team 2 logo", "(*.png)"));
+    SetT2_Logo(GetPath("Select team 2 logo", "(*.png)"));
 }

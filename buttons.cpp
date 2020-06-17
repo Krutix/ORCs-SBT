@@ -100,6 +100,14 @@ void Buttons::Update_CurrentMatch(){
                          QApplication::applicationDirPath()
                          + "/Resurces/side_none_T2.png");
     }
+    fwrite->ReplaceFile(ui->GetT1_Logo(),
+                        "/CurrentMap/logoT1.png");
+    fwrite->SaveData("/CurrentMap/logoT1.txt",
+                     ui->GetT1_Logo());
+    fwrite->ReplaceFile(ui->GetT2_Logo(),
+                        "/CurrentMap/logoT2.png");
+    fwrite->SaveData("/CurrentMap/logoT2.txt",
+                     ui->GetT2_Logo());
     ui->SetStatus("Match data update");
 }
 
