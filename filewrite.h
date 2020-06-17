@@ -12,8 +12,9 @@ public:
     FileWrite();
     FileWrite(const QString&);
 
-    bool SaveData(const QString&, const QString&);
-    bool ReplaceFile(const QString& dir, const QString& str);
+    bool SaveDataInDir(const QString& dir, const QString& str);
+    bool SaveImgToDir(const QString& sourcedir, const QString& finaldir);
+    bool ReplaceFileInDir(const QString& sourcedir, const QString& finaldir);
 private:
     QString dir = "";
 };
