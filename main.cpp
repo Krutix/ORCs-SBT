@@ -1,13 +1,17 @@
 #include "mainwindow.h"
+#include "iuserinterface.h"
 #include "buttons.h"
 
 #include <QObject>
 #include <memory>
 #include <QDebug>
+#include <QFile>
 #include <windows.h>
 
 void StartFoldersCheck();
 void ResurcesDefault();
+QString ReadFile(const QString& dir);
+void RestoreUIData(IUserInterface* UI);
 void showInGraphicalShell(QWidget *parent, const QString &pathIn);
 
 int main(int argc, char *argv[])
@@ -19,6 +23,8 @@ int main(int argc, char *argv[])
 
     MainWindow* MWindow = new MainWindow();
     Buttons *buttons = new Buttons(MWindow);
+
+    RestoreUIData(MWindow);
 
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
@@ -58,3 +64,30 @@ void ResurcesDefault(){
                 QApplication::applicationDirPath() + "/Resurces/side_none_t2.png");
 }
 
+void RestoreUIData(IUserInterface* ui){
+    QString cdir = QApplication::applicationDirPath();
+    ui->SetT1_Name(ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
+    ui->SetT2_Name(ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
+    ui->SetT1_ShortName(ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
+    ui->SetT2_ShortName(ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
+    ui->SetCMap_ScoreT1(ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
+    ui->SetCMap_ScoreT2(ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
+    ui->SetT1_Logo(ReadFile(cdir + "/CurrentMap/logoT1.txt"));
+    ui->SetT2_Logo(ReadFile(cdir + "/CurrentMap/logoT2.txt"));
+    ui->SetMutualInfo(ReadFile(cdir + "/CurrentMap/MutualInfo.txt"));
+    QVector<QString> util;
+    for (int ix = 1; ix < 10; ix++)
+        util.push_back(ReadFile(cdir + "/Info/Utility" + QString::number(ix) + ".txt"));
+    ui->SetUtilityList(util);
+}
+
+QString ReadFile(const QString& dir){
+    QString tbh {};
+    if (QFile(dir).exists()){
+        QFile file (dir);
+        file.open(QIODevice::ReadOnly);
+        tbh = file.readAll();
+        file.close();
+    }
+    return tbh;
+}

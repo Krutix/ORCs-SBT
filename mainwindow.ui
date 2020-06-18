@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>932</width>
-    <height>446</height>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -2606,13 +2606,133 @@
        <attribute name="title">
         <string>Info</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_24">
+       <layout class="QHBoxLayout" name="horizontalLayout_26">
         <item>
          <layout class="QGridLayout" name="gridLayout_7">
-          <item row="9" column="4">
-           <widget class="QLabel" name="label_utility3">
+          <item row="5" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="11" column="4">
+           <widget class="QLabel" name="label_utility9">
             <property name="text">
-             <string>Utility 3</string>
+             <string>Utility 9</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="2">
+           <widget class="QLabel" name="label_utility5">
+            <property name="text">
+             <string>Utility 5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QLabel" name="label_utility8">
+            <property name="text">
+             <string>Utility 8</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_observer1">
+            <property name="text">
+             <string>Observer 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="label_utility1">
+            <property name="text">
+             <string>Utility 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_analist2">
+            <property name="text">
+             <string>Analist 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string/>
             </property>
            </widget>
           </item>
@@ -2641,19 +2761,11 @@
             </item>
            </widget>
           </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_caster1">
-            <property name="text">
-             <string>Caster 1</string>
-            </property>
-           </widget>
+          <item row="9" column="1">
+           <widget class="QLineEdit" name="lineEdit_utility1"/>
           </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_producer_nick">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
+          <item row="9" column="5">
+           <widget class="QLineEdit" name="lineEdit_utility3"/>
           </item>
           <item row="0" column="5">
            <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -2686,8 +2798,15 @@
             </item>
            </layout>
           </item>
-          <item row="2" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_12">
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEdit_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_17">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -2696,70 +2815,49 @@
             </property>
            </widget>
           </item>
-          <item row="12" column="2">
-           <spacer name="verticalSpacer_18">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="5" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_9">
+          <item row="1" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_6">
             <property name="enabled">
              <bool>false</bool>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_caster2">
             <property name="text">
-             <string>/</string>
+             <string>Caster 2</string>
             </property>
            </widget>
           </item>
-          <item row="8" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_20">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="5">
-           <widget class="QLineEdit" name="lineEdit_utility3"/>
-          </item>
-          <item row="6" column="1">
-           <widget class="QLineEdit" name="lineEdit_11">
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEdit_6">
             <property name="enabled">
              <bool>false</bool>
             </property>
            </widget>
           </item>
-          <item row="3" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_13">
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="lineEdit_12">
             <property name="enabled">
              <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_t1_social_p1_5">
-            <property name="text">
-             <string>Socials</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="2">
-           <widget class="QLabel" name="label_utility2">
-            <property name="text">
-             <string>Utility 2</string>
             </property>
            </widget>
           </item>
@@ -2788,35 +2886,8 @@
             </item>
            </widget>
           </item>
-          <item row="9" column="0">
-           <widget class="QLabel" name="label_utility1">
-            <property name="text">
-             <string>Utility 1</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_7">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_9">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_9">
+          <item row="4" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_3">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -2838,75 +2909,6 @@
               <string>Twitter</string>
              </property>
             </item>
-           </widget>
-          </item>
-          <item row="7" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_16">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <widget class="QLineEdit" name="lineEdit_10">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_17">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QComboBox" name="comboBox_socials_p1_10">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_8">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLineEdit" name="lineEdit_6">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
            </widget>
           </item>
           <item row="1" column="2">
@@ -2934,40 +2936,8 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_12">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="9" column="3">
-           <widget class="QLineEdit" name="lineEdit_utility2"/>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_caster2">
-            <property name="text">
-             <string>Caster 2</string>
-            </property>
-           </widget>
+          <item row="10" column="3">
+           <widget class="QLineEdit" name="lineEdit_utility5"/>
           </item>
           <item row="10" column="0">
            <widget class="QLabel" name="label_utility4">
@@ -2976,50 +2946,19 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_7">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="3" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_14">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
+          <item row="10" column="4">
+           <widget class="QLabel" name="label_utility6">
             <property name="text">
-             <string>/</string>
+             <string>Utility 6</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_observer1">
+          <item row="11" column="0">
+           <widget class="QLabel" name="label_utility7">
             <property name="text">
-             <string>Observer 1</string>
+             <string>Utility 7</string>
             </property>
            </widget>
-          </item>
-          <item row="10" column="5">
-           <widget class="QLineEdit" name="lineEdit_utility6"/>
           </item>
           <item row="2" column="5">
            <widget class="QLineEdit" name="lineEdit_t1_player1_11">
@@ -3031,8 +2970,8 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_19">
+          <item row="7" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_16">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3041,8 +2980,51 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_4">
+          <item row="10" column="5">
+           <widget class="QLineEdit" name="lineEdit_utility6"/>
+          </item>
+          <item row="7" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_15">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_analist1">
+            <property name="text">
+             <string>Analist 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="2">
+           <spacer name="verticalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_6">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_13">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3091,96 +3073,8 @@
             </item>
            </widget>
           </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="label_analist1">
-            <property name="text">
-             <string>Analist 1</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_producer">
-            <property name="text">
-             <string>Producer</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_host">
-            <property name="text">
-             <string>Host</string>
-            </property>
-           </widget>
-          </item>
-          <item row="8" column="2">
-           <widget class="QComboBox" name="comboBox_socials_p1_17">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QComboBox" name="comboBox_socials_p1_11">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="8" column="0">
-           <widget class="QLabel" name="label_analist2">
-            <property name="text">
-             <string>Analist 2</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_10">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QComboBox" name="comboBox_socials_p1_3">
+          <item row="4" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_4">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3214,33 +3108,8 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_6">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="4" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_6">
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_5">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3249,70 +3118,8 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_15">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="4">
-           <widget class="QComboBox" name="comboBox_socials_p1_13">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::RightToLeft</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>None</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>VK</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Twitter</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="6" column="5">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_18">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item row="10" column="1">
-           <widget class="QLineEdit" name="lineEdit_utility4"/>
-          </item>
-          <item row="8" column="1">
-           <widget class="QLineEdit" name="lineEdit_12">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QLineEdit" name="lineEdit_7">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="2">
-           <widget class="QComboBox" name="comboBox_socials_p1_8">
+          <item row="8" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_17">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3361,21 +3168,32 @@
             </item>
            </widget>
           </item>
-          <item row="9" column="1">
-           <widget class="QLineEdit" name="lineEdit_utility1"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_observer2">
-            <property name="text">
-             <string>Observer 2</string>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_producer_nick">
+            <property name="enabled">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
-          <item row="10" column="3">
-           <widget class="QLineEdit" name="lineEdit_utility5"/>
+          <item row="9" column="4">
+           <widget class="QLabel" name="label_utility3">
+            <property name="text">
+             <string>Utility 3</string>
+            </property>
+           </widget>
           </item>
-          <item row="4" column="3">
-           <widget class="QLineEdit" name="lineEdit_t1_player1_5">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_producer">
+            <property name="text">
+             <string>Producer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="3">
+           <widget class="QLineEdit" name="lineEdit_utility2"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_14">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -3384,49 +3202,273 @@
             </property>
            </widget>
           </item>
-          <item row="11" column="1">
-           <widget class="QLineEdit" name="lineEdit_utility7"/>
+          <item row="9" column="2">
+           <widget class="QLabel" name="label_utility2">
+            <property name="text">
+             <string>Utility 2</string>
+            </property>
+           </widget>
           </item>
-          <item row="11" column="3">
-           <widget class="QLineEdit" name="lineEdit_utility8"/>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QComboBox" name="comboBox_socials_p1_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_t1_social_p1_5">
+            <property name="text">
+             <string>Socials</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_9">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QComboBox" name="comboBox_socials_p1_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VK</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Twitter</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="lineEdit_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_host">
+            <property name="text">
+             <string>Host</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_13">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_caster1">
+            <property name="text">
+             <string>Caster 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_18">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_observer2">
+            <property name="text">
+             <string>Observer 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lineEdit_10">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="3">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_19">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QLineEdit" name="lineEdit_utility4"/>
+          </item>
+          <item row="8" column="5">
+           <widget class="QLineEdit" name="lineEdit_t1_player1_20">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+           </widget>
           </item>
           <item row="11" column="5">
-           <widget class="QLineEdit" name="lineEdit_utility9"/>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_utility9"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item row="10" column="2">
-           <widget class="QLabel" name="label_utility5">
-            <property name="text">
-             <string>Utility 5</string>
-            </property>
-           </widget>
+          <item row="11" column="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_24">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_utility8"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item row="10" column="4">
-           <widget class="QLabel" name="label_utility6">
-            <property name="text">
-             <string>Utility 6</string>
-            </property>
-           </widget>
-          </item>
-          <item row="11" column="4">
-           <widget class="QLabel" name="label_utility9">
-            <property name="text">
-             <string>Utility 9</string>
-            </property>
-           </widget>
-          </item>
-          <item row="11" column="2">
-           <widget class="QLabel" name="label_utility8">
-            <property name="text">
-             <string>Utility 8</string>
-            </property>
-           </widget>
-          </item>
-          <item row="11" column="0">
-           <widget class="QLabel" name="label_utility7">
-            <property name="text">
-             <string>Utility 7</string>
-            </property>
-           </widget>
+          <item row="11" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_utility7"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_3">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </item>

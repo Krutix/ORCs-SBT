@@ -29,6 +29,10 @@ void Buttons::Swap_CurrentTeams(){
     int tbhscore = ui->GetCMap_ScoreT1();
     ui->SetCMap_ScoreT1(ui->GetCMap_ScoreT2());
     ui->SetCMap_ScoreT2(tbhscore);
+    qDebug() << "Swap teams logo";
+    tbh = ui->GetT1_Logo();
+    ui->SetT1_Logo(ui->GetT2_Logo());
+    ui->SetT2_Logo(tbh);
     ui->SetStatus("Team swaped");
 }
 
@@ -43,6 +47,8 @@ void Buttons::Reset_CurrentMatch(){
     ui->SetCMap_ScoreT1(0);
     ui->SetCMap_ScoreT2(0);
     ui->SetMutualInfo("");
+    ui->SetT1_Logo("");
+    ui->SetT2_Logo("");
     //ui->SetCMap("None");
     ui->SetStatus("Match fields reset");
 }
