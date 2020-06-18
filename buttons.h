@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <memory>
 #include "iuserinterface.h"
-#include "filewrite.h"
+#include "filecontrol.h"
 
 class Buttons : public QObject
 {
@@ -27,7 +27,7 @@ public slots:
     void Reset_CastInfo();
 protected:
     IUserInterface* ui = nullptr;
-    FileWrite* fwrite = new FileWrite(QApplication::applicationDirPath());
+    const QString cdir = QApplication::applicationDirPath();
 };
 
-#endif // BUTTONS_H
+#endif // BUTTONS_HW

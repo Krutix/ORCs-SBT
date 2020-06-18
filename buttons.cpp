@@ -12,9 +12,7 @@ void Buttons::SetUI(IUserInterface* ui){
     this->ui = ui;
 }
 
-Buttons::~Buttons(){
-    delete fwrite;
-}
+Buttons::~Buttons(){}
 
 void Buttons::Swap_CurrentTeams(){
     qDebug() << "Swap full name teams";
@@ -54,51 +52,44 @@ void Buttons::Reset_CurrentMatch(){
 }
 
 void Buttons::Update_CurrentMatch(){
-
-    fwrite->SaveDataInDir("/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
-    fwrite->SaveDataInDir("/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
-    fwrite->SaveDataInDir("/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
-    fwrite->SaveDataInDir("/CurrentMap/Team2_ShortName.txt", ui->GetT2_ShortName());
-    fwrite->SaveDataInDir("/CurrentMap/Map.txt", ui->GetCMap_Map());
-    fwrite->SaveDataInDir("/CurrentMap/Score_Team1.txt",
+    FileControl::SaveData(cdir + "/CurrentMap/Team1_Name.txt", ui->GetT1_Name());
+    FileControl::SaveData(cdir + "/CurrentMap/Team2_Name.txt", ui->GetT2_Name());
+    FileControl::SaveData(cdir + "/CurrentMap/Team1_ShortName.txt", ui->GetT1_ShortName());
+    FileControl::SaveData(cdir + "/CurrentMap/Team2_ShortName.txt", ui->GetT2_ShortName());
+    FileControl::SaveData(cdir + "/CurrentMap/Map.txt", ui->GetCMap_Map());
+    FileControl::SaveData(cdir + "/CurrentMap/Score_Team1.txt",
                      QString::number(ui->GetCMap_ScoreT1()));
-    fwrite->SaveDataInDir("/CurrentMap/Score_Team2.txt",
+    FileControl::SaveData(cdir + "/CurrentMap/Score_Team2.txt",
                      QString::number(ui->GetCMap_ScoreT2()));
-    fwrite->SaveDataInDir("/CurrentMap/MutualInfo.txt", ui->GetMutualInfo());
+    FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", ui->GetMutualInfo());
     QString side = ui->GetSideT1();
     if (side[0] == "A"){
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_attack_t1.png", "/CurrentMap/sideT1");
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_defense_t2.png", "/CurrentMap/sideT2");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t1.png", cdir + "/CurrentMap/sideT1");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_defense_t2.png", cdir + "/CurrentMap/sideT2");
     } else if (side[0] == "D"){
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_defense_t1.png", "/CurrentMap/sideT1");
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_attack_t2.png", "/CurrentMap/sideT2");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_defense_t1.png", cdir + "/CurrentMap/sideT1");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t2.png", cdir + "/CurrentMap/sideT2");
     } else if (side[0] == "N"){
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_none_t1.png", "/CurrentMap/sideT1");
-        fwrite->SaveImgToDir(QApplication::applicationDirPath()
-                        + "/Resurces/side_none_t2.png", "/CurrentMap/sideT2");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t1.png", cdir + "/CurrentMap/sideT1");
+        FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t2.png", cdir + "/CurrentMap/sideT2");
     }
-    fwrite->SaveImgToDir(ui->GetT1_Logo(), "/CurrentMap/logoT1");
-    fwrite->SaveImgToDir(ui->GetT2_Logo(), "/CurrentMap/logoT2");
-    ui->SetStatus("Match data update");
+    FileControl::SaveImgPNG(ui->GetT1_Logo(), cdir + "/CurrentMap/logoT1");
+    FileControl::SaveImgPNG(ui->GetT2_Logo(), cdir + "/CurrentMap/logoT2");
+    ui->SetStatus("Match info update");
 }
 
 void Buttons::Update_CastInfo(){
     int i = 1;
     for (auto saveData : ui->GetUtilityList()){
-        fwrite->SaveDataInDir("/Info/Utility" + QString::number(i++) + ".txt", saveData);
+        FileControl::SaveData(cdir + "/Info/Utility" + QString::number(i++) + ".txt", saveData);
     }
     ui->SetStatus("Cast info updated");
 }
 
 void Buttons::Reset_CastInfo(){
-    if (!ui->ActConfirmation("Reset cast info?", "Reset cast info?"))
+    if (!ui->ActConfirmation("Reset genetal info?", "Reset genetal info?"))
         return;
     QVector<QString> res (9, "");
     ui->SetUtilityList(res);
-    ui->SetStatus("Cast info reseted");
+    ui->SetStatus("Genetal info reset");
 }

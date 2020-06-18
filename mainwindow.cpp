@@ -128,25 +128,16 @@ QString MainWindow::GetSideT1(){ // TODO Groupe radio buttons
 
 //void MainWindow::SetSideT1(){}
 
-void MainWindow::SetUtilityList(const QVector<QString>& utilitys){ // TODO fuck 'if'
-    if (utilitys.size() >= 1)
-        ui->lineEdit_utility1->setText(utilitys[0]);
-    if (utilitys.size() >= 2)
-        ui->lineEdit_utility2->setText(utilitys[1]);
-    if (utilitys.size() >= 3)
-        ui->lineEdit_utility3->setText(utilitys[2]);
-    if (utilitys.size() >= 4)
-        ui->lineEdit_utility4->setText(utilitys[3]);
-    if (utilitys.size() >= 5)
-        ui->lineEdit_utility5->setText(utilitys[4]);
-    if (utilitys.size() >= 6)
-        ui->lineEdit_utility6->setText(utilitys[5]);
-    if (utilitys.size() >= 7)
-        ui->lineEdit_utility7->setText(utilitys[6]);
-    if (utilitys.size() >= 8)
-        ui->lineEdit_utility8->setText(utilitys[7]);
-    if (utilitys.size() >= 9)
-        ui->lineEdit_utility9->setText(utilitys[8]);
+void MainWindow::SetUtilityList(const QVector<QString>& utilitys){
+    ui->lineEdit_utility1->setText(utilitys[0]);
+    ui->lineEdit_utility2->setText(utilitys[1]);
+    ui->lineEdit_utility3->setText(utilitys[2]);
+    ui->lineEdit_utility4->setText(utilitys[3]);
+    ui->lineEdit_utility5->setText(utilitys[4]);
+    ui->lineEdit_utility6->setText(utilitys[5]);
+    ui->lineEdit_utility7->setText(utilitys[6]);
+    ui->lineEdit_utility8->setText(utilitys[7]);
+    ui->lineEdit_utility9->setText(utilitys[8]);
 }
 
 void MainWindow::SetStatus(const QString& status){
@@ -173,20 +164,14 @@ QObject* MainWindow::GetButtonCast_Reset(){
     return ui->pushButton_reset_cast;
 }
 
-QString MainWindow::GetPath(const QString& name, const QString& str){
-    return QFileDialog::getOpenFileName(
-                        this,
-                        name,
-                        QApplication::applicationDirPath(),
-                        str);
-}
+
 
 void MainWindow::on_toolButton_t1_logo_clicked()
 {
-    SetT1_Logo(GetPath("Select team 1 logo", "(*.png)"));
+    SetT1_Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
 }
 
 void MainWindow::on_toolButton_4_clicked()
 {
-    SetT2_Logo(GetPath("Select team 2 logo", "(*.png)"));
+    SetT2_Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
 }

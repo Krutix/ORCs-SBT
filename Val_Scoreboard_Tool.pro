@@ -17,13 +17,13 @@ RC_ICONS = SMOrc_icon.ico
 
 SOURCES += \
     buttons.cpp \
-    filewrite.cpp \
+    filecontrol.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     buttons.h \
-    filewrite.h \
+    filecontrol.h \
     iuserinterface.h \
     mainwindow.h
 

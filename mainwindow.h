@@ -3,10 +3,10 @@
 
 #include "buttons.h"
 #include "iuserinterface.h"
+#include "filecontrol.h"
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QDebug>
-#include <QFileDialog>
 #include <memory>
 
 QT_BEGIN_NAMESPACE

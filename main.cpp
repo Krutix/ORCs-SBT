@@ -1,29 +1,27 @@
-#include "mainwindow.h"
-#include "iuserinterface.h"
-#include "buttons.h"
-
 #include <QObject>
 #include <memory>
 #include <QDebug>
 #include <QFile>
-#include <windows.h>
+
+#include "mainwindow.h"
+#include "iuserinterface.h"
+#include "filecontrol.h"
+#include "buttons.h"
 
 void StartFoldersCheck();
 void ResurcesDefault();
-QString ReadFile(const QString& dir);
-void RestoreUIData(IUserInterface* UI);
+void RestoreUIData(IUserInterface* ui);
 void showInGraphicalShell(QWidget *parent, const QString &pathIn);
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    StartFoldersCheck();
-    ResurcesDefault();
-
     MainWindow* MWindow = new MainWindow();
     Buttons *buttons = new Buttons(MWindow);
 
+    StartFoldersCheck();
+    ResurcesDefault();
     RestoreUIData(MWindow);
 
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
@@ -41,53 +39,44 @@ int main(int argc, char *argv[])
 }
 
 void StartFoldersCheck(){
-    if (!QDir(QApplication::applicationDirPath() + "/CurrentMap").exists())
-        QDir().mkdir(QApplication::applicationDirPath() + "/CurrentMap");
-    if (!QDir(QApplication::applicationDirPath() + "/Info").exists())
-        QDir().mkdir(QApplication::applicationDirPath() + "/Info");
-    if (!QDir(QApplication::applicationDirPath() + "/Resurces").exists())
-        QDir().mkdir(QApplication::applicationDirPath() + "/Resurces");
+    const QString cdir = QApplication::applicationDirPath();
+    if (!QDir(cdir + "/CurrentMap").exists())
+        QDir().mkdir(cdir + "/CurrentMap");
+    if (!QDir(cdir + "/Info").exists())
+        QDir().mkdir(cdir + "/Info");
+    if (!QDir(cdir + "/Resurces").exists())
+        QDir().mkdir(cdir + "/Resurces");
 }
 
 void ResurcesDefault(){
+    const QString cdir = QApplication::applicationDirPath();
     QFile::copy(":/side_img/attack_red.png",
-                QApplication::applicationDirPath() + "/Resurces/side_attack_t1.png");
+                cdir + "/Resurces/side_attack_t1.png");
     QFile::copy(":/side_img/attack_white.png",
-                QApplication::applicationDirPath() + "/Resurces/side_attack_t2.png");
+                cdir + "/Resurces/side_attack_t2.png");
     QFile::copy(":/side_img/defend_red.png",
-                QApplication::applicationDirPath() + "/Resurces/side_defense_t1.png");
+                cdir + "/Resurces/side_defense_t1.png");
     QFile::copy(":/side_img/defend_white.png",
-                QApplication::applicationDirPath() + "/Resurces/side_defense_t2.png");
+                cdir + "/Resurces/side_defense_t2.png");
     QFile::copy(":/side_img/attack_red.png",
-                QApplication::applicationDirPath() + "/Resurces/side_none_t1.png");
+                cdir + "/Resurces/side_none_t1.png");
     QFile::copy(":/side_img/attack_white.png",
-                QApplication::applicationDirPath() + "/Resurces/side_none_t2.png");
+                cdir + "/Resurces/side_none_t2.png");
 }
 
 void RestoreUIData(IUserInterface* ui){
-    QString cdir = QApplication::applicationDirPath();
-    ui->SetT1_Name(ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
-    ui->SetT2_Name(ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
-    ui->SetT1_ShortName(ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
-    ui->SetT2_ShortName(ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
-    ui->SetCMap_ScoreT1(ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
-    ui->SetCMap_ScoreT2(ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
-    ui->SetT1_Logo(ReadFile(cdir + "/CurrentMap/logoT1.txt"));
-    ui->SetT2_Logo(ReadFile(cdir + "/CurrentMap/logoT2.txt"));
-    ui->SetMutualInfo(ReadFile(cdir + "/CurrentMap/MutualInfo.txt"));
+    const QString cdir = QApplication::applicationDirPath();
+    ui->SetT1_Name(FileControl::ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
+    ui->SetT2_Name(FileControl::ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
+    ui->SetT1_ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
+    ui->SetT2_ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
+    ui->SetCMap_ScoreT1(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
+    ui->SetCMap_ScoreT2(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
+    ui->SetT1_Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT1.txt"));
+    ui->SetT2_Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"));
+    ui->SetMutualInfo(FileControl::ReadFile(cdir + "/CurrentMap/MutualInfo.txt"));
     QVector<QString> util;
     for (int ix = 1; ix < 10; ix++)
-        util.push_back(ReadFile(cdir + "/Info/Utility" + QString::number(ix) + ".txt"));
+        util.push_back(FileControl::ReadFile(cdir + "/Info/Utility" + QString::number(ix) + ".txt"));
     ui->SetUtilityList(util);
-}
-
-QString ReadFile(const QString& dir){
-    QString tbh {};
-    if (QFile(dir).exists()){
-        QFile file (dir);
-        file.open(QIODevice::ReadOnly);
-        tbh = file.readAll();
-        file.close();
-    }
-    return tbh;
 }
