@@ -11,7 +11,6 @@
 void StartFoldersCheck();
 void ResurcesDefault();
 void RestoreUIData(IUserInterface* ui);
-void showInGraphicalShell(QWidget *parent, const QString &pathIn);
 
 int main(int argc, char *argv[])
 {
@@ -66,14 +65,14 @@ void ResurcesDefault(){
 
 void RestoreUIData(IUserInterface* ui){
     const QString cdir = QApplication::applicationDirPath();
-    ui->SetT1_Name(FileControl::ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
-    ui->SetT2_Name(FileControl::ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
-    ui->SetT1_ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
-    ui->SetT2_ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
-    ui->SetCMap_ScoreT1(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
-    ui->SetCMap_ScoreT2(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
-    ui->SetT1_Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT1.txt"));
-    ui->SetT2_Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"));
+    ui->SetTeam1Name(FileControl::ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
+    ui->SetTeam2Name(FileControl::ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
+    ui->SetTeam1ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
+    ui->SetTeam2ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
+    ui->SetTeam1CurrentScore(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
+    ui->SetTeam2CurrentScore(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
+    ui->SetTeam1Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT1.txt"));
+    ui->SetTeam2Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"));
     ui->SetMutualInfo(FileControl::ReadFile(cdir + "/CurrentMap/MutualInfo.txt"));
     QVector<QString> util;
     for (int ix = 1; ix < 10; ix++)

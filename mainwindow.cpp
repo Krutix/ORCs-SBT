@@ -2,89 +2,57 @@
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow()){
+    : QMainWindow(parent), ui(new Ui::MainWindow())
+{
     ui->setupUi(this);
     setWindowTitle("ORCs Scoreboard Tool");
 }
 
-MainWindow::~MainWindow(){
+MainWindow::~MainWindow()
+{
     delete ui;
 }
 
-QString MainWindow::GetT1_Name (){
-    return ui->lineEdit_t1_name->text();
+Team MainWindow::GetTeam1() 
+{
+    return { GetTeam1Name(), GetTeam1ShortName(), GetTeam1Logo(), GetTeam1CurrentScore() };
 }
 
-void MainWindow::SetT1_Name (const QString& str){
-    ui->lineEdit_t1_name->setText(str);
+Team MainWindow::GetTeam2() 
+{
+    return { GetTeam2Name(), GetTeam2ShortName(), GetTeam2Logo(), GetTeam2CurrentScore() };
 }
 
-QString MainWindow::GetT2_Name (){
-    return ui->lineEdit_t2_name->text();
+void MainWindow::SetTeam1(const Team& team) 
+{
+    SetTeam1Name(team.name);
+    SetTeam1ShortName(team.shortName);
+    SetTeam1CurrentScore(team.score);
+    SetTeam1Logo(team.logoPath);
 }
 
-void MainWindow::SetT2_Name (const QString& str){
-    ui->lineEdit_t2_name->setText(str);
+void MainWindow::SetTeam2(const Team& team) 
+{
+    SetTeam2Name(team.name);
+    SetTeam2ShortName(team.shortName);
+    SetTeam2CurrentScore(team.score);
+    SetTeam2Logo(team.logoPath);
 }
 
-QString MainWindow::GetT1_ShortName(){
-    return ui->lineEdit_t1_sn->text();
+const MutualMapInfo MainWindow::GetMutualMapInfo() 
+{
+    return { GetCurrentMap(),  GetMutualInfo() };
 }
 
-void MainWindow::SetT1_ShortName(const QString& str){
-    ui->lineEdit_t1_sn->setText(str);
+void MainWindow::SetMutualMapInfo(const MutualMapInfo& info)
+{
+    SetCurrentMap(info.currentMap);
+    SetMutualInfo(info.mutualInfo);
 }
 
-QString MainWindow::GetT2_ShortName(){
-    return ui->lineEdit_t2_sn->text();
-}
 
-void MainWindow::SetT2_ShortName(const QString& str){
-    ui->lineEdit_t2_sn->setText(str);
-}
-
-QString MainWindow::GetCMap_Map(){
-    return ui->comboBox_map->currentText();
-}
-
-void MainWindow::SetCMap_Map(const QString& str){
-    ui->comboBox_map->setCurrentText(str);
-}
-
-int MainWindow::GetCMap_ScoreT1(){
-    return ui->spinBox_t1_score->value();
-}
-
-void MainWindow::SetCMap_ScoreT1(const int& score){
-    ui->spinBox_t1_score->setValue(score);
-}
-
-int MainWindow::GetCMap_ScoreT2(){
-    return ui->spinBox_t2_score->value();
-}
-
-void MainWindow::SetCMap_ScoreT2(const int& score){
-    ui->spinBox_t2_score->setValue(score);
-}
-
-QString MainWindow::GetT1_Logo(){
-    return ui->lineEdit_t1_logo->text();
-}
-
-void MainWindow::SetT1_Logo(const QString& dir){
-     ui->lineEdit_t1_logo->setText(dir);
-}
-
-QString MainWindow::GetT2_Logo(){
-    return ui->lineEdit_t2_logo->text();
-}
-
-void MainWindow::SetT2_Logo(const QString& dir){
-     ui->lineEdit_t2_logo->setText(dir);
-}
-
-bool MainWindow::ActConfirmation(const QString& name, const QString& message){
+bool MainWindow::ActConfirmation(const QString& name, const QString& message)
+{
     int conf = QMessageBox::question(this, name, message,
                                      QMessageBox::Yes|QMessageBox::Cancel);
     if (conf == QMessageBox::Yes) {
@@ -93,13 +61,6 @@ bool MainWindow::ActConfirmation(const QString& name, const QString& message){
     return false;
 }
 
-QString MainWindow::GetMutualInfo(){
-    return ui->lineEdit_mutualinfo->text();
-}
-
-void MainWindow::SetMutualInfo(const QString& str){
-    ui->lineEdit_mutualinfo->setText(str);
-}
 
 QVector<QString> MainWindow::GetUtilityList(){
     QVector<QString> utilitys;
@@ -116,7 +77,8 @@ QVector<QString> MainWindow::GetUtilityList(){
 }
 
 
-QString MainWindow::GetSideT1(){ // TODO Groupe radio buttons
+QString MainWindow::GetSideT1()
+{ // TODO Groupe radio buttons
     if (ui->radioButton_side_attack->isChecked())
         return "Attack";
     if (ui->radioButton_side_defence->isChecked())
@@ -128,7 +90,8 @@ QString MainWindow::GetSideT1(){ // TODO Groupe radio buttons
 
 //void MainWindow::SetSideT1(){}
 
-void MainWindow::SetUtilityList(const QVector<QString>& utilitys){
+void MainWindow::SetUtilityList(const QVector<QString>& utilitys)
+{
     ui->lineEdit_utility1->setText(utilitys[0]);
     ui->lineEdit_utility2->setText(utilitys[1]);
     ui->lineEdit_utility3->setText(utilitys[2]);
@@ -140,38 +103,42 @@ void MainWindow::SetUtilityList(const QVector<QString>& utilitys){
     ui->lineEdit_utility9->setText(utilitys[8]);
 }
 
-void MainWindow::SetStatus(const QString& status){
+void MainWindow::SetStatus(const QString& status)
+{
     ui->statusbar->showMessage(status);
 }
 
-QObject* MainWindow::GetButtonCMatch_Swap(){
+QObject* MainWindow::GetButtonCMatch_Swap()
+{
     return ui->pushButton_swap_match;
 }
 
-QObject* MainWindow::GetButtonCMatch_Update(){
+QObject* MainWindow::GetButtonCMatch_Update()
+{
     return ui->pushButton_update_match;
 }
 
-QObject* MainWindow::GetButtonCMatch_Reset(){
+QObject* MainWindow::GetButtonCMatch_Reset()
+{
     return ui->pushButton_reset_match;
 }
 
-QObject* MainWindow::GetButtonCast_Update(){
+QObject* MainWindow::GetButtonCast_Update()
+{
     return ui->pushButton_update_cast;
 }
 
-QObject* MainWindow::GetButtonCast_Reset(){
+QObject* MainWindow::GetButtonCast_Reset()
+{
     return ui->pushButton_reset_cast;
 }
 
-
-
 void MainWindow::on_toolButton_t1_logo_clicked()
 {
-    SetT1_Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
+    SetTeam1Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
 }
 
 void MainWindow::on_toolButton_4_clicked()
 {
-    SetT2_Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
+    SetTeam2Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
 }

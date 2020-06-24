@@ -21,23 +21,31 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    QString GetCMap_Map() override;
-    void SetCMap_Map(const QString&) override;
+    Team GetTeam1() override;
+    void SetTeam1(const Team&) override;
+    Team GetTeam2() override;
+    void SetTeam2(const Team&) override;
 
-    QString GetT1_Name () override;
-    void SetT1_Name (const QString&) override;
-    QString GetT2_Name () override;
-    void SetT2_Name (const QString&) override;
+    const MutualMapInfo GetMutualMapInfo() override;
+    void SetMutualMapInfo(const MutualMapInfo&) override;
 
-    QString GetT1_ShortName() override;
-    void SetT1_ShortName(const QString&) override;
-    QString GetT2_ShortName() override;
-    void SetT2_ShortName(const QString&) override;
+    QString GetCurrentMap() override;
+    void SetCurrentMap(const QString&) override;
 
-    int GetCMap_ScoreT1() override;
-    void SetCMap_ScoreT1(const int&) override;
-    int GetCMap_ScoreT2() override;
-    void SetCMap_ScoreT2(const int&) override;
+    QString GetTeam1Name () override;
+    void SetTeam1Name (const QString&) override;
+    QString GetTeam2Name () override;
+    void SetTeam2Name (const QString&) override;
+
+    QString GetTeam1ShortName() override;
+    void SetTeam1ShortName(const QString&) override;
+    QString GetTeam2ShortName() override;
+    void SetTeam2ShortName(const QString&) override;
+
+    int GetTeam1CurrentScore() override;
+    void SetTeam1CurrentScore(const int&) override;
+    int GetTeam2CurrentScore() override;
+    void SetTeam2CurrentScore(const int&) override;
 
     bool ActConfirmation(const QString& name, const QString& message) override;
 
@@ -47,17 +55,15 @@ public:
     QString GetMutualInfo() override;
     void SetMutualInfo(const QString&) override;
 
-    QString GetT1_Logo() override;
-    void SetT1_Logo(const QString&) override;
-    QString GetT2_Logo() override;
-    void SetT2_Logo(const QString&) override;
+    QString GetTeam1Logo() override;
+    void SetTeam1Logo(const QString&) override;
+    QString GetTeam2Logo() override;
+    void SetTeam2Logo(const QString&) override;
 
     QString GetSideT1() override; //A - attack | D - defence | N - none
     //void SetSideT1(const QString&) override;
 
     void SetStatus(const QString&) override;
-
-    QString GetPath(const QString&, const QString&);
 
     QObject* GetButtonCast_Update();
     QObject* GetButtonCast_Reset();

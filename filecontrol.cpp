@@ -2,7 +2,8 @@
 
 FileControl::FileControl() {}
 
-bool FileControl::SaveData(const QString& dir, const QString& str){
+bool FileControl::SaveData(const QString& dir, const QString& str)
+{
     QFile mFile(dir);
     mFile.open(QIODevice::WriteOnly);
     if (!mFile.isOpen())
@@ -13,7 +14,8 @@ bool FileControl::SaveData(const QString& dir, const QString& str){
     return true;
 }
 
-bool FileControl::SaveImgPNG(const QString& sourcedir, const QString& finaldir){
+bool FileControl::SaveImgPNG(const QString& sourcedir, const QString& finaldir)
+{
     if (!QFile(sourcedir).exists())
         return false;
     ReplaceFile(sourcedir, finaldir + ".png");
@@ -21,7 +23,8 @@ bool FileControl::SaveImgPNG(const QString& sourcedir, const QString& finaldir){
     return true;
 }
 
-bool FileControl::ReplaceFile(const QString& sourcedir, const QString& finaldir){
+bool FileControl::ReplaceFile(const QString& sourcedir, const QString& finaldir)
+{
     if (!QFile(sourcedir).exists())
         return false;
     if (QFile(finaldir).exists()){
@@ -32,7 +35,8 @@ bool FileControl::ReplaceFile(const QString& sourcedir, const QString& finaldir)
     return true;
 }
 
-QString FileControl::ReadFile(const QString& dir){
+QString FileControl::ReadFile(const QString& dir)
+{
     QString tbh = "";
     if (QFile(dir).exists()){
         QFile file (dir);
@@ -43,7 +47,8 @@ QString FileControl::ReadFile(const QString& dir){
     return tbh;
 }
 
-QString FileControl::GetPath(QWidget* obj, const QString& name, const QString& str){
+QString FileControl::GetPath(QWidget* obj, const QString& name, const QString& str)
+{
     static QString lastDir = "";
     const QString filepath = QFileDialog::getOpenFileName(obj, name, lastDir, str);
     lastDir = filepath;
