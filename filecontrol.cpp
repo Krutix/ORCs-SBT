@@ -1,7 +1,5 @@
 #include "filecontrol.h"
 
-FileControl::FileControl() {}
-
 bool FileControl::SaveData(const QString& dir, const QString& str)
 {
     QFile mFile(dir);
@@ -50,8 +48,6 @@ QString FileControl::ReadFile(const QString& dir)
 QString FileControl::GetPath(QWidget* obj, const QString& name, const QString& str)
 {
     static QString lastDir = "";
-    const QString filepath = QFileDialog::getOpenFileName(obj, name, lastDir, str);
-    lastDir = filepath;
-    qDebug() << lastDir;
-    return filepath;
+    lastDir = QFileDialog::getOpenFileName(obj, name, lastDir, str);
+    return lastDir;
 }

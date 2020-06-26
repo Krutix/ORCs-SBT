@@ -29,16 +29,9 @@ void Buttons::Reset_CurrentMatch()
     if (!ui->ActConfirmation("Reset match info?", "Reset match info?"))
         return;
     qDebug() << "Reset Input";
-    ui->SetTeam1Name("");
-    ui->SetTeam2Name("");
-    ui->SetTeam1ShortName("");
-    ui->SetTeam2ShortName("");
-    ui->SetTeam1CurrentScore(0);
-    ui->SetTeam2CurrentScore(0);
-    ui->SetMutualInfo("");
-    ui->SetTeam1Logo("");
-    ui->SetTeam2Logo("");
-    //ui->SetCMap("None");
+    ui->SetTeam1(Team());
+    ui->SetTeam2(Team());
+    ui->SetMutualMapInfo(MutualMapInfo());
     ui->SetStatus("Match fields reset");
 }
 

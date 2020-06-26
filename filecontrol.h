@@ -8,17 +8,14 @@
 #include <QFileDialog>
 #include <QDebug>
 
-class FileControl
-{
-public:
-    FileControl();
+namespace FileControl {
 
-    static bool SaveData(const QString& dir, const QString& str);
-    static bool SaveImgPNG(const QString& sourcedir, const QString& finaldir);
-    static bool ReplaceFile(const QString& sourcedir, const QString& finaldir);
-    static QString ReadFile(const QString& dir);
-    static QString GetPath(QWidget* obj, const QString& name, const QString& str);
-private:
-};
+    bool SaveData(const QString& dir, const QString& str);
+    bool SaveImgPNG(const QString& sourcedir, const QString& finaldir);
+    bool ReplaceFile(const QString& sourcedir, const QString& finaldir);
+    QString ReadFile(const QString& dir);
+    QString GetPath(QWidget* obj, const QString& name, const QString& str);
+
+}
 
 #endif // FILEWRITE_H
