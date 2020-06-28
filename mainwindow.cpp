@@ -13,17 +13,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-Team MainWindow::GetTeam1() 
+Team MainWindow::GetTeam1()
 {
     return { GetTeam1Name(), GetTeam1ShortName(), GetTeam1Logo(), GetTeam1CurrentScore() };
 }
 
-Team MainWindow::GetTeam2() 
+Team MainWindow::GetTeam2()
 {
     return { GetTeam2Name(), GetTeam2ShortName(), GetTeam2Logo(), GetTeam2CurrentScore() };
 }
 
-void MainWindow::SetTeam1(const Team& team) 
+void MainWindow::SetTeam1(const Team& team)
 {
     SetTeam1Name(team.name);
     SetTeam1ShortName(team.shortName);
@@ -31,7 +31,7 @@ void MainWindow::SetTeam1(const Team& team)
     SetTeam1Logo(team.logoPath);
 }
 
-void MainWindow::SetTeam2(const Team& team) 
+void MainWindow::SetTeam2(const Team& team)
 {
     SetTeam2Name(team.name);
     SetTeam2ShortName(team.shortName);
@@ -39,7 +39,7 @@ void MainWindow::SetTeam2(const Team& team)
     SetTeam2Logo(team.logoPath);
 }
 
-const MutualMapInfo MainWindow::GetMutualMapInfo() 
+const MutualMapInfo MainWindow::GetMutualMapInfo()
 {
     return { GetCurrentMap(),  GetMutualInfo() };
 }
@@ -133,12 +133,15 @@ QObject* MainWindow::GetButtonCast_Reset()
     return ui->pushButton_reset_cast;
 }
 
-void MainWindow::on_toolButton_t1_logo_clicked()
+/*void MainWindow::on_toolButton_t1_logo_clicked()
 {
     SetTeam1Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
 }
 
-void MainWindow::on_toolButton_4_clicked()
+void MainWindow::on_toolButton_utility7_clicked()
 {
-    SetTeam2Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
-}
+    TextEditor te(this);
+    te.SetText(ui->lineEdit_utility7->text());
+    if (te.exec())
+        ui->lineEdit_utility7->setText(te.GetText());
+}*/

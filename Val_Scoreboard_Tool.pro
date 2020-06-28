@@ -19,16 +19,21 @@ SOURCES += \
     buttons.cpp \
     filecontrol.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    mainwindow_getset.cpp \
+    texteditor.cpp
 
 HEADERS += \
     buttons.h \
     filecontrol.h \
     iuserinterface.h \
-    mainwindow.h
+    mainwindow.h \
+    castom_data.h \
+    texteditor.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    texteditor.ui
 
 TRANSLATIONS += \
     Val_Scoreboard_Tool_en.ts

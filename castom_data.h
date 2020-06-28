@@ -12,7 +12,7 @@ struct Player
 
 struct Team 
 {
-	QString name;
+    QString name;
 	QString shortName;
 	QString logoPath;
 	int score;

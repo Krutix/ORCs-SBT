@@ -1,9 +1,6 @@
 #include "buttons.h"
 
-Buttons::Buttons()
-{
-
-}
+Buttons::Buttons() {}
 
 Buttons::Buttons(IUserInterface* ui)
 {
@@ -28,7 +25,6 @@ void Buttons::Reset_CurrentMatch()
 {
     if (!ui->ActConfirmation("Reset match info?", "Reset match info?"))
         return;
-    qDebug() << "Reset Input";
     ui->SetTeam1(Team());
     ui->SetTeam2(Team());
     ui->SetMutualMapInfo(MutualMapInfo());
@@ -37,17 +33,20 @@ void Buttons::Reset_CurrentMatch()
 
 void Buttons::Update_CurrentMatch()
 {
-    FileControl::SaveData(cdir + "/CurrentMap/Team1_Name.txt", ui->GetTeam1Name());
-    FileControl::SaveData(cdir + "/CurrentMap/Team2_Name.txt", ui->GetTeam2Name());
-    FileControl::SaveData(cdir + "/CurrentMap/Team1_ShortName.txt", ui->GetTeam1ShortName());
-    FileControl::SaveData(cdir + "/CurrentMap/Team2_ShortName.txt", ui->GetTeam2ShortName());
-    FileControl::SaveData(cdir + "/CurrentMap/Map.txt", ui->GetCurrentMap());
+    const Team Team1 = ui->GetTeam1();
+    const Team Team2 = ui->GetTeam2();
+    const MutualMapInfo MapInfo = ui->GetMutualMapInfo();
+    FileControl::SaveData(cdir + "/CurrentMap/Team1_Name.txt", Team1.name);
+    FileControl::SaveData(cdir + "/CurrentMap/Team2_Name.txt", Team2.name);
+    FileControl::SaveData(cdir + "/CurrentMap/Team1_ShortName.txt", Team1.shortName);
+    FileControl::SaveData(cdir + "/CurrentMap/Team2_ShortName.txt", Team2.shortName);
+    FileControl::SaveData(cdir + "/CurrentMap/Map.txt", MapInfo.currentMap);
     FileControl::SaveData(cdir + "/CurrentMap/Score_Team1.txt",
-                     QString::number(ui->GetTeam1CurrentScore()));
+                     QString::number(Team1.score));
     FileControl::SaveData(cdir + "/CurrentMap/Score_Team2.txt",
-                     QString::number(ui->GetTeam2CurrentScore()));
-    FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", ui->GetMutualInfo());
-    QString side = ui->GetSideT1();
+                     QString::number(Team2.score));
+    FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", MapInfo.mutualInfo);
+    /*QString side = ui->GetSideT1();
     if (side[0] == "A"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t1.png", cdir + "/CurrentMap/sideT1");
         FileControl::SaveImgPNG(cdir + "/Resurces/side_defense_t2.png", cdir + "/CurrentMap/sideT2");
@@ -57,9 +56,9 @@ void Buttons::Update_CurrentMatch()
     } else if (side[0] == "N"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t1.png", cdir + "/CurrentMap/sideT1");
         FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t2.png", cdir + "/CurrentMap/sideT2");
-    }
-    FileControl::SaveImgPNG(ui->GetTeam1Logo(), cdir + "/CurrentMap/logoT1");
-    FileControl::SaveImgPNG(ui->GetTeam2Logo(), cdir + "/CurrentMap/logoT2");
+    }*/
+    FileControl::SaveImgPNG(Team1.logoPath, cdir + "/CurrentMap/logoT1");
+    FileControl::SaveImgPNG(Team1.logoPath, cdir + "/CurrentMap/logoT2");
     ui->SetStatus("Match info update");
 }
 

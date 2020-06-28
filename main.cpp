@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     StartFoldersCheck();
     ResurcesDefault();
-    RestoreUIData(MWindow);
+    //RestoreUIData(MWindow);
 
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
@@ -65,15 +65,15 @@ void ResurcesDefault(){
 
 void RestoreUIData(IUserInterface* ui){
     const QString cdir = QApplication::applicationDirPath();
-    ui->SetTeam1Name(FileControl::ReadFile(cdir + "/CurrentMap/Team1_Name.txt"));
-    ui->SetTeam2Name(FileControl::ReadFile(cdir + "/CurrentMap/Team2_Name.txt"));
-    ui->SetTeam1ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"));
-    ui->SetTeam2ShortName(FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"));
-    ui->SetTeam1CurrentScore(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt());
-    ui->SetTeam2CurrentScore(FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt());
-    ui->SetTeam1Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT1.txt"));
-    ui->SetTeam2Logo(FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"));
-    ui->SetMutualInfo(FileControl::ReadFile(cdir + "/CurrentMap/MutualInfo.txt"));
+    ui->SetTeam1({ FileControl::ReadFile(cdir + "/CurrentMap/Team1_Name.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/Team1_ShortName.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/logoT1.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/Score_Team1.txt").toInt() });
+    ui->SetTeam2({ FileControl::ReadFile(cdir + "/CurrentMap/Team2_Name.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"),
+        FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt() });
+    ui->SetMutualMapInfo({ FileControl::ReadFile(cdir + "/CurrentMap/Map.txt"), FileControl::ReadFile(cdir + "/CurrentMap/MutualInfo.txt") });
     QVector<QString> util;
     for (int ix = 1; ix < 10; ix++)
         util.push_back(FileControl::ReadFile(cdir + "/Info/Utility" + QString::number(ix) + ".txt"));
