@@ -58,6 +58,7 @@ Thumbs.db
 *.opensdf
 *.vcxproj
 *vcxproj.*
+resource.h
 
 # MinGW generated files
 *.Debug
