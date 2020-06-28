@@ -53,17 +53,17 @@ void StartFoldersCheck(){
 
 void ResurcesDefault(){
     const QString cdir = QApplication::applicationDirPath();
-    QFile::copy(":/side_img/attack_red.png",
+    QFile::copy(":/side_img/resurces/attack_red.png",
                 cdir + "/Resurces/side_attack_t1.png");
-    QFile::copy(":/side_img/attack_white.png",
+    QFile::copy(":/side_img/resurces/attack_white.png",
                 cdir + "/Resurces/side_attack_t2.png");
-    QFile::copy(":/side_img/defend_red.png",
+    QFile::copy(":/side_img/resurces/defend_red.png",
                 cdir + "/Resurces/side_defense_t1.png");
-    QFile::copy(":/side_img/defend_white.png",
+    QFile::copy(":/side_img/resurces/defend_white.png",
                 cdir + "/Resurces/side_defense_t2.png");
-    QFile::copy(":/side_img/attack_red.png",
+    QFile::copy(":/side_img/resurces/attack_red.png",
                 cdir + "/Resurces/side_none_t1.png");
-    QFile::copy(":/side_img/attack_white.png",
+    QFile::copy(":/side_img/resurces/attack_white.png",
                 cdir + "/Resurces/side_none_t2.png");
 }
 

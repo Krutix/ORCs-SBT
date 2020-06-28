@@ -1,15 +1,15 @@
 <RCC>
     <qresource prefix="/icon">
-        <file>SMOrc_icon.ico</file>
+        <file>resurces/SMOrc_icon.ico</file>
     </qresource>
     <qresource prefix="/side_img">
-        <file>attack_red.png</file>
-        <file>attack_white.png</file>
-        <file>defend_red.png</file>
-        <file>defend_white.png</file>
+        <file>resurces/attack_red.png</file>
+        <file>resurces/attack_white.png</file>
+        <file>resurces/defend_red.png</file>
+        <file>resurces/defend_white.png</file>
     </qresource>
     <qresource prefix="/default_logo">
-        <file>logo_default_t2.png</file>
-        <file>logo_default_t1.png</file>
+        <file>resurces/logo_default_t1.png</file>
+        <file>resurces/logo_default_t2.png</file>
     </qresource>
 </RCC>
