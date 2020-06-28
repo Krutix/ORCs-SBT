@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     StartFoldersCheck();
     ResurcesDefault();
-    //RestoreUIData(MWindow);
+    RestoreUIData(MWindow);
 
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
