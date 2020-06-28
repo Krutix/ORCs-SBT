@@ -23,16 +23,20 @@ int main(int argc, char *argv[])
     ResurcesDefault();
     RestoreUIData(MWindow);
 
+    //Current match buttons connect
     QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
     QObject::connect(MWindow->GetButtonCMatch_Reset(), SIGNAL(clicked()),
             buttons, SLOT(Reset_CurrentMatch()));
     QObject::connect(MWindow->GetButtonCMatch_Update(), SIGNAL(clicked()),
             buttons, SLOT(Update_CurrentMatch()));
+    //General info buttons connect
     QObject::connect(MWindow->GetButtonCast_Update(), SIGNAL(clicked()),
             buttons, SLOT(Update_CastInfo()));
     QObject::connect(MWindow->GetButtonCast_Reset(), SIGNAL(clicked()),
             buttons, SLOT(Reset_CastInfo()));
+
+
     MWindow->show();
     return a.exec();
 }

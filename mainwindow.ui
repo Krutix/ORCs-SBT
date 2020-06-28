@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -123,7 +123,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QToolButton" name="toolButton_3">
+             <widget class="QToolButton" name="toolButton_t1_logo">
               <property name="text">
                <string>...</string>
               </property>
@@ -524,7 +524,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QToolButton" name="toolButton_4">
+             <widget class="QToolButton" name="toolButton_t2_logo">
               <property name="text">
                <string>...</string>
               </property>
@@ -578,7 +578,7 @@
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="lineEdit_caster1">
+           <widget class="QLineEdit" name="lineEdit_caster1_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -633,7 +633,7 @@
            </widget>
           </item>
           <item row="8" column="1">
-           <widget class="QLineEdit" name="lineEdit_analist2">
+           <widget class="QLineEdit" name="lineEdit_analist2_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -666,7 +666,7 @@
              <widget class="QLineEdit" name="lineEdit_utility9"/>
             </item>
             <item>
-             <widget class="QToolButton" name="toolButton_5">
+             <widget class="QToolButton" name="toolButton_utility9">
               <property name="text">
                <string>...</string>
               </property>
@@ -680,7 +680,7 @@
              <widget class="QLineEdit" name="lineEdit_utility7"/>
             </item>
             <item>
-             <widget class="QToolButton" name="toolButton">
+             <widget class="QToolButton" name="toolButton_utility7">
               <property name="text">
                <string>...</string>
               </property>
@@ -694,7 +694,7 @@
              <widget class="QLineEdit" name="lineEdit_utility8"/>
             </item>
             <item>
-             <widget class="QToolButton" name="toolButton_2">
+             <widget class="QToolButton" name="toolButton_utility8">
               <property name="text">
                <string>...</string>
               </property>
@@ -703,7 +703,7 @@
            </layout>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_observer1">
+           <widget class="QLineEdit" name="lineEdit_observer1_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -713,7 +713,7 @@
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="lineEdit_caster2">
+           <widget class="QLineEdit" name="lineEdit_caster2_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -747,7 +747,7 @@
            </widget>
           </item>
           <item row="6" column="1">
-           <widget class="QLineEdit" name="lineEdit_host">
+           <widget class="QLineEdit" name="lineEdit_host_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -778,7 +778,7 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_observer2">
+           <widget class="QLineEdit" name="lineEdit_observer2_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -802,7 +802,7 @@
            </widget>
           </item>
           <item row="7" column="1">
-           <widget class="QLineEdit" name="lineEdit_analist1">
+           <widget class="QLineEdit" name="lineEdit_analist1_nick">
             <property name="enabled">
              <bool>false</bool>
             </property>

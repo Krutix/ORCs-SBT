@@ -73,7 +73,9 @@ public:
     QObject* GetButtonCMatch_Reset();
 
 private slots:
-
+    void on_toolButton_utility7_clicked();
+    void on_toolButton_utility8_clicked();
+    void on_toolButton_utility9_clicked();
 
 private:
     Ui::MainWindow *ui;
