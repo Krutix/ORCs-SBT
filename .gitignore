@@ -59,6 +59,10 @@ Thumbs.db
 *.vcxproj
 *vcxproj.*
 resource.h
+.vs
+Release
+Debug
+RCa05644
 
 # MinGW generated files
 *.Debug
