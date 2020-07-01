@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>726</width>
+    <width>651</width>
     <height>407</height>
    </rect>
   </property>
@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -144,6 +144,12 @@
             </item>
             <item row="0" column="3">
              <widget class="QFrame" name="frame">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="frameShape">
                <enum>QFrame::Box</enum>
               </property>
@@ -854,7 +860,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>726</width>
+     <width>651</width>
      <height>21</height>
     </rect>
    </property>

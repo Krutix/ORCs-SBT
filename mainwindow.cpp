@@ -6,8 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("ORCs Scoreboard Tool");
-
-    
 }
 
 MainWindow::~MainWindow()
@@ -135,10 +133,15 @@ QObject* MainWindow::GetButtonCast_Reset()
     return ui->pushButton_reset_cast;
 }
 
-/*void MainWindow::on_toolButton_t1_logo_clicked()
+void MainWindow::on_toolButton_t1_logo_clicked()
 {
     SetTeam1Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
-}*/
+}
+
+void MainWindow::on_toolButton_t2_logo_clicked()
+{
+    SetTeam1Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
+}
 
 void MainWindow::on_toolButton_utility7_clicked()
 {

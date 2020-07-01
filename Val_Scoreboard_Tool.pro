@@ -8,12 +8,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 QMAKE_LFLAGS_RELEASE += -static -static-libgcc
 
-VERSION = 1.0.2
+VERSION = 1.0.2.0
 QMAKE_TARGET_COMPANY = ORCs cast
 QMAKE_TARGET_PRODUCT = ORCs Scoreboard Tool
 QMAKE_TARGET_COPYRIGHT = Andrey Krutikhin
 QMAKE_TARGET_DESCRIPTION = Scoreboard tool for valorant
-RC_ICONS = SMOrc_icon.ico
+RC_ICONS = resurces/SMOrc_icon.ico
 
 SOURCES += \
     buttons.cpp \
