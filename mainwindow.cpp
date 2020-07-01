@@ -39,6 +39,25 @@ void MainWindow::SetTeam2(const Team& team)
     SetTeam2Logo(team.logoPath);
 }
 
+CastTeam MainWindow::GetCastTeam()
+{
+    return { ui->lineEdit_producer_nick->text(), ui->lineEdit_observer1_nick->text(),
+    ui->lineEdit_observer2_nick->text(), ui->lineEdit_caster1_nick->text(), ui->lineEdit_caster2_nick->text(),
+    ui->lineEdit_host_nick->text(),  ui->lineEdit_analist1_nick->text(), ui->lineEdit_analist2_nick->text() };
+}
+
+void MainWindow::SetCastTeam(const CastTeam& cTeam)
+{
+    ui->lineEdit_producer_nick->setText(cTeam.producer);
+    ui->lineEdit_observer1_nick->setText(cTeam.observer[0]);
+    ui->lineEdit_observer2_nick->setText(cTeam.observer[1]);
+    ui->lineEdit_caster1_nick->setText(cTeam.caster[0]);
+    ui->lineEdit_caster2_nick->setText(cTeam.caster[1]);
+    ui->lineEdit_host_nick->setText(cTeam.host);
+    ui->lineEdit_analist1_nick->setText(cTeam.analist[0]);
+    ui->lineEdit_analist2_nick->setText(cTeam.analist[1]);
+}
+
 const MutualMapInfo MainWindow::GetMutualMapInfo()
 {
     return { GetCurrentMap(),  GetMutualInfo() };

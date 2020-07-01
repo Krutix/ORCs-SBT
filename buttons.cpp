@@ -46,7 +46,7 @@ void Buttons::Update_CurrentMatch()
     FileControl::SaveData(cdir + "/CurrentMap/Score_Team2.txt",
                      QString::number(Team2.score));
     FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", MapInfo.mutualInfo);
-    /*QString side = ui->GetSideT1();
+    QString side = ui->GetSideT1();
     if (side[0] == "A"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t1.png", cdir + "/CurrentMap/sideT1");
         FileControl::SaveImgPNG(cdir + "/Resurces/side_defense_t2.png", cdir + "/CurrentMap/sideT2");
@@ -56,7 +56,7 @@ void Buttons::Update_CurrentMatch()
     } else if (side[0] == "N"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t1.png", cdir + "/CurrentMap/sideT1");
         FileControl::SaveImgPNG(cdir + "/Resurces/side_none_t2.png", cdir + "/CurrentMap/sideT2");
-    }*/
+    }
     FileControl::SaveImgPNG(Team1.logoPath, cdir + "/CurrentMap/logoT1");
     FileControl::SaveImgPNG(Team1.logoPath, cdir + "/CurrentMap/logoT2");
     ui->SetStatus("Match info update");
@@ -68,6 +68,15 @@ void Buttons::Update_CastInfo()
     for (auto saveData : ui->GetUtilityList()){
         FileControl::SaveData(cdir + "/Info/Utility" + QString::number(i++) + ".txt", saveData);
     }
+    CastTeam cast (ui->GetCastTeam());
+    FileControl::SaveData(cdir + "/Info/Producer.txt", cast.producer);
+    FileControl::SaveData(cdir + "/Info/Observer1.txt", cast.observer[0]);
+    FileControl::SaveData(cdir + "/Info/Observer2.txt", cast.observer[1]);
+    FileControl::SaveData(cdir + "/Info/Caster1.txt", cast.caster[0]);
+    FileControl::SaveData(cdir + "/Info/Caster2.txt", cast.caster[1]);
+    FileControl::SaveData(cdir + "/Info/Host.txt", cast.host);
+    FileControl::SaveData(cdir + "/Info/Analist1.txt", cast.analist[0]);
+    FileControl::SaveData(cdir + "/Info/Analist2.txt", cast.analist[1]);
     ui->SetStatus("Cast info updated");
 }
 

@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -586,7 +586,7 @@
           <item row="4" column="1">
            <widget class="QLineEdit" name="lineEdit_caster1_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -641,7 +641,7 @@
           <item row="8" column="1">
            <widget class="QLineEdit" name="lineEdit_analist2_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -711,7 +711,7 @@
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineEdit_observer1_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="text">
              <string/>
@@ -721,7 +721,7 @@
           <item row="5" column="1">
            <widget class="QLineEdit" name="lineEdit_caster2_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -755,7 +755,7 @@
           <item row="6" column="1">
            <widget class="QLineEdit" name="lineEdit_host_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -779,14 +779,14 @@
           <item row="1" column="1">
            <widget class="QLineEdit" name="lineEdit_producer_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
            <widget class="QLineEdit" name="lineEdit_observer2_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="text">
              <string/>
@@ -810,7 +810,7 @@
           <item row="7" column="1">
            <widget class="QLineEdit" name="lineEdit_analist1_nick">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
            </widget>
           </item>

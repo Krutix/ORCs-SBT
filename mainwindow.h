@@ -30,6 +30,9 @@ public:
     const MutualMapInfo GetMutualMapInfo() override;
     void SetMutualMapInfo(const MutualMapInfo&) override;
 
+    CastTeam GetCastTeam() override;
+    void SetCastTeam(const CastTeam& CastTeam) override;
+
     QString GetCurrentMap();
     void SetCurrentMap(const QString&);
 
@@ -61,7 +64,7 @@ public:
     QString GetTeam2Logo();
     void SetTeam2Logo(const QString&);
 
-    QString GetSideT1(); //A - attack | D - defence | N - none
+    QString GetSideT1() override; //A - attack | D - defence | N - none
     //void SetSideT1(const QString&);
 
     void SetStatus(const QString&) override;

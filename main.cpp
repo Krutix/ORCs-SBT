@@ -77,6 +77,14 @@ void RestoreUIData(IUserInterface* ui){
         FileControl::ReadFile(cdir + "/CurrentMap/Team2_ShortName.txt"),
         FileControl::ReadFile(cdir + "/CurrentMap/logoT2.txt"),
         FileControl::ReadFile(cdir + "/CurrentMap/Score_Team2.txt").toInt() });
+    ui->SetCastTeam({ FileControl::ReadFile(cdir + "/Info/Producer.txt"),
+        FileControl::ReadFile(cdir + "/Info/Observer1.txt"),
+        FileControl::ReadFile(cdir + "/Info/Observer2.txt"),
+        FileControl::ReadFile(cdir + "/Info/Caster1.txt"),
+        FileControl::ReadFile(cdir + "/Info/Caster2.txt"),
+        FileControl::ReadFile(cdir + "/Info/Host.txt"),
+        FileControl::ReadFile(cdir + "/Info/Analist1.txt"),
+        FileControl::ReadFile(cdir + "/Info/Analist2.txt") });
     ui->SetMutualMapInfo({ FileControl::ReadFile(cdir + "/CurrentMap/Map.txt"), FileControl::ReadFile(cdir + "/CurrentMap/MutualInfo.txt") });
     QVector<QString> util;
     for (int ix = 1; ix < 10; ix++)
