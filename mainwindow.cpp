@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle("ORCs Scoreboard Tool");
 }
 
+
 MainWindow::~MainWindow()
 {
     delete ui;

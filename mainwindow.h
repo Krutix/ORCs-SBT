@@ -54,6 +54,7 @@ public:
     inline QObject* GetButtonCMatch_Update() { return ui->pushButton_update_match; }
     inline QObject* GetButtonCMatch_Reset() { return ui->pushButton_reset_match; }
 
+    inline QString GetSide() { return ui->buttonGroup_side->checkedButton()->text(); }
 private slots:
     void on_toolButton_t1_logo_clicked();
     void on_toolButton_t2_logo_clicked();

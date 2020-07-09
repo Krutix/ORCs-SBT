@@ -26,8 +26,7 @@ public:
     QVector<QString> GetUtilityList() override;
     void SetUtilityList(const QVector<QString>&) override;
 
-    QString GetSideT1() override; //A - attack | D - defence | N - none
-    //void SetSideT1(const QString&);
+    inline QString GetSideT1() override; //A - attack | D - defence | N - none
 
     void SetStatus(const QString&) override;
 };

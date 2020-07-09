@@ -86,19 +86,10 @@ QVector<QString> MWindow::GetUtilityList(){
     return utilitys;
 }
 
-
 QString MWindow::GetSideT1()
-{ // TODO Groupe radio buttons
-    if (ui->radioButton_side_attack->isChecked())
-        return "Attack";
-    if (ui->radioButton_side_defence->isChecked())
-        return "Defence";
-    if (ui->radioButton_side_none->isChecked())
-        return "None";
-    return "";
+{
+    return GetSide();
 }
-
-//void MainWindow::SetSideT1(){}
 
 void MWindow::SetUtilityList(const QVector<QString>& utilitys)
 {
