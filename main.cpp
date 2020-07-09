@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QFile>
 
-#include "mainwindow.h"
+#include "mwindow.h"
 #include "iuserinterface.h"
 #include "filecontrol.h"
 #include "buttons.h"
@@ -16,28 +16,28 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    MainWindow* MWindow = new MainWindow();
-    Buttons *buttons = new Buttons(MWindow);
+    MWindow* MainWindow = new MWindow();
+    Buttons *buttons = new Buttons(MainWindow);
 
     StartFoldersCheck();
     ResurcesDefault();
-    RestoreUIData(MWindow);
+    RestoreUIData(MainWindow);
 
     //Current match buttons connect
-    QObject::connect(MWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
+    QObject::connect(MainWindow->GetButtonCMatch_Swap(), SIGNAL(clicked()),
             buttons, SLOT(Swap_CurrentTeams()));
-    QObject::connect(MWindow->GetButtonCMatch_Reset(), SIGNAL(clicked()),
+    QObject::connect(MainWindow->GetButtonCMatch_Reset(), SIGNAL(clicked()),
             buttons, SLOT(Reset_CurrentMatch()));
-    QObject::connect(MWindow->GetButtonCMatch_Update(), SIGNAL(clicked()),
+    QObject::connect(MainWindow->GetButtonCMatch_Update(), SIGNAL(clicked()),
             buttons, SLOT(Update_CurrentMatch()));
     //General info buttons connect
-    QObject::connect(MWindow->GetButtonCast_Update(), SIGNAL(clicked()),
+    QObject::connect(MainWindow->GetButtonCast_Update(), SIGNAL(clicked()),
             buttons, SLOT(Update_CastInfo()));
-    QObject::connect(MWindow->GetButtonCast_Reset(), SIGNAL(clicked()),
+    QObject::connect(MainWindow->GetButtonCast_Reset(), SIGNAL(clicked()),
             buttons, SLOT(Reset_CastInfo()));
 
 
-    MWindow->show();
+    MainWindow->show();
     return a.exec();
 }
 

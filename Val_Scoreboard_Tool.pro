@@ -20,7 +20,7 @@ SOURCES += \
     filecontrol.cpp \
     main.cpp \
     mainwindow.cpp \
-    mainwindow_getset.cpp \
+    mwindow.cpp \
     texteditor.cpp
 
 HEADERS += \
@@ -29,6 +29,7 @@ HEADERS += \
     iuserinterface.h \
     mainwindow.h \
     castom_data.h \
+    mwindow.h \
     texteditor.h
 
 FORMS += \
