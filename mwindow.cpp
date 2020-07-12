@@ -30,28 +30,9 @@ void MWindow::SetTeam2(const Team& team)
     SetTeam2Logo(team.logoPath);
 }
 
-CastTeam MWindow::GetCastTeam()
-{
-    return { ui->lineEdit_producer_nick->text(), ui->lineEdit_observer1_nick->text(),
-    ui->lineEdit_observer2_nick->text(), ui->lineEdit_caster1_nick->text(), ui->lineEdit_caster2_nick->text(),
-    ui->lineEdit_host_nick->text(),  ui->lineEdit_analist1_nick->text(), ui->lineEdit_analist2_nick->text() };
-}
-
-void MWindow::SetCastTeam(const CastTeam& cTeam)
-{
-    ui->lineEdit_producer_nick->setText(cTeam.producer);
-    ui->lineEdit_observer1_nick->setText(cTeam.observer[0]);
-    ui->lineEdit_observer2_nick->setText(cTeam.observer[1]);
-    ui->lineEdit_caster1_nick->setText(cTeam.caster[0]);
-    ui->lineEdit_caster2_nick->setText(cTeam.caster[1]);
-    ui->lineEdit_host_nick->setText(cTeam.host);
-    ui->lineEdit_analist1_nick->setText(cTeam.analist[0]);
-    ui->lineEdit_analist2_nick->setText(cTeam.analist[1]);
-}
-
 const MutualMapInfo MWindow::GetMutualMapInfo()
 {
-    return { GetCurrentMap(),  GetMutualInfo() };
+    return { GetCurrentMap(), GetMutualInfo() };
 }
 
 void MWindow::SetMutualMapInfo(const MutualMapInfo& info)
@@ -72,36 +53,28 @@ bool MWindow::ActConfirmation(const QString& name, const QString& message)
 }
 
 
-QVector<QString> MWindow::GetUtilityList(){
-    QVector<QString> utilitys;
-    utilitys.push_back(ui->lineEdit_utility1->text());
-    utilitys.push_back(ui->lineEdit_utility2->text());
-    utilitys.push_back(ui->lineEdit_utility3->text());
-    utilitys.push_back(ui->lineEdit_utility4->text());
-    utilitys.push_back(ui->lineEdit_utility5->text());
-    utilitys.push_back(ui->lineEdit_utility6->text());
-    utilitys.push_back(ui->lineEdit_utility7->text());
-    utilitys.push_back(ui->lineEdit_utility8->text());
-    utilitys.push_back(ui->lineEdit_utility9->text());
-    return utilitys;
+QVector<QString> MWindow::GetUtilities(){
+    return { GetUtilitiesText() };
+}
+
+void MWindow::SetUtilities(const QVector<QString>& utilitys)
+{
+    SetUtilitiesText(utilitys);
+}
+
+CastTeam MWindow::GetCastTeam()
+{
+    return GetCastTeamText();
+}
+
+void MWindow::SetCastTeam(const CastTeam& castTeam)
+{
+    SetCastTeamText(castTeam);
 }
 
 QString MWindow::GetSideT1()
 {
     return GetSide();
-}
-
-void MWindow::SetUtilityList(const QVector<QString>& utilitys)
-{
-    ui->lineEdit_utility1->setText(utilitys[0]);
-    ui->lineEdit_utility2->setText(utilitys[1]);
-    ui->lineEdit_utility3->setText(utilitys[2]);
-    ui->lineEdit_utility4->setText(utilitys[3]);
-    ui->lineEdit_utility5->setText(utilitys[4]);
-    ui->lineEdit_utility6->setText(utilitys[5]);
-    ui->lineEdit_utility7->setText(utilitys[6]);
-    ui->lineEdit_utility8->setText(utilitys[7]);
-    ui->lineEdit_utility9->setText(utilitys[8]);
 }
 
 void MWindow::SetStatus(const QString& status)

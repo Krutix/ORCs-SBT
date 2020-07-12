@@ -23,8 +23,8 @@ public:
 
     bool ActConfirmation(const QString& name, const QString& message) override;
 
-    QVector<QString> GetUtilityList() override;
-    void SetUtilityList(const QVector<QString>&) override;
+    QVector<QString> GetUtilities() override;
+    void SetUtilities(const QVector<QString>&) override;
 
     inline QString GetSideT1() override; //A - attack | D - defence | N - none
 

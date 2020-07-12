@@ -89,5 +89,5 @@ void RestoreUIData(IUserInterface* ui){
     QVector<QString> util;
     for (int ix = 1; ix < 10; ix++)
         util.push_back(FileControl::ReadFile(cdir + "/Info/Utility" + QString::number(ix) + ".txt"));
-    ui->SetUtilityList(util);
+    ui->SetUtilities(util);
 }

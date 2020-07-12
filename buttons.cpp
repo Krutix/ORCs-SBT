@@ -65,7 +65,7 @@ void Buttons::Update_CurrentMatch()
 void Buttons::Update_CastInfo()
 {
     int i = 1;
-    for (auto saveData : ui->GetUtilityList()){
+    for (auto saveData : ui->GetUtilities()){
         FileControl::SaveData(cdir + "/Info/Utility" + QString::number(i++) + ".txt", saveData);
     }
     CastTeam cast (ui->GetCastTeam());
@@ -85,6 +85,6 @@ void Buttons::Reset_CastInfo()
     if (!ui->ActConfirmation("Reset genetal info?", "Reset genetal info?"))
         return;
     QVector<QString> res (9, "");
-    ui->SetUtilityList(res);
+    ui->SetUtilities(res);
     ui->SetStatus("Genetal info reset");
 }

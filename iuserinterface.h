@@ -18,8 +18,8 @@ public:
     virtual const MutualMapInfo GetMutualMapInfo() = 0;
     virtual void SetMutualMapInfo(const MutualMapInfo&) = 0;
 
-    virtual QVector<QString> GetUtilityList() = 0;
-    virtual void SetUtilityList(const QVector<QString>&) = 0;
+    virtual QVector<QString> GetUtilities() = 0;
+    virtual void SetUtilities(const QVector<QString>&) = 0;
 
     virtual CastTeam GetCastTeam() = 0;
     virtual void SetCastTeam(const CastTeam& CastTeam) = 0;
