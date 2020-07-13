@@ -6,8 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("ORCs Scoreboard Tool");
-    utilityList.reserve(9);
-    utilityList = { ui->lineEdit_utility1, ui->lineEdit_utility2,
+    utilitiesList.reserve(9);
+    utilitiesList = { ui->lineEdit_utility1, ui->lineEdit_utility2,
                         ui->lineEdit_utility3, ui->lineEdit_utility4,
                         ui->lineEdit_utility5, ui->lineEdit_utility6,
                         ui->lineEdit_utility7, ui->lineEdit_utility8,
@@ -25,14 +25,14 @@ QVector<QString> MainWindow::GetUtilitiesText() const
     QVector<QString> utilityText;
     utilityText.reserve(9);
     for (int ix = 0; ix < 9; ix++)
-        utilityText.push_back(utilityList[ix]->text());
+        utilityText.push_back(utilitiesList[ix]->text());
     return utilityText;
 }
 
 void MainWindow::SetUtilitiesText(const QVector<QString>& utilityText)
 {
     for (int ix = 0; ix < 9; ix++)
-        utilityList[ix]->setText(utilityText[ix]);
+        utilitiesList[ix]->setText(utilityText[ix]);
 }
 
 CastTeam MainWindow::GetCastTeamText() const
@@ -89,4 +89,21 @@ void MainWindow::on_toolButton_utility9_clicked()
     te.SetText(ui->lineEdit_utility9->text());
     if (te.exec())
         ui->lineEdit_utility9->setText(te.GetText());
+}
+
+void MainWindow::on_actionGit_Hub_triggered()
+{
+    int conf = QMessageBox::question(this, "Open external url?",
+                                     "Press Yes to open external url\n"
+                                     "in your default browser",
+                                     QMessageBox::Yes|QMessageBox::Cancel);
+    if (conf == QMessageBox::Yes) {
+        QDesktopServices::openUrl(QUrl(
+                "https://github.com/Krutix/ORCs-Scoreboard-Tool"));
+    }
+}
+
+void MainWindow::on_actionCreators_triggered()
+{
+
 }

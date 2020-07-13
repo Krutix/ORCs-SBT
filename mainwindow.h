@@ -11,6 +11,7 @@
 #include <QVector>
 #include <QDebug>
 #include <memory>
+#include <QDesktopServices>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -63,6 +64,7 @@ public:
     inline QObject* GetButtonCMatch_Swap() const { return ui->pushButton_swap_match; }
     inline QObject* GetButtonCMatch_Update() const { return ui->pushButton_update_match; }
     inline QObject* GetButtonCMatch_Reset() const { return ui->pushButton_reset_match; }
+
 private slots:
     void on_toolButton_t1_logo_clicked();
     void on_toolButton_t2_logo_clicked();
@@ -71,10 +73,14 @@ private slots:
     void on_toolButton_utility8_clicked();
     void on_toolButton_utility9_clicked();
 
+    void on_actionGit_Hub_triggered();
+
+    void on_actionCreators_triggered();
+
 protected:
     Ui::MainWindow *ui;
 
 private:
-    QVector<QLineEdit*> utilityList;
+    QVector<QLineEdit*> utilitiesList;
 };
 #endif // MAINWINDOW_H
