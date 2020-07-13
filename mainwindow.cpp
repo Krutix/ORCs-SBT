@@ -102,3 +102,9 @@ void MainWindow::on_actionGit_Hub_triggered()
                 "https://github.com/Krutix/ORCs-Scoreboard-Tool"));
     }
 }
+
+void MainWindow::on_actionAbout_ORCs_SBT_triggered()
+{
+    about aboutWindow(this);
+    aboutWindow.exec();
+}

@@ -5,6 +5,7 @@
 #include "texteditor.h"
 #include "ui_mainwindow.h"
 #include "castom_data.h"
+#include "about.h"
 
 #include <QMainWindow>
 #include <QMessageBox>
@@ -79,6 +80,8 @@ private slots:
     void on_toolButton_utility9_clicked();
 
     void on_actionGit_Hub_triggered();
+
+    void on_actionAbout_ORCs_SBT_triggered();
 
 protected:
     Ui::MainWindow *ui;

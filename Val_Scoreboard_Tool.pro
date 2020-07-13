@@ -16,6 +16,7 @@ QMAKE_TARGET_DESCRIPTION = Scoreboard tool for valorant
 RC_ICONS = resurces/SMOrc_icon.ico
 
 SOURCES += \
+    about.cpp \
     buttons.cpp \
     filecontrol.cpp \
     main.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
     texteditor.cpp
 
 HEADERS += \
+    about.h \
     buttons.h \
     filecontrol.h \
     iuserinterface.h \
@@ -33,6 +35,7 @@ HEADERS += \
     texteditor.h
 
 FORMS += \
+    about.ui \
     mainwindow.ui \
     texteditor.ui
 

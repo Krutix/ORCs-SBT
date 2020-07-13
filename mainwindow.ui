@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
+    <width>766</width>
     <height>428</height>
    </rect>
   </property>
@@ -150,11 +150,14 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="autoFillBackground">
+               <bool>true</bool>
+              </property>
               <property name="frameShape">
-               <enum>QFrame::Box</enum>
+               <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
+               <enum>QFrame::Sunken</enum>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
                <property name="spacing">
@@ -863,7 +866,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
+     <width>766</width>
      <height>18</height>
     </rect>
    </property>
