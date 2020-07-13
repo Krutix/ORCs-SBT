@@ -5,7 +5,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow())
 {
     ui->setupUi(this);
-    setWindowTitle("ORCs Scoreboard Tool");
+    setWindowTitle("ORCs SBT");
     utilitiesList.reserve(9);
     utilitiesList = { ui->lineEdit_utility1, ui->lineEdit_utility2,
                         ui->lineEdit_utility3, ui->lineEdit_utility4,
@@ -101,9 +101,4 @@ void MainWindow::on_actionGit_Hub_triggered()
         QDesktopServices::openUrl(QUrl(
                 "https://github.com/Krutix/ORCs-Scoreboard-Tool"));
     }
-}
-
-void MainWindow::on_actionCreators_triggered()
-{
-
 }

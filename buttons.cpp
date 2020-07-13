@@ -19,6 +19,7 @@ void Buttons::Swap_CurrentTeams()
     Team team1 (ui->GetTeam1());
     ui->SetTeam1(ui->GetTeam2());
     ui->SetTeam2(team1);
+    ui->SetStatus("Teams swapped");
 }
 
 void Buttons::Reset_CurrentMatch()
@@ -36,6 +37,7 @@ void Buttons::Update_CurrentMatch()
     const Team Team1 = ui->GetTeam1();
     const Team Team2 = ui->GetTeam2();
     const MutualMapInfo MapInfo = ui->GetMutualMapInfo();
+
     FileControl::SaveData(cdir + "/CurrentMap/Team1_Name.txt", Team1.name);
     FileControl::SaveData(cdir + "/CurrentMap/Team2_Name.txt", Team2.name);
     FileControl::SaveData(cdir + "/CurrentMap/Team1_ShortName.txt", Team1.shortName);
@@ -46,6 +48,7 @@ void Buttons::Update_CurrentMatch()
     FileControl::SaveData(cdir + "/CurrentMap/Score_Team2.txt",
                      QString::number(Team2.score));
     FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", MapInfo.mutualInfo);
+
     QString side = ui->GetSideT1();
     if (side[0] == "A"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t1.png", cdir + "/CurrentMap/sideT1");
@@ -77,7 +80,7 @@ void Buttons::Update_CastInfo()
     FileControl::SaveData(cdir + "/Info/Host.txt", cast.host);
     FileControl::SaveData(cdir + "/Info/Analist1.txt", cast.analist[0]);
     FileControl::SaveData(cdir + "/Info/Analist2.txt", cast.analist[1]);
-    ui->SetStatus("Cast info updated");
+    ui->SetStatus("General info updated");
 }
 
 void Buttons::Reset_CastInfo()
@@ -86,5 +89,6 @@ void Buttons::Reset_CastInfo()
         return;
     QVector<QString> res (9, "");
     ui->SetUtilities(res);
+    ui->SetCastTeam({});
     ui->SetStatus("Genetal info reset");
 }

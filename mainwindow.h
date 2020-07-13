@@ -57,7 +57,12 @@ public:
     CastTeam GetCastTeamText() const;
     void SetCastTeamText(const CastTeam&);
 
-    inline QString GetSide() { return ui->buttonGroup_side->checkedButton()->text(); }
+    inline QString GetSide()
+    {
+        if (ui->buttonGroup_side->checkedButton())
+            return ui->buttonGroup_side->checkedButton()->text();
+        return "0";
+    }
 
     inline QObject* GetButtonCast_Update() const { return ui->pushButton_update_cast; }
     inline QObject* GetButtonCast_Reset() const { return ui->pushButton_reset_cast; }
@@ -74,8 +79,6 @@ private slots:
     void on_toolButton_utility9_clicked();
 
     void on_actionGit_Hub_triggered();
-
-    void on_actionCreators_triggered();
 
 protected:
     Ui::MainWindow *ui;

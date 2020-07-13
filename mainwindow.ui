@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>742</width>
+    <width>764</width>
     <height>428</height>
    </rect>
   </property>
@@ -863,7 +863,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>742</width>
+     <width>764</width>
      <height>18</height>
     </rect>
    </property>
@@ -871,15 +871,15 @@
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionCreators"/>
+    <addaction name="actionAbout_ORCs_SBT"/>
     <addaction name="actionGit_Hub"/>
    </widget>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionCreators">
+  <action name="actionAbout_ORCs_SBT">
    <property name="text">
-    <string>Creators</string>
+    <string>About ORCs SBT</string>
    </property>
   </action>
   <action name="actionGit_Hub">
