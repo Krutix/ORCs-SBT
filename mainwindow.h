@@ -10,8 +10,8 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QVector>
+#include <QStringList>
 #include <QDebug>
-#include <memory>
 #include <QDesktopServices>
 
 QT_BEGIN_NAMESPACE
@@ -52,8 +52,18 @@ public:
     inline QString GetTeam2Logo() const { return ui->lineEdit_t2_logo->text(); }
     inline void SetTeam2Logo(const QString& dir) { ui->lineEdit_t2_logo->setText(dir); }
 
-    QVector<QString> GetUtilitiesText() const;
-    void SetUtilitiesText(const QVector<QString>&);
+    QStringList GetTeam1PlayersNick();
+    void SetTeam1PlayersNick(const QStringList&);
+    QStringList GetTeam2PlayersNick();
+    void SetTeam2PlayersNick(const QStringList&);
+
+    QStringList GetTeam1PlayersHero();
+    void SetTeam1PlayersHero(const QStringList&);
+    QStringList GetTeam2PlayersHero();
+    void SetTeam2PlayersHero(const QStringList&);
+
+    QStringList GetUtilitiesText() const;
+    void SetUtilitiesText(const QStringList&);
 
     CastTeam GetCastTeamText() const;
     void SetCastTeamText(const CastTeam&);
@@ -88,5 +98,10 @@ protected:
 
 private:
     QVector<QLineEdit*> utilitiesList;
+    QVector<QLineEdit*> playersT1;
+    QVector<QLineEdit*> playersT2;
+
+    QVector<QComboBox*> playersHeroT1;
+    QVector<QComboBox*> playersHeroT2;
 };
 #endif // MAINWINDOW_H

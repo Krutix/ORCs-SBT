@@ -21,8 +21,8 @@ public:
     CastTeam GetCastTeam() override;
     void SetCastTeam(const CastTeam& CastTeam) override;
 
-    QVector<QString> GetUtilities() override;
-    void SetUtilities(const QVector<QString>&) override;
+    QStringList GetUtilities() override;
+    void SetUtilities(const QStringList&) override;
 
     inline QString GetSideT1() override; //A - attack | D - defence | N - none
 

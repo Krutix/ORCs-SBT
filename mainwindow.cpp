@@ -12,6 +12,25 @@ MainWindow::MainWindow(QWidget *parent)
                         ui->lineEdit_utility5, ui->lineEdit_utility6,
                         ui->lineEdit_utility7, ui->lineEdit_utility8,
                         ui->lineEdit_utility9 };
+    playersT1 = { ui->lineEdit_t1_nick_p1, ui->lineEdit_t1_nick_p2,
+                ui->lineEdit_t1_nick_p3, ui->lineEdit_t1_nick_p4,
+                ui->lineEdit_t1_nick_p5 };
+    playersT2 = { ui->lineEdit_t2_nick_p1, ui->lineEdit_t2_nick_p2,
+                ui->lineEdit_t2_nick_p3, ui->lineEdit_t2_nick_p4,
+                ui->lineEdit_t2_nick_p5 };
+    playersHeroT1 = { ui->comboBox_t1_hero_p1, ui->comboBox_t1_hero_p2,
+                ui->comboBox_t1_hero_p3, ui->comboBox_t1_hero_p4,
+                ui->comboBox_t1_hero_p5 };
+    playersHeroT2 = { ui->comboBox_t2_hero_p1, ui->comboBox_t2_hero_p2,
+                ui->comboBox_t2_hero_p3, ui->comboBox_t2_hero_p4,
+                ui->comboBox_t2_hero_p5 };
+    QStringList HeroList = { "None", "Breach", "Brimstone", "Cypher", "Jett",
+                             "Omen", "Phoenix", "Raze", "Reyna", "Sage",
+                             "Sova", "Viper" };
+    for (auto playersHero : playersHeroT1)
+        playersHero->addItems(HeroList);
+    for (auto playersHero : playersHeroT2)
+        playersHero->addItems(HeroList);
 }
 
 
@@ -20,16 +39,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-QVector<QString> MainWindow::GetUtilitiesText() const
+QStringList MainWindow::GetUtilitiesText() const
 {
-    QVector<QString> utilityText;
+    QStringList utilityText;
     utilityText.reserve(9);
     for (int ix = 0; ix < 9; ix++)
         utilityText.push_back(utilitiesList[ix]->text());
     return utilityText;
 }
 
-void MainWindow::SetUtilitiesText(const QVector<QString>& utilityText)
+void MainWindow::SetUtilitiesText(const QStringList& utilityText)
 {
     for (int ix = 0; ix < 9; ix++)
         utilitiesList[ix]->setText(utilityText[ix]);
@@ -54,6 +73,56 @@ void MainWindow::SetCastTeamText(const CastTeam& cTeam)
     ui->lineEdit_analist2_nick->setText(cTeam.analist[1]);
 }
 
+QStringList MainWindow::GetTeam1PlayersNick()
+{
+    return { playersT1[0]->text(), playersT1[1]->text(), playersT1[2]->text(),
+        playersT1[3]->text(), playersT1[4]->text() };
+}
+
+void MainWindow::SetTeam1PlayersNick(const QStringList& list)
+{
+    for (int i = 0; i < 5; i++)
+        playersT1[i]->setText(list[i]);
+}
+
+QStringList MainWindow::GetTeam2PlayersNick()
+{
+    return { playersT2[0]->text(), playersT2[1]->text(), playersT2[2]->text(),
+        playersT2[3]->text(), playersT2[4]->text() };
+}
+
+void MainWindow::SetTeam2PlayersNick(const QStringList& list)
+{
+    for (int i = 0; i < 5; i++)
+        playersT2[i]->setText(list[i]);
+}
+
+QStringList MainWindow::GetTeam1PlayersHero()
+{
+    return { playersHeroT1[0]->currentText(), playersHeroT1[1]->currentText(),
+                playersHeroT1[2]->currentText(), playersHeroT1[3]->currentText(),
+                playersHeroT1[4]->currentText() };
+}
+
+void MainWindow::SetTeam1PlayersHero(const QStringList& list)
+{
+    for (int i = 0; i < 5; i++)
+        playersHeroT1[i]->setCurrentText(list[i]);
+}
+
+QStringList MainWindow::GetTeam2PlayersHero()
+{
+    return { playersHeroT2[0]->currentText(), playersHeroT2[1]->currentText(),
+                playersHeroT2[2]->currentText(), playersHeroT2[3]->currentText(),
+                playersHeroT2[4]->currentText() };
+}
+
+void MainWindow::SetTeam2PlayersHero(const QStringList& list)
+{
+    for (int i = 0; i < 5; i++)
+        playersHeroT2[i]->setCurrentText(list[i]);
+}
+
 void MainWindow::on_toolButton_t1_logo_clicked()
 {
     SetTeam1Logo(FileControl::GetPath(this, "Select team 1 logo", "(*.png)"));
@@ -61,7 +130,7 @@ void MainWindow::on_toolButton_t1_logo_clicked()
 
 void MainWindow::on_toolButton_t2_logo_clicked()
 {
-    SetTeam1Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
+    SetTeam2Logo(FileControl::GetPath(this, "Select team 2 logo", "(*.png)"));
 }
 
 void MainWindow::on_toolButton_utility7_clicked()

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
-    <height>428</height>
+    <width>774</width>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,10 +49,25 @@
         <string>Match</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>4</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>4</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_t1_main">
           <property name="spacing">
-           <number>3</number>
+           <number>5</number>
           </property>
           <item>
            <layout class="QGridLayout" name="t1_name">
@@ -62,7 +77,7 @@
             <item row="0" column="0">
              <widget class="QLabel" name="label_t1_name">
               <property name="text">
-               <string>Team 1</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Team 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -109,6 +124,9 @@
           </item>
           <item>
            <layout class="QGridLayout" name="gridLayout_logoside">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <item row="0" column="1">
              <widget class="QLineEdit" name="lineEdit_t1_logo">
               <property name="enabled">
@@ -263,6 +281,83 @@
            </layout>
           </item>
           <item>
+           <layout class="QGridLayout" name="gridLayout_t1_players">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <item row="4" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_nick_p4"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_nick_p3"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_nick_p1"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBox_t1_hero_p1">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t1_player">
+              <property name="text">
+               <string>Players</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_hero_t1">
+              <property name="text">
+               <string>Hero</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_nick_p2"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="lineEdit_t1_nick_p5"/>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="comboBox_t1_hero_p2">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="comboBox_t1_hero_p3">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QComboBox" name="comboBox_t1_hero_p4">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="comboBox_t1_hero_p5">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <spacer name="verticalSpacer_7">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -279,10 +374,13 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>3</number>
+          </property>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_button">
             <property name="spacing">
-             <number>6</number>
+             <number>1</number>
             </property>
             <item>
              <widget class="QPushButton" name="pushButton_swap_match">
@@ -310,7 +408,7 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_map">
             <property name="spacing">
-             <number>6</number>
+             <number>3</number>
             </property>
             <item>
              <widget class="QLabel" name="label_map">
@@ -353,7 +451,7 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_score">
             <property name="spacing">
-             <number>6</number>
+             <number>3</number>
             </property>
             <item>
              <widget class="QLabel" name="label_score">
@@ -365,7 +463,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_score">
               <property name="spacing">
-               <number>6</number>
+               <number>3</number>
               </property>
               <item>
                <widget class="QSpinBox" name="spinBox_t1_score"/>
@@ -399,7 +497,7 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_t2_main">
           <property name="spacing">
-           <number>3</number>
+           <number>5</number>
           </property>
           <item>
            <layout class="QGridLayout" name="gridLayout_2">
@@ -441,7 +539,7 @@
                <enum>Qt::LeftToRight</enum>
               </property>
               <property name="text">
-               <string>Team 2</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Team 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -459,6 +557,9 @@
           </item>
           <item>
            <layout class="QGridLayout" name="gridLayout_6">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <item row="0" column="1">
              <widget class="QLineEdit" name="lineEdit_t2_logo">
               <property name="enabled">
@@ -542,6 +643,83 @@
            </layout>
           </item>
           <item>
+           <layout class="QGridLayout" name="gridLayout_t2_players">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <item row="4" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_nick_p4"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_nick_p3"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_nick_p1"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBox_t2_hero_p1">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_t2_player">
+              <property name="text">
+               <string>Players</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_hero_t2">
+              <property name="text">
+               <string>Hero</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_nick_p2"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="lineEdit_t2_nick_p5"/>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="comboBox_t2_hero_p2">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="comboBox_t2_hero_p3">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QComboBox" name="comboBox_t2_hero_p4">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="comboBox_t2_hero_p5">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <spacer name="verticalSpacer_9">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -563,6 +741,21 @@
         <string>Info</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>4</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>4</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
         <item>
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="10" column="4">
@@ -674,6 +867,9 @@
           </item>
           <item row="11" column="5">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility9"/>
             </item>
@@ -688,6 +884,9 @@
           </item>
           <item row="11" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility7"/>
             </item>
@@ -702,6 +901,9 @@
           </item>
           <item row="11" column="3">
            <layout class="QHBoxLayout" name="horizontalLayout_24">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility8"/>
             </item>
@@ -866,7 +1068,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>774</width>
      <height>18</height>
     </rect>
    </property>

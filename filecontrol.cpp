@@ -21,6 +21,12 @@ bool FileControl::SaveImgPNG(const QString& sourcedir, const QString& finaldir)
     return true;
 }
 
+bool FileControl::DeleteImgPNG(const QString& dir)
+{
+    SaveData(dir + ".txt", "");
+    return QFile(dir + ".png").remove();
+}
+
 bool FileControl::ReplaceFile(const QString& sourcedir, const QString& finaldir)
 {
     if (!QFile(sourcedir).exists())

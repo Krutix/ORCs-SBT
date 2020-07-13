@@ -2,6 +2,7 @@
 #define CASTOM_DATA_H
 
 #include <QString>
+#include <QStringList>
 
 struct Team 
 {
@@ -10,12 +11,18 @@ struct Team
 	QString logoPath;
 	int score;
 
+    QStringList playersNick;
+    QStringList playersHero;
+
 	Team(const QString& name = "",
 		const QString& sName = "",
 		const QString& logo = "",
-		const int& score = 0)
+        const int& score = 0,
+        const QStringList& nicks = {"", "", "", "", "", "", "", "", ""},
+        const QStringList& heroes = {"None", "None", "None", "None", "None", "None", "None", "None", "None"} )
 		: name(name), shortName(sName),
-		logoPath(logo), score(score) {}
+        logoPath(logo), score(score),
+        playersNick(nicks), playersHero(heroes){}
 };
 
 struct MutualMapInfo 

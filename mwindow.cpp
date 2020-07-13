@@ -6,12 +6,14 @@ MWindow::MWindow(QWidget *parent)
 
 Team MWindow::GetTeam1()
 {
-    return { GetTeam1Name(), GetTeam1ShortName(), GetTeam1Logo(), GetTeam1CurrentScore() };
+    return { GetTeam1Name(), GetTeam1ShortName(), GetTeam1Logo(), GetTeam1CurrentScore(),
+                GetTeam1PlayersNick(), GetTeam1PlayersHero() };
 }
 
 Team MWindow::GetTeam2()
 {
-    return { GetTeam2Name(), GetTeam2ShortName(), GetTeam2Logo(), GetTeam2CurrentScore() };
+    return { GetTeam2Name(), GetTeam2ShortName(), GetTeam2Logo(), GetTeam2CurrentScore(),
+                GetTeam2PlayersNick(), GetTeam2PlayersHero() };
 }
 
 void MWindow::SetTeam1(const Team& team)
@@ -20,6 +22,8 @@ void MWindow::SetTeam1(const Team& team)
     SetTeam1ShortName(team.shortName);
     SetTeam1CurrentScore(team.score);
     SetTeam1Logo(team.logoPath);
+    SetTeam1PlayersNick(team.playersNick);
+    SetTeam1PlayersHero(team.playersHero);
 }
 
 void MWindow::SetTeam2(const Team& team)
@@ -28,6 +32,8 @@ void MWindow::SetTeam2(const Team& team)
     SetTeam2ShortName(team.shortName);
     SetTeam2CurrentScore(team.score);
     SetTeam2Logo(team.logoPath);
+    SetTeam2PlayersNick(team.playersNick);
+    SetTeam2PlayersHero(team.playersHero);
 }
 
 const MutualMapInfo MWindow::GetMutualMapInfo()
@@ -53,11 +59,11 @@ bool MWindow::ActConfirmation(const QString& name, const QString& message)
 }
 
 
-QVector<QString> MWindow::GetUtilities(){
+QStringList MWindow::GetUtilities(){
     return { GetUtilitiesText() };
 }
 
-void MWindow::SetUtilities(const QVector<QString>& utilitys)
+void MWindow::SetUtilities(const QStringList& utilitys)
 {
     SetUtilitiesText(utilitys);
 }

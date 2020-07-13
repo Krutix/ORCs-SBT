@@ -49,6 +49,28 @@ void Buttons::Update_CurrentMatch()
                      QString::number(Team2.score));
     FileControl::SaveData(cdir + "/CurrentMap/MutualInfo.txt", MapInfo.mutualInfo);
 
+    for (int i = 0; i < 5; i++)
+    {
+        FileControl::SaveData(cdir + "/CurrentMap/T1Player" + QString::number(i + 1) + "Nick.txt",
+                         Team1.playersNick[i]);
+        FileControl::SaveData(cdir + "/CurrentMap/T2Player" + QString::number(i + 1) + "Nick.txt",
+                         Team2.playersNick[i]);
+        FileControl::SaveData(cdir + "/CurrentMap/Score_Team1.txt",
+                         QString::number(Team1.score));
+        if (Team1.playersHero[i] != "None")
+            FileControl::SaveImgPNG(cdir + "/Resurces/" + Team1.playersHero[i] + ".png",
+                                cdir + "/CurrentMap/" + "T1Player" + QString::number(i + 1) + "Hero");
+        else {
+            FileControl::DeleteImgPNG(cdir + "/CurrentMap/" + "T1Player" + QString::number(i + 1) + "Hero");
+        }
+        if (Team2.playersHero[i] != "None")
+            FileControl::SaveImgPNG(cdir + "/Resurces/" + Team2.playersHero[i] + ".png",
+                                cdir + "/CurrentMap/" + "T2Player" + QString::number(i + 1) + "Hero");
+        else {
+            FileControl::DeleteImgPNG(cdir + "/CurrentMap/" + "T2Player" + QString::number(i + 1) + "Hero");
+        }
+    }
+
     QString side = ui->GetSideT1();
     if (side[0] == "A"){
         FileControl::SaveImgPNG(cdir + "/Resurces/side_attack_t1.png", cdir + "/CurrentMap/sideT1");
@@ -87,7 +109,7 @@ void Buttons::Reset_CastInfo()
 {
     if (!ui->ActConfirmation("Reset genetal info?", "Reset genetal info?"))
         return;
-    QVector<QString> res (9, "");
+    QStringList res = {"", "", "", "", "", "", "", "", ""};
     ui->SetUtilities(res);
     ui->SetCastTeam({});
     ui->SetStatus("Genetal info reset");

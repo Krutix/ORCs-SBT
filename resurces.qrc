@@ -12,4 +12,17 @@
         <file>resurces/logo_default_t1.png</file>
         <file>resurces/logo_default_t2.png</file>
     </qresource>
+    <qresource prefix="/hero">
+        <file>resurces/Breach.png</file>
+        <file>resurces/Brimstone.png</file>
+        <file>resurces/Cypher.png</file>
+        <file>resurces/Jett.png</file>
+        <file>resurces/Omen.png</file>
+        <file>resurces/Phoenix.png</file>
+        <file>resurces/Raze.png</file>
+        <file>resurces/Reyna.png</file>
+        <file>resurces/Sage.png</file>
+        <file>resurces/Sova.png</file>
+        <file>resurces/Viper.png</file>
+    </qresource>
 </RCC>
