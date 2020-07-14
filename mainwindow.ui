@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
-    <height>418</height>
+    <width>747</width>
+    <height>394</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -758,6 +758,9 @@
         </property>
         <item>
          <layout class="QGridLayout" name="gridLayout_7">
+          <property name="spacing">
+           <number>4</number>
+          </property>
           <item row="10" column="4">
            <widget class="QLabel" name="label_utility6">
             <property name="text">
@@ -791,6 +794,9 @@
           </item>
           <item row="0" column="5">
            <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <property name="spacing">
+             <number>5</number>
+            </property>
             <item>
              <spacer name="verticalSpacer_19">
               <property name="orientation">
@@ -868,7 +874,7 @@
           <item row="11" column="5">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <property name="spacing">
-             <number>3</number>
+             <number>2</number>
             </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility9"/>
@@ -885,7 +891,7 @@
           <item row="11" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_25">
             <property name="spacing">
-             <number>3</number>
+             <number>2</number>
             </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility7"/>
@@ -902,7 +908,7 @@
           <item row="11" column="3">
            <layout class="QHBoxLayout" name="horizontalLayout_24">
             <property name="spacing">
-             <number>3</number>
+             <number>2</number>
             </property>
             <item>
              <widget class="QLineEdit" name="lineEdit_utility8"/>
@@ -1068,7 +1074,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>774</width>
+     <width>747</width>
      <height>18</height>
     </rect>
    </property>

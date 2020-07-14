@@ -46,6 +46,8 @@ void StartFoldersCheck(){
     const QString cdir = QApplication::applicationDirPath();
     if (!QDir(cdir + "/CurrentMap").exists())
         QDir().mkdir(cdir + "/CurrentMap");
+    if (!QDir(cdir + "/Players").exists())
+        QDir().mkdir(cdir + "/Players");
     if (!QDir(cdir + "/Info").exists())
         QDir().mkdir(cdir + "/Info");
     if (!QDir(cdir + "/Resurces").exists())
@@ -91,17 +93,17 @@ void RestoreUIData(IUserInterface* ui){
     QRegularExpression re("^(.*)/(.*)(.png)$");
     for (int i = 0; i < 5; i++)
     {
-        nicksT1.push_back(FileControl::ReadFile(cdir + "/CurrentMap/T1Player" +
+        nicksT1.push_back(FileControl::ReadFile(cdir + "/Players/T1Player" +
                                                 QString::number(i + 1) + "Nick.txt"));
-        nicksT2.push_back(FileControl::ReadFile(cdir + "/CurrentMap/T2Player" +
+        nicksT2.push_back(FileControl::ReadFile(cdir + "/Players/T2Player" +
                                                 QString::number(i + 1) + "Nick.txt"));
 
-        match = re.match(FileControl::ReadFile(cdir + "/CurrentMap/T1Player" +
+        match = re.match(FileControl::ReadFile(cdir + "/Players/T1Player" +
                                                QString::number(i + 1) + "Hero.txt"));
 
         heroesT1.push_back(match.captured(2));
 
-        match = re.match(FileControl::ReadFile(cdir + "/CurrentMap/T2Player" +
+        match = re.match(FileControl::ReadFile(cdir + "/Players/T2Player" +
                                                QString::number(i + 1) + "Hero.txt"));
         heroesT2.push_back(match.captured(2));
     }

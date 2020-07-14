@@ -31,6 +31,44 @@ MainWindow::MainWindow(QWidget *parent)
         playersHero->addItems(HeroList);
     for (auto playersHero : playersHeroT2)
         playersHero->addItems(HeroList);
+
+    /* Tips setup */
+
+    ui->lineEdit_t1_name->setToolTip("/CurrentMap/Team1_Name.txt");
+    ui->lineEdit_t2_name->setToolTip("/CurrentMap/Team2_Name.txt");
+    ui->lineEdit_t1_sn->setToolTip("/CurrentMap/Team1_ShortName.txt");
+    ui->lineEdit_t2_sn->setToolTip("/CurrentMap/Team2_ShortName.txt");
+
+    ui->spinBox_t1_score->setToolTip("/CurrentMap/Score_Team1.txt");
+    ui->spinBox_t2_score->setToolTip("/CurrentMap/Score_Team2.txt");
+
+    ui->radioButton_side_attack->setToolTip("/CurrentMap/sideT1, /CurrentMap/sideT2");
+    ui->radioButton_side_defence->setToolTip("/CurrentMap/sideT1, /CurrentMap/sideT2");
+    ui->radioButton_side_none->setToolTip("/CurrentMap/sideT1, /CurrentMap/sideT2");
+    ui->comboBox_map->setToolTip("/CurrentMap/Map.txt");
+    ui->lineEdit_mutualinfo->setToolTip("/CurrentMap/MutualInfo.txt");
+
+    ui->lineEdit_t1_logo->setToolTip("/CurrentMap/logoT1");
+    ui->lineEdit_t2_logo->setToolTip("/CurrentMap/logoT2");
+
+    ui->lineEdit_producer_nick->setToolTip("/Info/Producer.txt");
+    ui->lineEdit_observer1_nick->setToolTip("/Info/Observer1.txt");
+    ui->lineEdit_observer2_nick->setToolTip("/Info/Observer2.txt");
+    ui->lineEdit_caster1_nick->setToolTip("/Info/Caster1.txt");
+    ui->lineEdit_caster2_nick->setToolTip("/Info/Caster2.txt");
+    ui->lineEdit_host_nick->setToolTip("/Info/Host.txt");
+    ui->lineEdit_analist1_nick->setToolTip("/Info/Analist1.txt");
+    ui->lineEdit_analist2_nick->setToolTip("/Info/Analist2.txt");
+
+    for (int i = 0; i < 9; i++)
+        utilitiesList[i]->setToolTip("/Info/Utility" + QString::number(i + 1) + ".txt");
+
+    for (int i = 0; i < 5; i++) {
+        playersT1[i]->setToolTip("/Players/T1Player" + QString::number(i + 1) + "Nick.txt");
+        playersT2[i]->setToolTip("/Players/T2Player" + QString::number(i + 1) + "Nick.txt");
+        playersHeroT1[i]->setToolTip("/Players/T1Player" + QString::number(i + 1) + "Hero");
+        playersHeroT2[i]->setToolTip("/Players/T2Player" + QString::number(i + 1) + "Hero");
+    }
 }
 
 
