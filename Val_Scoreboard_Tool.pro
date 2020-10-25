@@ -24,15 +24,7 @@ SOURCES += \
     mwindow.cpp \
     texteditor.cpp
 
-HEADERS += \
-    about.h \
-    buttons.h \
-    filecontrol.h \
-    iuserinterface.h \
-    mainwindow.h \
-    castom_data.h \
-    mwindow.h \
-    texteditor.h
+HEADERS +=
 
 FORMS += \
     about.ui \
