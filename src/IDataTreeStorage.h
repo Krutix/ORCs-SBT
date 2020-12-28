@@ -8,8 +8,16 @@ class IDataTreeStorage
 {
 protected:
     QString nodeName;
+    QVector<IDataTreeStorage<T>*> children;
 public:
-    virtual DataTree<T> getData() = 0;
+    using Super = IDataTreeStorage;
+    virtual DataTree<T> getData() const
+    {
+        DataTree<T> tree(nodeName);
+        for (auto& c : children) {
+            tree.add(c.getData());
+        }
+    };
     virtual void setData(const DataTree<T>& data) = 0;
     virtual void resetData() = 0;
 };

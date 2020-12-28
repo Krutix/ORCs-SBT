@@ -10,32 +10,15 @@
 template<class T>
 class DataTree
 {
-private:
-    struct Node {
-        QString name;
-        QVector<QPair<QString, T>> data;
-        QVector<QSharedPointer<Node>> next;
-
-        Node(const QString& name)
-            : name(name) {}
-
-        void traverse(std::function<void(const QStringList&, const QString&)>& fNode,
-                      std::function<void(const QStringList&, const QString&, const T&)>& fData,
-                      QStringList& path) {
-            fNode(path, name);
-            for (auto d : data)
-                fData(path, d.first, d.second);
-            path << name;
-            for (auto n : next)
-                n->traverse(fNode, fData);
-            path.removeLast();
-        }
-    };
-    QSharedPointer<Node> rootNode;
 public:
+    using nodeHandleFundtion = std::function<void(const QStringList&, const QString&)>;
+    using dataHandleFunction = std::function<void(const QStringList&, const QString&, const T&)>;
 
     DataTree(const QString& name = "None")
         : rootNode(new Node(name)) { }
+
+    DataTree(const DataTree&  tree)
+        : rootNode(tree.rootNode) { }
 
     ~DataTree();
 
@@ -75,10 +58,33 @@ public:
         return T();
     }
 
-    void treeTraverse(std::function<void(const QStringList&, const QString&)>& fNode,
-                      std::function<void(const QStringList&, const QString&, const T&)>& fData) const {
+    void treeTraverse(const nodeHandleFundtion& fNode,
+                      const dataHandleFunction& fData) const {
         rootNode->traverse(fNode, fData, QStringList());
     }
+private:
+    struct Node {
+        QString name;
+        QVector<QPair<QString, T>> data;
+        QVector<QSharedPointer<Node>> next;
+
+        Node(const QString& name)
+            : name(name) {}
+
+        void traverse(const nodeHandleFundtion& fNode,
+                      const dataHandleFunction& fData,
+                      QStringList& path) {
+            fNode(path, name);
+            for (auto d : data)
+                fData(path, d.first, d.second);
+            path << name;
+            for (auto n : next)
+                n->traverse(fNode, fData);
+            path.removeLast();
+        }
+    };
+
+    QSharedPointer<Node> rootNode;
 };
 
 #endif
