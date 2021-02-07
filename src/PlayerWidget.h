@@ -3,22 +3,22 @@
 
 #include <QWidget>
 #include <QString>
-#include "IDataTreeStorage.h"
+#include "DataTreeStorage.h"
 
 namespace Ui {
 class PlayerWidget;
 }
 
-class PlayerWidget : public QWidget, public IDataTreeStorage<QString>
+class PlayerWidget final : public QWidget, public DataTreeStorage<QString>
 {
     Q_OBJECT
 
 public:
-    explicit PlayerWidget(const QString& nodeName, QWidget *parent = nullptr);
+    explicit PlayerWidget(QString const& nodeName, QWidget *parent = nullptr);
     ~PlayerWidget();
 
-    DataTree<QString> getData() override;
-    void setData(const DataTree<QString>& data) override;
+    DataTree<QString> getData() const override;
+    void setData(DataTree<QString> const& data) override;
     void resetData() override;
 
 private:

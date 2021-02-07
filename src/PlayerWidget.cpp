@@ -15,25 +15,27 @@ PlayerWidget::~PlayerWidget()
     delete ui;
 }
 
-DataTree<QString> PlayerWidget::getData()
+DataTree<QString> PlayerWidget::getData() const
 {
-    DataTree<QString> ret(nodeName);
-    ret.add("nickname", ui->nickNameLEdit->text());
-    ret.add("hero", ui->heroCBox->currentText());
-    return ret;
+    DataTree<QString> tree = Super::getData();
+    tree.add("nickname", ui->nickNameLEdit->text());
+    tree.add("hero", ui->heroCBox->currentText());
+    return tree;
 }
 
-void PlayerWidget::setData(const DataTree<QString> &data)
+void PlayerWidget::setData(DataTree<QString> const& data)
 {
+    Super::setData(data);
     QString find;
-    if ((find = data.find("nickname", true)) != QString())
+    if ((find = data.findDataInRoot("nickname")) != QString())
         ui->nickNameLEdit->setText(find);
-    if ((find = data.find("hero", true)) != QString())
+    if ((find = data.findDataInRoot("hero")) != QString())
         ui->heroCBox->setCurrentText(find);
 }
 
 void PlayerWidget::resetData()
 {
+    Super::resetData();
     ui->nickNameLEdit->setText("");
     ui->heroCBox->setCurrentText("None");
 }

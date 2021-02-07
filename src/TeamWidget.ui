@@ -102,6 +102,13 @@
     </layout>
    </item>
    <item>
+    <layout class="QVBoxLayout" name="playerListLayout">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+    </layout>
+   </item>
+   <item>
     <spacer name="__verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>

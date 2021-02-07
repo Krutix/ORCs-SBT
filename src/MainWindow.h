@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "MatchInfoWidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void updateButtonClicked();
+
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* ui;
+    MatchInfoWidget* matchWidget;
 };
 
 #endif // MAINWINDOW_H
