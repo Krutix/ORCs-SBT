@@ -32,3 +32,8 @@ void MatchInfoWidget::swapTeams()
     dataChildren[0]->setData(team2);
     dataChildren[1]->setData(team1);
 }
+
+void MatchInfoWidget::clearTeams()
+{
+    Super::resetData();
+}

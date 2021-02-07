@@ -30,14 +30,10 @@ DataTree<QString> TeamWidget::getData() const
 void TeamWidget::setData(DataTree<QString> const& data)
 {
     Super::setData(data);
-    QString find;
 
-    if ((find = data.findDataInRoot("name")) != QString())
-        ui->teamNameLineEdit->setText(find);
-    if ((find = data.findDataInRoot("short_name")) != QString())
-        ui->shortNameLineEdit->setText(find);
-    if ((find = data.findDataInRoot("logo")) != QString())
-        ui->logoPath->setText(find);
+    ui->teamNameLineEdit->setText(data.findDataInRoot("name"));
+    ui->shortNameLineEdit->setText(data.findDataInRoot("short_name"));
+    ui->logoPath->setText(data.findDataInRoot("logo"));
 }
 
 void TeamWidget::resetData()

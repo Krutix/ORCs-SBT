@@ -16,18 +16,19 @@ MainWindow::MainWindow(QWidget *parent) :
     qDebug() << "connect";
     connect(ui->updatePushButton, &QPushButton::clicked, this, &MainWindow::updateButtonClicked);
     connect(ui->swapPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::swapTeams);
+    connect(ui->clearPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::clearTeams);
 }
 
 MainWindow::~MainWindow()
 {
     disconnect(ui->updatePushButton, &QPushButton::clicked, this, &MainWindow::updateButtonClicked);
     disconnect(ui->swapPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::swapTeams);
+    disconnect(ui->clearPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::clearTeams);
     delete ui;
 }
 
 void MainWindow::updateButtonClicked()
 {
-    qDebug() << "clicked";
     DataTree matchInfoTree = matchWidget->getData();
     matchInfoTree.treeTraverse([](QStringList const& path, QString const& name){
         qDebug() << "node path: " << path << ", name: " << name;
