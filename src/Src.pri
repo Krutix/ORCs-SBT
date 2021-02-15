@@ -1,4 +1,5 @@
 SOURCES += \
+    $$PWD/ApplicationSettings.cpp \
     $$PWD/Main.cpp \
     $$PWD/MainWindow.cpp \
     $$PWD/MatchInfoWidget.cpp \
@@ -7,6 +8,7 @@ SOURCES += \
     $$PWD/TeamWidget.cpp
 
 HEADERS += \
+    $$PWD/ApplicationSettings.h \
     $$PWD/DataTree.h \
     $$PWD/DataTreeStorage.h \
     $$PWD/MainWindow.h \

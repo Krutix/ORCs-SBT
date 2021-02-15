@@ -19,6 +19,7 @@ public:
     ~MatchInfoWidget();
 
 public slots:
+    void updateTeams();
     void swapTeams();
     void clearTeams();
 

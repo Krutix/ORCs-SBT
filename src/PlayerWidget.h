@@ -17,6 +17,8 @@ public:
     explicit PlayerWidget(QString const& nodeName, QWidget *parent = nullptr);
     ~PlayerWidget();
 
+    // IDataTreeStorage interface
+public:
     DataTree<QString> getData() const override;
     void setData(DataTree<QString> const& data) override;
     void resetData() override;

@@ -13,26 +13,15 @@ MainWindow::MainWindow(QWidget *parent) :
     matchWidget = new MatchInfoWidget("match_info", this);
     ui->matchInfoLayout->addWidget(matchWidget);
 
-    qDebug() << "connect";
-    connect(ui->updatePushButton, &QPushButton::clicked, this, &MainWindow::updateButtonClicked);
+    connect(ui->updatePushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::updateTeams);
     connect(ui->swapPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::swapTeams);
     connect(ui->clearPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::clearTeams);
 }
 
 MainWindow::~MainWindow()
 {
-    disconnect(ui->updatePushButton, &QPushButton::clicked, this, &MainWindow::updateButtonClicked);
+    disconnect(ui->updatePushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::updateTeams);
     disconnect(ui->swapPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::swapTeams);
     disconnect(ui->clearPushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::clearTeams);
     delete ui;
-}
-
-void MainWindow::updateButtonClicked()
-{
-    DataTree matchInfoTree = matchWidget->getData();
-    matchInfoTree.treeTraverse([](QStringList const& path, QString const& name){
-        qDebug() << "node path: " << path << ", name: " << name;
-    }, [](QStringList const& path, QString const& name, QString const& data){
-        qDebug() << "data path: " << path << ", name: " << name << ", data: " << data;
-    });
 }
