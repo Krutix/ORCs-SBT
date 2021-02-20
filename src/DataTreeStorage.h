@@ -12,6 +12,11 @@ protected:
 
     using Super = DataTreeStorage;
 public:
+    void setName(QString name)
+    {
+        this->nodeName = name;
+    }
+
     virtual DataTree<T> getData() const
     {
         DataTree<T> tree(nodeName);

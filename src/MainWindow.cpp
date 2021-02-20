@@ -5,12 +5,13 @@
 
 #include <QDebug>
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(ApplicationSettings* settings, QWidget* parent) :
     QMainWindow(parent),
+    settings(settings),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    matchWidget = new MatchInfoWidget("match_info", this);
+    matchWidget = new MatchInfoWidget("match_info", settings, this);
     ui->matchInfoLayout->addWidget(matchWidget);
 
     connect(ui->updatePushButton, &QPushButton::clicked, matchWidget, &MatchInfoWidget::updateTeams);

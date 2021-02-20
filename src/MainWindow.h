@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "MatchInfoWidget.h"
+#include "ApplicationSettings.h"
 
 namespace Ui {
 class MainWindow;
@@ -13,12 +14,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(ApplicationSettings* settings = nullptr, QWidget* parent = nullptr);
     ~MainWindow();
 
 private:
-    Ui::MainWindow* ui;
     MatchInfoWidget* matchWidget;
+    ApplicationSettings* settings;
+    Ui::MainWindow* ui;
 };
 
 #endif // MAINWINDOW_H
