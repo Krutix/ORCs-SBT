@@ -2,14 +2,13 @@
 #include "PlayerWidget.h"
 #include "ui_TeamWidget.h"
 
-TeamWidget::TeamWidget(QString const& name, ApplicationSettings* settings, QWidget *parent) :
+TeamWidget::TeamWidget(QString const& name, QWidget *parent) :
     QWidget(parent),
-    settings(settings),
     ui(new Ui::TeamWidget)
 {
     nodeName = name;
     ui->setupUi(this);
-    teamPlayers = new PlayerListWidget("player_list", settings, this);
+    teamPlayers = new PlayerListWidget("player_list", this);
     ui->playerListLayout->addWidget(teamPlayers);
     dataChildren.push_back(teamPlayers);
 }

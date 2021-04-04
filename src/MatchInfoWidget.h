@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QArrayData>
-#include "ApplicationSettings.h"
 
 #include "DataTreeStorage.h"
 
@@ -16,7 +15,7 @@ class MatchInfoWidget final : public QWidget, public DataTreeStorage<QString>
     Q_OBJECT
 
 public:
-    explicit MatchInfoWidget(QString const& sting, ApplicationSettings* settings = nullptr, QWidget *parent = nullptr);
+    explicit MatchInfoWidget(QString const& name, QWidget *parent = nullptr);
     ~MatchInfoWidget();
 
 public slots:
@@ -25,8 +24,7 @@ public slots:
     void clearTeams();
 
 private:
-    ApplicationSettings* settings;
-    Ui::MatchInfoWidget* ui;
+    Ui::MatchInfoWidget *ui;
 };
 
 #endif // MATCHINFOWIDGET_H

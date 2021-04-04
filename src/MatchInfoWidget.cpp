@@ -6,15 +6,14 @@
 #include "TeamWidget.h"
 #include "DataTree.h"
 
-MatchInfoWidget::MatchInfoWidget(QString const& name, ApplicationSettings* settings, QWidget *parent) :
+MatchInfoWidget::MatchInfoWidget(QString const& name, QWidget *parent) :
     QWidget(parent),
-    settings(settings),
     ui(new Ui::MatchInfoWidget)
 {
     Super::nodeName = name;
     ui->setupUi(this);
     for (int i = 0; i < 2; i++) {
-        TeamWidget* team = new TeamWidget(QString("Team %1").arg(i + 1), settings, this);
+        TeamWidget* team = new TeamWidget(QString("Team %1").arg(i + 1), this);
         dataChildren.push_back(team);
         ui->teamsHorizontalLayout->addWidget(team);
     }
