@@ -1,6 +1,3 @@
-#ifndef DATATREE_H
-#define DATATREE_H
-
 #include <QSharedPointer>
 #include <QString>
 #include <QStringList>
@@ -55,5 +52,3 @@ public:
         rootNode->traverse(fNode, fData, QStringList());
     }
 };
-
-#endif
