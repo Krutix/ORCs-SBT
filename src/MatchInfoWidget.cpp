@@ -24,16 +24,6 @@ MatchInfoWidget::~MatchInfoWidget()
     delete ui;
 }
 
-void MatchInfoWidget::updateTeams()
-{
-    DataTree matchInfoTree = getData();
-    matchInfoTree.treeTraverse([](QStringList const& path, QString const& name){
-        qDebug() << "node path: " << path << ", name: " << name;
-    }, [](QStringList const& path, QString const& name, QString const& data){
-        qDebug() << "data path: " << path << ", name: " << name << ", data: " << data;
-    });
-}
-
 void MatchInfoWidget::swapTeams()
 {
     DataTree team1 = dataChildren[0]->getData();

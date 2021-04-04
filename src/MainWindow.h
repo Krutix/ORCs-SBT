@@ -16,6 +16,9 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void updateButtonClicked();
+
 private:
     Ui::MainWindow* ui;
     MatchInfoWidget* matchWidget;
