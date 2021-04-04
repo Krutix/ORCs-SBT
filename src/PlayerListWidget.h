@@ -2,18 +2,17 @@
 #define PLAYERLISTWIDGET_H
 
 #include <QWidget>
-#include "DataTreeStorage.h"
 
 namespace Ui {
 class PlayerListWidget;
 }
 
-class PlayerListWidget final : public QWidget, public DataTreeStorage<QString>
+class PlayerListWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit PlayerListWidget(QString const& name, QWidget *parent = nullptr);
+    explicit PlayerListWidget(QWidget *parent = nullptr);
     ~PlayerListWidget();
 
 private:

@@ -1,8 +1,7 @@
 #ifndef TEAMWIDGET_H
 #define TEAMWIDGET_H
 
-#include "DataTreeStorage.h"
-#include "PlayerListWidget.h"
+#include "IDataTreeStorage.h"
 #include <QWidget>
 #include <QString>
 
@@ -10,22 +9,25 @@ namespace Ui {
 class TeamWidget;
 }
 
-class TeamWidget final : public QWidget, public DataTreeStorage<QString>
+class TeamWidget : public QWidget, public IDataTreeStorage<QString>
 {
     Q_OBJECT
 
 public:
-    explicit TeamWidget(QString const& name, QWidget *parent = nullptr);
+    explicit TeamWidget(QWidget *parent = nullptr);
     ~TeamWidget();
 
 private:
-    Ui::TeamWidget* ui;
-    PlayerListWidget* teamPlayers;
+    Ui::TeamWidget *ui;
+
+    // QPaintDevice interface
+public:
+    QPaintEngine *paintEngine() const override;
 
     // IDataTreeStorage interface
 public:
-    DataTree<QString> getData() const override;
-    void setData(DataTree<QString> const& data) override;
+    DataTree<QString> getData() override;
+    void setData(const DataTree<QString> &data) override;
     void resetData() override;
 };
 

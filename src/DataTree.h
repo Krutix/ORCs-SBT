@@ -11,106 +11,75 @@ template<class T>
 class DataTree
 {
 public:
-    using nodeHandleFundtion = std::function<void(QStringList const& path, QString const& nodeName)>;
-    using dataHandleFunction = std::function<void(QStringList const& path, QString const& key, T const& data)>;
+    using nodeHandleFundtion = std::function<void(const QStringList&, const QString&)>;
+    using dataHandleFunction = std::function<void(const QStringList&, const QString&, const T&)>;
 
-    DataTree(QString const& name = QString())
+    DataTree(const QString& name = "None")
         : rootNode(new Node(name)) { }
 
-    DataTree(DataTree const&  tree)
+    DataTree(const DataTree&  tree)
         : rootNode(tree.rootNode) { }
 
-    ~DataTree() { }
+    ~DataTree();
 
-    void setName(QString const& name)
-    {
+    void setName(const QString& name) {
         rootNode->name = name;
     }
 
-    void getName()
-    {
-        return rootNode->name;
+    void add(const DataTree& tree) {
+        rootNode->next.pushBack(tree.rootNode);
     }
 
-    void add(DataTree const& tree)
-    {
-        rootNode->next.push_back(tree.rootNode);
+    void add(const QString& name, const T& data) {
+        rootNode->data.pushBack(QPair(name, data));
     }
 
-    void add(QString const& name, T const& data)
-    {
-        rootNode->data.push_back(QPair(name, data));
-    }
-
-    DataTree findNode(QString const& nodeName) const
-    {
-        QQueue<QWeakPointer<Node>> queue;
-        queue.append(rootNode);
-        while (!queue.isEmpty())
+    T find(const QString& key, bool onlyRoot = false) const {
+        if (onlyRoot)
         {
-            QWeakPointer<Node> node = queue.dequeue();
-            for (auto& p : node.data()->next)
-            {
-                if (p->name == nodeName)
-                {
-                    DataTree find;
-                    find.rootNode = p;
-                    return find;
-                }
-                queue.append(p);
-            }
-        }
-        return DataTree();
-    }
-
-    T findDataInRoot(QString const& key) const
-    {
-        for (auto&[k, d] : rootNode->data)
-            if (k == key)
-                return d;
-    }
-
-    T findData(QString const& key) const
-    {
-        QQueue<QWeakPointer<Node>> queue;
-        queue.append(rootNode);
-        while (!queue.isEmpty())
-        {
-            QWeakPointer<Node> node = queue.dequeue();
-            for (auto&[k, d] : node.data()->data)
+            for (auto&[k, d] : rootNode->data)
                 if (k == key)
                     return d;
-            for (auto& p : node.data()->next)
-                queue.append(p);
+        }
+        else
+        {
+            QQueue<QWeakPointer<Node>> queue;
+            queue.append(rootNode);
+            while (!queue.isEmpty())
+            {
+                QWeakPointer<Node> node = queue.dequeue();
+                for (auto&[k, d] : node->data)
+                    if (k == key)
+                        return d;
+                for (auto& p : node->next)
+                    queue.append(p);
+            }
         }
         return T();
     }
 
-    void treeTraverse(nodeHandleFundtion const& fNode,
-                      dataHandleFunction const& fData) const
-    {
-        QStringList path;
-        rootNode->traverse(fNode, fData, path);
+    void treeTraverse(const nodeHandleFundtion& fNode,
+                      const dataHandleFunction& fData) const {
+        rootNode->traverse(fNode, fData, QStringList());
     }
 private:
-    struct Node
-    {
+    struct Node {
         QString name;
         QVector<QPair<QString, T>> data;
         QVector<QSharedPointer<Node>> next;
 
-        Node(QString const& name)
-            : name(name) { }
+        Node(const QString& name)
+            : name(name) {}
 
-        void traverse(nodeHandleFundtion const& fNode,
-                      dataHandleFunction const& fData,
+        void traverse(const nodeHandleFundtion& fNode,
+                      const dataHandleFunction& fData,
                       QStringList& path) {
             fNode(path, name);
             for (auto d : data)
                 fData(path, d.first, d.second);
             path << name;
             for (auto n : next)
-                n->traverse(fNode, fData, path);
+                n->traverse(fNode, fData);
             path.removeLast();
         }
     };
