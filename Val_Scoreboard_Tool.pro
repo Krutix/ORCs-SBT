@@ -1,5 +1,3 @@
-include(src/Src.pri)
-
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -16,6 +14,25 @@ QMAKE_TARGET_PRODUCT = ORCs SBT
 QMAKE_TARGET_COPYRIGHT = Andrey Krutikhin
 QMAKE_TARGET_DESCRIPTION = Scoreboard tool for valorant
 RC_ICONS = resurces/SMOrc_icon.ico
+
+SOURCES += \
+    about.cpp \
+    buttons.cpp \
+    filecontrol.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    mwindow.cpp \
+    texteditor.cpp
+
+HEADERS +=
+
+FORMS += \
+    about.ui \
+    mainwindow.ui \
+    texteditor.ui
+
+TRANSLATIONS += \
+    Val_Scoreboard_Tool_en.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
