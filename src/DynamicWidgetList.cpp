@@ -8,6 +8,7 @@ DynamicWidgetItem::DynamicWidgetItem(QWidget* widget, int index, QWidget* parent
     removeButton = new QToolButton(this);
     removeButton->setText(QString::fromStdWString(L"×"));
     buttonLayout->addWidget(removeButton);
+
     //toTopButton = new QToolButton(this);
     //toDownButton = new QToolButton(this);
     //toTopButton->setText(QString::fromStdWString(L"▲"));
@@ -20,8 +21,6 @@ DynamicWidgetItem::DynamicWidgetItem(QWidget* widget, int index, QWidget* parent
     itemLayout->addItem(buttonLayout);
 
     connect(removeButton, &QToolButton::clicked, this, &DynamicWidgetItem::remove);
-    //connect(toTopButton, &QToolButton::clicked, this, &DynamicWidgetItem::toTop);
-    //connect(toDownButton, &QToolButton::clicked, this, &DynamicWidgetItem::toDown);
 }
 
 void DynamicWidgetItem::setIndex(int index)
@@ -71,13 +70,22 @@ void DynamicWidgetList::add()
     itemsLayout->addWidget(widgetList.back());
     widgetList.back()->show();
     connect(widgetList.back(), &DynamicWidgetItem::removed, this, &DynamicWidgetList::remove);
-    //connect(widgetList.back(), &DynamicWidgetItem::swaped, this, &DynamicWidgetList::swap);
+}
+
+void DynamicWidgetList::clear()
+{
+    while (!widgetList.isEmpty())
+    {
+        disconnect(widgetList[0], &DynamicWidgetItem::removed, this, &DynamicWidgetList::remove);
+        widgetList[0]->hide();
+        delete widgetList[0];
+        widgetList.removeAt(0);
+    }
 }
 
 void DynamicWidgetList::remove(int index)
 {
     disconnect(widgetList[index], &DynamicWidgetItem::removed, this, &DynamicWidgetList::remove);
-    //disconnect(widgetList[index], &DynamicWidgetItem::swaped, this, &DynamicWidgetList::swap);
     widgetList[index]->hide();
     delete widgetList[index];
     widgetList.removeAt(index);
