@@ -26,9 +26,11 @@ DataTree<QString> PlayerWidget::getData() const
 void PlayerWidget::setData(DataTree<QString> const& data)
 {
     Super::setData(data);
-
-    ui->nickNameLEdit->setText(data.findDataInRoot("nickname"));
-    ui->heroCBox->setCurrentText(data.findDataInRoot("hero"));
+    QString find;
+    if ((find = data.findDataInRoot("nickname")) != QString())
+        ui->nickNameLEdit->setText(find);
+    if ((find = data.findDataInRoot("hero")) != QString())
+        ui->heroCBox->setCurrentText(find);
 }
 
 void PlayerWidget::resetData()

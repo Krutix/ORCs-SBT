@@ -20,7 +20,6 @@ public:
 
 public slots:
     void swapTeams();
-    void clearTeams();
 
 private:
     Ui::MatchInfoWidget *ui;
