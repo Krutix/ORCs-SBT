@@ -52,8 +52,6 @@ public:
 public slots:
     void add();
 
-    void clear();
-
     void remove(int index);
 
 private:
