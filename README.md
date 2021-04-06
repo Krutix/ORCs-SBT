@@ -1,7 +1,14 @@
 # ORCs-SBT
 Scoreboard tool for valorant
 
-Developed by Andrey Krutix Krutikhin with the ORCs cup team support
+# Requirements
+The programm requires Qt 5.15 and CMake 3.7+
+
+# Build
+```
+mkdir build
+cmake --build build
+```
 
 Contacts:
 Andrey Krutix Krutikhin
@@ -12,5 +19,3 @@ ORCs cup team
 Twitter: @ORCsCup
 Twitch: www.twitch.tv/ORCsCup
 VK: www.vk.com/orcscup
-
-Download Windows last release: https://yadi.sk/d/SKtPZFw2MfU4Pw
