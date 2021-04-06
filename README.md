@@ -11,18 +11,9 @@ cmake --build build
 ```
 
 # Contacts:
-Andrey Krutix Krutikhin
-
-Twitter: @hato_krutix
-
-Email: pigeon.krutix@gmail.com
-
+Andrey 'Krutix' Krutikhin | Twitter: @hato_krutix | Email: pigeon.krutix@gmail.com
 
 ORCs cup team
 
-Twitter: @ORCsCup
-
-Twitch: www.twitch.tv/ORCsCup
-
-VK: www.vk.com/orcscup
+Twitter: @ORCsCup | Twitch: www.twitch.tv/ORCsCup | VK: www.vk.com/orcscup
 
