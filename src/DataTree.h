@@ -7,6 +7,9 @@
 #include <QVector>
 #include <QQueue>
 
+/*!
+ * /brief Хранение информации в древовидном виде
+ */
 template<class T>
 class DataTree
 {
@@ -49,7 +52,7 @@ public:
         while (!queue.isEmpty())
         {
             QWeakPointer<Node> node = queue.dequeue();
-            for (auto& p : node.data()->next)
+            for (auto& p : node.toStrongRef()->next)
             {
                 if (p->name == nodeName)
                 {
@@ -68,6 +71,7 @@ public:
         for (auto&[k, d] : rootNode->data)
             if (k == key)
                 return d;
+        return T();
     }
 
     T findData(QString const& key) const
