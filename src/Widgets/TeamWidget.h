@@ -11,7 +11,7 @@ namespace Ui {
 class TeamWidget;
 }
 
-class TeamWidget final : public QWidget, public DataTreeStorage<QString>
+class TeamWidget final : public QWidget, public DataTreeStorage
 {
     Q_OBJECT
 
@@ -21,8 +21,8 @@ public:
 
     // IDataTreeStorage interface
 public:
-    DataTree<QString> getData() const override;
-    void setData(DataTree<QString> const& data) override;
+    DataTree getData() const override;
+    void setData(DataTree const& data) override;
     void resetData() override;
 
 private:

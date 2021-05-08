@@ -3,12 +3,11 @@
 
 #include "DataTree.h"
 
-template<class T>
 class DataTreeStorage
 {
 protected:
     QString nodeName;
-    QVector<DataTreeStorage<T>*> dataChildren;
+    QVector<DataTreeStorage*> dataChildren;
 
     using Super = DataTreeStorage;
 public:
@@ -17,16 +16,16 @@ public:
         this->nodeName = name;
     }
 
-    virtual DataTree<T> getData() const
+    virtual DataTree getData() const
     {
-        DataTree<T> tree(nodeName);
+        DataTree tree(nodeName);
         for (auto& c : dataChildren) {
             tree.add(c->getData());
         }
         return tree;
     };
 
-    virtual void setData(DataTree<T> const& data)
+    virtual void setData(DataTree const& data)
     {
         for (auto& c : dataChildren) {
             c->setData(data.findNode(c->nodeName));

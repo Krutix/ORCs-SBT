@@ -10,7 +10,7 @@ namespace Ui {
 class PlayerWidget;
 }
 
-class PlayerWidget final : public QWidget, public DataTreeStorage<QString>
+class PlayerWidget final : public QWidget, public DataTreeStorage
 {
     Q_OBJECT
 
@@ -23,8 +23,8 @@ public slots:
 
     // IDataTreeStorage interface
 public:
-    DataTree<QString> getData() const override;
-    void setData(DataTree<QString> const& data) override;
+    DataTree getData() const override;
+    void setData(DataTree const& data) override;
     void resetData() override;
 
 private:

@@ -8,14 +8,15 @@
 #include <QQueue>
 
 /*!
- * /brief Хранение информации в древовидном виде
+ * /brief Concentrate and stores information in a tree-like form
  */
-template<class T>
 class DataTree
 {
 public:
-    using nodeHandleFundtion = std::function<void(QStringList const& path, QString const& nodeName)>;
-    using dataHandleFunction = std::function<void(QStringList const& path, QString const& key, T const& data)>;
+    using nodeHandleFundtion = //!< Function signature used for handle nodes in the tree (path, node_name)
+        std::function<void(QStringList const& path, QString const& nodeName)>;
+    using dataHandleFunction = //!< Function signature used for handle data in the tree (path, key, data)
+        std::function<void(QStringList const& path, QString const& key, QString const& data)>;
 
     DataTree(QString const& name = QString())
         : rootNode(new Node(name)) { }
@@ -25,82 +26,27 @@ public:
 
     ~DataTree() { }
 
-    void setName(QString const& name)
-    {
-        rootNode->name = name;
-    }
+    void setName(QString const& name);
 
-    void getName()
-    {
-        return rootNode->name;
-    }
+    QString getName();
 
-    void add(DataTree const& tree)
-    {
-        rootNode->next.push_back(tree.rootNode);
-    }
+    void add(DataTree const& tree);
 
-    void add(QString const& name, T const& data)
-    {
-        rootNode->data.push_back(QPair(name, data));
-    }
+    void add(QString const& name, QString const& data);
 
-    DataTree findNode(QString const& nodeName) const
-    {
-        QQueue<QWeakPointer<Node>> queue;
-        queue.append(rootNode);
-        while (!queue.isEmpty())
-        {
-            QWeakPointer<Node> node = queue.dequeue();
-            for (auto& p : node.toStrongRef()->next)
-            {
-                if (p->name == nodeName)
-                {
-                    DataTree find;
-                    find.rootNode = p;
-                    return find;
-                }
-                queue.append(p);
-            }
-        }
-        return DataTree();
-    }
+    DataTree findNode(QString const& nodeName) const;
 
-    T findDataInRoot(QString const& key) const
-    {
-        for (auto&[k, d] : rootNode->data)
-            if (k == key)
-                return d;
-        return T();
-    }
+    QString findDataInRoot(QString const& key) const;
 
-    T findData(QString const& key) const
-    {
-        QQueue<QWeakPointer<Node>> queue;
-        queue.append(rootNode);
-        while (!queue.isEmpty())
-        {
-            QWeakPointer<Node> node = queue.dequeue();
-            for (auto&[k, d] : node.data()->data)
-                if (k == key)
-                    return d;
-            for (auto& p : node.data()->next)
-                queue.append(p);
-        }
-        return T();
-    }
+    QString findData(QString const& key) const;
 
     void treeTraverse(nodeHandleFundtion const& fNode,
-                      dataHandleFunction const& fData) const
-    {
-        QStringList path;
-        rootNode->traverse(fNode, fData, path);
-    }
+                      dataHandleFunction const& fData) const;
 private:
     struct Node
     {
         QString name;
-        QVector<QPair<QString, T>> data;
+        QVector<QPair<QString, QString>> data;
         QVector<QSharedPointer<Node>> next;
 
         Node(QString const& name)

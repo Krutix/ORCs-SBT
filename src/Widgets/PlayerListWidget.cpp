@@ -22,9 +22,9 @@ PlayerListWidget::~PlayerListWidget()
     delete ui;
 }
 
-DataTree<QString> PlayerListWidget::getData() const
+DataTree PlayerListWidget::getData() const
 {
-    DataTree<QString> tree = Super::getData();
+    DataTree tree = Super::getData();
     QVector<QWidget*> vec = playerList->getWidgets();
     for (int i = 0; i < vec.size(); i++)
     {
@@ -35,7 +35,7 @@ DataTree<QString> PlayerListWidget::getData() const
     return tree;
 }
 
-void PlayerListWidget::setData(const DataTree<QString> &data)
+void PlayerListWidget::setData(const DataTree &data)
 {
     Super::setData(data);
     QVector<QWidget*> vec = playerList->getWidgets();

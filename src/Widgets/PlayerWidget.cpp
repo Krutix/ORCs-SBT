@@ -30,16 +30,16 @@ void PlayerWidget::setHeroes(QPair<QStringList, QStringList> heroes)
     }
 }
 
-DataTree<QString> PlayerWidget::getData() const
+DataTree PlayerWidget::getData() const
 {
-    DataTree<QString> tree = Super::getData();
+    DataTree tree = Super::getData();
     tree.add("nickname", ui->nickNameLEdit->text());
     tree.add("hero", ui->heroCBox->currentText());
     tree.add("hero_value", ui->heroCBox->currentData().toString());
     return tree;
 }
 
-void PlayerWidget::setData(DataTree<QString> const& data)
+void PlayerWidget::setData(DataTree const& data)
 {
     Super::setData(data);
 

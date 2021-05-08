@@ -11,7 +11,7 @@ namespace Ui {
 class MatchInfoWidget;
 }
 
-class MatchInfoWidget final : public QWidget, public DataTreeStorage<QString>
+class MatchInfoWidget final : public QWidget, public DataTreeStorage
 {
     Q_OBJECT
 

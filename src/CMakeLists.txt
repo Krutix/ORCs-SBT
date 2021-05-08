@@ -13,6 +13,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 add_executable(ORCsSBT
   ApplicationSettings.cpp
   DynamicWidgetList.cpp
+  DataTree.cpp
   Main.cpp
   Widgets/MainWindow.cpp
   Widgets/MainWindow.ui
