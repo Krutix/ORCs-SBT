@@ -8,15 +8,17 @@
 #include <QQueue>
 
 /*!
- * /brief Concentrate and stores information in a tree-like form
+ * Concentrate and stores information in a tree-like form
  */
 class DataTree
 {
 public:
-    using nodeHandleFundtion = //!< Function signature used for handle nodes in the tree (path, node_name)
+    using nodeHandleFundtion =
         std::function<void(QStringList const& path, QString const& nodeName)>;
-    using dataHandleFunction = //!< Function signature used for handle data in the tree (path, key, data)
+    //!< Function signature used for handle nodes in the tree (path, node_name)
+    using dataHandleFunction =
         std::function<void(QStringList const& path, QString const& key, QString const& data)>;
+    //!< Function signature used for handle data in the tree (path, key, data)
 
     DataTree(QString const& name = QString())
         : rootNode(new Node(name)) { }
@@ -26,20 +28,30 @@ public:
 
     ~DataTree() { }
 
+    //! Set root node name
     void setName(QString const& name);
 
+    //! Get root node name
     QString getName();
 
+    //! Add root node subtree
     void add(DataTree const& tree);
 
+    //! Add root node data
     void add(QString const& name, QString const& data);
 
+    //! Find subtree by root node name. Algorithm - Breadth First Search
     DataTree findNode(QString const& nodeName) const;
 
+    //! Find data in root node by name
     QString findDataInRoot(QString const& key) const;
 
+    //! Find data in subtrees by name. Algorithm - Breadth First Search
     QString findData(QString const& key) const;
 
+    //! Inorder tree traverse with handle each node and data field
+    //! @param function to handle subtree root node
+    //! @param function to handle data for last hendled node
     void treeTraverse(nodeHandleFundtion const& fNode,
                       dataHandleFunction const& fData) const;
 private:
