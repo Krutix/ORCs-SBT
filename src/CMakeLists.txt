@@ -14,6 +14,7 @@ add_executable(ORCsSBT
   ApplicationSettings.cpp
   DynamicWidgetList.cpp
   DataTree.cpp
+  DataTreeStorage.cpp
   Main.cpp
   Widgets/MainWindow.cpp
   Widgets/MainWindow.ui

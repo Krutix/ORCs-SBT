@@ -29,7 +29,7 @@ DataTree PlayerListWidget::getData() const
     for (int i = 0; i < vec.size(); i++)
     {
         PlayerWidget* pl = static_cast<PlayerWidget*>(vec[i]);
-        pl->setName(QString("Player %1").arg(i));
+        pl->nodeName = QString("Player %1").arg(i);
         tree.add(pl->getData());
     }
     return tree;

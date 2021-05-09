@@ -6,38 +6,19 @@
 class DataTreeStorage
 {
 protected:
-    QString nodeName;
     QVector<DataTreeStorage*> dataChildren;
 
+    //! Simple appear to the parent
     using Super = DataTreeStorage;
 public:
-    void setName(QString name)
-    {
-        this->nodeName = name;
-    }
+    //! Name of node
+    QString nodeName;
 
-    virtual DataTree getData() const
-    {
-        DataTree tree(nodeName);
-        for (auto& c : dataChildren) {
-            tree.add(c->getData());
-        }
-        return tree;
-    };
+    virtual DataTree getData() const;
 
-    virtual void setData(DataTree const& data)
-    {
-        for (auto& c : dataChildren) {
-            c->setData(data.findNode(c->nodeName));
-        }
-    }
+    virtual void setData(DataTree const& data);
 
-    virtual void resetData()
-    {
-        for (auto& c : dataChildren) {
-            c->resetData();
-        }
-    }
+    virtual void resetData();
 };
 
 #endif // IDATATREESTORAGE_H

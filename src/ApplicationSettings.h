@@ -6,6 +6,9 @@
 #include <QStringList>
 #include <QPair>
 
+/*!
+ * \brief The Application Settings class contains castomized data and raise signal if something change
+ */
 class ApplicationSettings : public QObject
 {
     Q_OBJECT

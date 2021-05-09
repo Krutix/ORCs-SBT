@@ -8,25 +8,28 @@
 #include <QQueue>
 
 /*!
- * Concentrate and stores information in a tree-like form
+ * @brief Concentrate and stores information in a tree-like form
  */
 class DataTree
 {
 public:
+    //! Function signature used for handle nodes in the tree (path, node_name)
     using nodeHandleFundtion =
         std::function<void(QStringList const& path, QString const& nodeName)>;
-    //!< Function signature used for handle nodes in the tree (path, node_name)
+    //! Function signature used for handle data in the tree (path, key, data)
     using dataHandleFunction =
         std::function<void(QStringList const& path, QString const& key, QString const& data)>;
-    //!< Function signature used for handle data in the tree (path, key, data)
 
+    //! Simple default constructor. Create root node with given name
     DataTree(QString const& name = QString())
         : rootNode(new Node(name)) { }
 
+    //! Create copy of the tree
+    //! @todo full copy of the tree
     DataTree(DataTree const&  tree)
         : rootNode(tree.rootNode) { }
 
-    ~DataTree() { }
+    virtual ~DataTree() { }
 
     //! Set root node name
     void setName(QString const& name);
@@ -50,14 +53,15 @@ public:
     QString findData(QString const& key) const;
 
     //! Inorder tree traverse with handle each node and data field
-    //! @param function to handle subtree root node
-    //! @param function to handle data for last hendled node
+    //! @param fNode function to handle subtree root node
+    //! @param fData function to handle data for last hendled node
     void treeTraverse(nodeHandleFundtion const& fNode,
                       dataHandleFunction const& fData) const;
 private:
     struct Node
     {
         QString name;
+        //! @todo replace vector to hash table (faster)
         QVector<QPair<QString, QString>> data;
         QVector<QSharedPointer<Node>> next;
 
